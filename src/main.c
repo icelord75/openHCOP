@@ -7,8 +7,14 @@
 //      \___/--------TECH--------\___/
 //       ==== ABOVE SCIENCE 1994 ====
 //
-//   Coil on Plug I4 Controller AT44mod Version 0.3 / 2017
+//       Open Coil on Plug Controller
+//             Inline4 - AT44mod
 */
+
+//*** CONFIG ****
+
+//#define DIRECT_FIRE // !!! Use DirectFire coils instead Coil-on-plug !!!
+#define MULTI_FIRE // Multifire - only for Coil-on-plug
 
 #include <avr/io.h>
 #include <avr/interrupt.h>
@@ -21,12 +27,12 @@
 #define IGNITION4 PB3
 #define LED       PA3
 #define TACHO     PA1
+
 // INPUT
 #define CYP1      PA0
 #define IGN       PA2
 
-//#define F_CPU sysclk_get_cpu_hz()
-
+//VARS
 uint8_t CYLINDER=0;
 uint8_t WASFIRE=0;
 uint8_t INFIRE=0;
@@ -36,14 +42,6 @@ uint16_t RPM=0;
 uint64_t LASTMILLIS=0;
 uint64_t _1000us=0, _millis=0;
 uint8_t LEDSTATUS=0;
-
-//UART
-volatile uint8_t c;
-volatile uint8_t coef;
-volatile uint8_t Rece_bit;
-volatile uint8_t count;
-volatile uint8_t start;
-uint8_t temp;
 
 ISR( __vectorPCINT4,  ISR_NOBLOCK) // PCINT4 - CYP PA4
 {
@@ -87,7 +85,6 @@ uint64_t millis() {
 
 int main(void)
 {
-
 // Setup
         DDRB = PB0+PB1+PB2+PB2;
         DDRA = PA1+PA3;
@@ -102,15 +99,17 @@ int main(void)
         {
                 if (INFIRE==1)// Fire coil?
                 { WASFIRE=1;
-                  PORTA |= _BV(TACHO);
+                  PORTA |= _BV(TACHO); // TACHO output
                   switch (CYLINDER) { // Set fire for required coil 1-3-4-2
-                  case 1: PORTB |= _BV(IGNITION1);
-                  case 2: PORTB |= _BV(IGNITION3);
-                  case 3: PORTB |= _BV(IGNITION4);
-                  case 4: PORTB |= _BV(IGNITION2);
+                    case 1: PORTB |= _BV(IGNITION1);
+                    case 2: PORTB |= _BV(IGNITION3);
+                    case 3: PORTB |= _BV(IGNITION4);
+                    case 4: PORTB |= _BV(IGNITION2);
                   }
-                  SPARKS++; 
-// Ignition delay (10° crankshaft rotation after ignition point)
+                  SPARKS++;
+
+#ifdef DIRECT_FIRE // DirectFire Coils
+                   // Ignition delay (10° crankshaft rotation after ignition point)
                   if (RPM > 11000 ) {
                           _delay_us(150);
                   } else
@@ -133,6 +132,24 @@ int main(void)
                           _delay_us(270);
                   } else
                           _delay_us(300);
+#else // Coil-on-plug
+                  _delay_us(10);
+
+            #ifdef MULTI_FIRE
+                  if (RPM < 2500) { // Extra spark on low RPM
+                    PORTB=0; // Off ignition
+                    _delay_us(20);
+                    switch (CYLINDER) { // Set fire for required coil 1-3-4-2
+                      case 1: PORTB |= _BV(IGNITION1);
+                      case 2: PORTB |= _BV(IGNITION3);
+                      case 3: PORTB |= _BV(IGNITION4);
+                      case 4: PORTB |= _BV(IGNITION2);
+                    }
+                    _delay_us(10);
+                  }
+            #endif // MULTI_FIRE
+
+#endif // COP or DF
 // Stop igniting
                   PORTB=0; // Off ignition
                   PORTA &= ~_BV(TACHO); // Off TACHO
