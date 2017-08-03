@@ -1,6 +1,6 @@
 #openHCOP
 
-Coil-on-plug controller for HONDA H- F- D- B-series OBD1 Engines
+Coil-on-plug controller for HONDA H- F- D- B-series OBD1 Engines.
 
 Piggyback ignition controller, for replace distributor internals: igniter unit
 and ignition coil.
