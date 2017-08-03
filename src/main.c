@@ -43,9 +43,8 @@ uint64_t LASTMILLIS=0;
 uint64_t _1000us=0, _millis=0;
 uint8_t LEDSTATUS=0;
 
-ISR( __vectorPCINT4,  ISR_NOBLOCK) // PCINT4 - CYP PA4
-{
-
+// PCINT4 - CYP PA4
+ISR( __vectorPCINT4,  ISR_NOBLOCK) {
 // Check CYP
         if ( ((PINA & (1 << 4))==0 ) && (!WASCYP)) { // CYP - LOW
                 CYLINDER=1; WASCYP=1;
@@ -55,8 +54,8 @@ ISR( __vectorPCINT4,  ISR_NOBLOCK) // PCINT4 - CYP PA4
         }
 }
 
-ISR( __vectorPCINT13, ISR_NOBLOCK) // PCINT13 - IGN PB5
-{
+// PCINT13 - IGN PB5
+ISR( __vectorPCINT13, ISR_NOBLOCK) {
 // Check FIRE
         if ( ((PINB & (1 << 5))==1) && (!INFIRE)) { // Start FIRE - HIGH
                 INFIRE=1;
@@ -66,6 +65,7 @@ ISR( __vectorPCINT13, ISR_NOBLOCK) // PCINT13 - IGN PB5
         }
 }
 
+// TIMER
 ISR(__vectorTIM0_OVF) {
         _1000us += 256;
         while (_1000us > 1000) {
@@ -95,12 +95,12 @@ int main(void)
         LASTMILLIS=millis();
 
 // Main loop
-        while (1)
-        {
-                if (INFIRE==1)// Fire coil?
-                { WASFIRE=1;
+        while (1) {
+                if (INFIRE==1) { // Fire coil?
+                  WASFIRE=1;
                   PORTA |= _BV(TACHO); // TACHO output
                   switch (CYLINDER) { // Set fire for required coil 1-3-4-2
+                    case 0: WASFIRE = 0; // SKIP fire until first CYP signal
                     case 1: PORTB |= _BV(IGNITION1);
                     case 2: PORTB |= _BV(IGNITION3);
                     case 3: PORTB |= _BV(IGNITION4);
@@ -140,6 +140,7 @@ int main(void)
                     PORTB=0; // Off ignition
                     _delay_us(20);
                     switch (CYLINDER) { // Set fire for required coil 1-3-4-2
+                      case 0: WASFIRE = 0; // SKIP fire until first CYP signal
                       case 1: PORTB |= _BV(IGNITION1);
                       case 2: PORTB |= _BV(IGNITION3);
                       case 3: PORTB |= _BV(IGNITION4);
