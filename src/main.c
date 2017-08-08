@@ -100,11 +100,11 @@ int main(void)
                   WASFIRE=1;
                   PORTA |= _BV(TACHO); // TACHO output
                   switch (CYLINDER) { // Set fire for required coil 1-3-4-2
-                    case 0: WASFIRE = 0; // SKIP fire until first CYP signal
-                    case 1: PORTB |= _BV(IGNITION1);
-                    case 2: PORTB |= _BV(IGNITION3);
-                    case 3: PORTB |= _BV(IGNITION4);
-                    case 4: PORTB |= _BV(IGNITION2);
+                    case 0: WASFIRE = 0;break; // SKIP fire until first CYP signal
+                    case 1: PORTB |= _BV(IGNITION1);break;
+                    case 2: PORTB |= _BV(IGNITION3);break;
+                    case 3: PORTB |= _BV(IGNITION4);break;
+                    case 4: PORTB |= _BV(IGNITION2);break;
                   }
                   SPARKS++;
 
@@ -140,11 +140,11 @@ int main(void)
                     PORTB=0; // Off ignition
                     _delay_us(20);
                     switch (CYLINDER) { // Set fire for required coil 1-3-4-2
-                      case 0: WASFIRE = 0; // SKIP fire until first CYP signal
-                      case 1: PORTB |= _BV(IGNITION1);
-                      case 2: PORTB |= _BV(IGNITION3);
-                      case 3: PORTB |= _BV(IGNITION4);
-                      case 4: PORTB |= _BV(IGNITION2);
+                      case 0: WASFIRE = 0;break; // SKIP fire until first CYP signal
+                      case 1: PORTB |= _BV(IGNITION1);break;
+                      case 2: PORTB |= _BV(IGNITION3);break;
+                      case 3: PORTB |= _BV(IGNITION4);break;
+                      case 4: PORTB |= _BV(IGNITION2);break;
                     }
                     _delay_us(10);
                   }
