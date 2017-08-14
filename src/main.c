@@ -7,18 +7,18 @@
 //      \___/--------TECH--------\___/
 //       ==== ABOVE SCIENCE 1994 ====
 //
-//       Open Coil on Plug Controller
+//   Ab0VE TECH - HONDA Open Coil on Plug Controller
 //             Inline4 - AT44mod
 */
-
-//*** CONFIG ****
-
-//#define DIRECT_FIRE // !!! Use DirectFire coils instead Coil-on-plug !!!
-#define MULTI_FIRE // Multifire - only for Coil-on-plug
 
 #include <avr/io.h>
 #include <avr/interrupt.h>
 #include <util/delay.h>
+
+//*** CONFIG ****
+//#define DIRECT_FIRE // !!! Use DirectFire coils instead Coil-on-plug !!!
+#define MULTI_FIRE // Multifire - only for Coil-on-plug
+#define MULTI_FIRE_DELAY 20 // 20us for recharge coil
 
 // OUTPUT
 #define IGNITION1 PB0
@@ -42,6 +42,10 @@ uint16_t RPM=0;
 uint64_t LASTMILLIS=0;
 uint64_t _1000us=0, _millis=0;
 uint8_t LEDSTATUS=0;
+
+#if defined(DIRECT_FIRE) && defined(MULTI_FIRE)
+#error "Multifire is NOT capable with DirectFire!"
+#endif
 
 // PCINT4 - CYP PA4
 ISR( __vectorPCINT4,  ISR_NOBLOCK) {
@@ -138,7 +142,7 @@ int main(void)
             #ifdef MULTI_FIRE
                   if (RPM < 2500) { // Extra spark on low RPM
                     PORTB=0; // Off ignition
-                    _delay_us(20);
+                    _delay_us(MULTI_FIRE_DELAY);
                     switch (CYLINDER) { // Set fire for required coil 1-3-4-2
                       case 0: WASFIRE = 0;break; // SKIP fire until first CYP signal
                       case 1: PORTB |= _BV(IGNITION1);break;

@@ -15523,11 +15523,6 @@ Source: www.kingbright.com</description>
 <pinref part="D3" gate="G$1" pin="A"/>
 </segment>
 <segment>
-<wire x1="116.84" y1="43.18" x2="129.54" y2="43.18" width="0.1524" layer="91"/>
-<label x="119.38" y="43.18" size="1.778" layer="95"/>
-<pinref part="RST" gate="G$1" pin="TP"/>
-</segment>
-<segment>
 <label x="68.58" y="10.16" size="1.778" layer="95"/>
 <wire x1="68.58" y1="10.16" x2="86.36" y2="10.16" width="0.1524" layer="91"/>
 <pinref part="U1" gate="A" pin="PB2"/>
@@ -15543,6 +15538,11 @@ Source: www.kingbright.com</description>
 <label x="68.58" y="7.62" size="1.778" layer="95"/>
 <pinref part="U1" gate="A" pin="PB3"/>
 <wire x1="86.36" y1="7.62" x2="68.58" y2="7.62" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<wire x1="116.84" y1="43.18" x2="129.54" y2="43.18" width="0.1524" layer="91"/>
+<label x="119.38" y="43.18" size="1.778" layer="95"/>
+<pinref part="RST" gate="G$1" pin="TP"/>
 </segment>
 </net>
 <net name="TACHO" class="0">
