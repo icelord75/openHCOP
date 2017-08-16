@@ -8,14 +8,17 @@
 //       ==== ABOVE SCIENCE 1994 ====
 //
 //   Ab0VE TECH - HONDA Open Coil on Plug Controller
-//             Inline4 - AT44mod
+//             Inline4 - AT24/44mod
 */
 
 #include <avr/io.h>
+#include <avr/wdt.h>
 #include <avr/interrupt.h>
 #include <util/delay.h>
 
 //*** CONFIG ****
+#define WATCHDOG_DELAY WDTO_30MS // Set watchdog for 30 mSec
+
 //#define DIRECT_FIRE // !!! Use DirectFire coils instead Coil-on-plug !!!
 #define MULTI_FIRE // Multifire - only for Coil-on-plug
 #define MULTI_FIRE_DELAY 20 // 20us for recharge coil
@@ -90,8 +93,10 @@ uint64_t millis() {
 int main(void)
 {
 // Setup
-        DDRB = PB0+PB1+PB2+PB2;
-        DDRA = PA1+PA3;
+        DDRB = IGNITION1 + IGNITION2 + IGNITION3 + IGNITION4;
+        DDRA = TACHO + LED;
+
+        wdt_enable (WATCHDOG_DELAY); // Enable WATCHDOG
 
         sei();
 
@@ -100,6 +105,7 @@ int main(void)
 
 // Main loop
         while (1) {
+                wdt_reset (); // reset WDR
                 if (INFIRE==1) { // Fire coil?
                   WASFIRE=1;
                   PORTA |= _BV(TACHO); // TACHO output
@@ -113,7 +119,7 @@ int main(void)
                   SPARKS++;
 
 #ifdef DIRECT_FIRE // DirectFire Coils
-                   // Ignition delay (10° crankshaft rotation after ignition point)
+                   // Ignition sustaining (10° crankshaft rotation after ignition point)
                   if (RPM > 11000 ) {
                           _delay_us(150);
                   } else
@@ -150,7 +156,7 @@ int main(void)
                       case 3: PORTB |= _BV(IGNITION4);break;
                       case 4: PORTB |= _BV(IGNITION2);break;
                     }
-                    _delay_us(10);
+                    _delay_us(20);
                   }
             #endif // MULTI_FIRE
 
