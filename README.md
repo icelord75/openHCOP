@@ -1,4 +1,4 @@
-#openHCOP
+# openHCOP
 
 Coil-on-plug controller for HONDA H- F- D- B-series OBD1 Engines.
 
@@ -10,6 +10,6 @@ Solder directly to sensor wires, do not cut and/or twist over wires!
 
 Support positive triggering Coil-On-Plugs and DirectFire coils.
 
-##License
+## License
 
 **openHCOP** is available under GPL License.
