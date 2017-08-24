@@ -1,15 +1,15 @@
 /*
-//      _______ __  _________ _________
-//      \_     |  |/  .  \   |   \ ___/
-//        / :  |   \  /   \  |   / _>_
-//       /      \ | \ |   /  |  /     \
-//      /   |___/___/____/ \___/_     /
-//      \___/--------TECH--------\___/
-//       ==== ABOVE SCIENCE 1994 ====
-//
-//   Ab0VE TECH - HONDA Open Coil on Plug Controller
-//             Inline4 - AT24/44mod
-*/
+   //      _______ __  _________ _________
+   //      \_     |  |/  .  \   |   \ ___/
+   //        / :  |   \  /   \  |   / _>_
+   //       /      \ | \ |   /  |  /     \
+   //      /   |___/___/____/ \___/_     /
+   //      \___/--------TECH--------\___/
+   //       ==== ABOVE SCIENCE 1994 ====
+   //
+   //   Ab0VE TECH - HONDA Open Coil on Plug Controller
+   //             Inline4 - AT24/44mod
+ */
 
 #include <avr/io.h>
 #include <avr/wdt.h>
@@ -107,63 +107,63 @@ int main(void)
         while (1) {
                 wdt_reset (); // reset WDR
                 if (INFIRE==1) { // Fire coil?
-                  WASFIRE=1;
-                  PORTA |= _BV(TACHO); // TACHO output
-                  switch (CYLINDER) { // Set fire for required coil 1-3-4-2
-                    case 0: WASFIRE = 0;break; // SKIP fire until first CYP signal
-                    case 1: PORTB |= _BV(IGNITION1);break;
-                    case 2: PORTB |= _BV(IGNITION3);break;
-                    case 3: PORTB |= _BV(IGNITION4);break;
-                    case 4: PORTB |= _BV(IGNITION2);break;
-                  }
-                  SPARKS++;
+                        WASFIRE=1;
+                        PORTA |= _BV(TACHO); // TACHO output
+                        switch (CYLINDER) { // Set fire for required coil 1-3-4-2
+                        case 0: WASFIRE = 0; break; // SKIP fire until first CYP signal
+                        case 1: PORTB |= _BV(IGNITION1); break;
+                        case 2: PORTB |= _BV(IGNITION3); break;
+                        case 3: PORTB |= _BV(IGNITION4); break;
+                        case 4: PORTB |= _BV(IGNITION2); break;
+                        }
+                        SPARKS++;
 
 #ifdef DIRECT_FIRE // DirectFire Coils
-                   // Ignition sustaining (10° crankshaft rotation after ignition point)
-                  if (RPM > 11000 ) {
-                          _delay_us(150);
-                  } else
-                  if (RPM > 10000 ) {
-                          _delay_us(160);
-                  } else
-                  if (RPM > 9000 ) {
-                          _delay_us(180);
-                  } else
-                  if (RPM > 8600 ) {
-                          _delay_us(190);
-                  } else
-                  if (RPM > 7600 ) {
-                          _delay_us(210);
-                  } else
-                  if (RPM > 7000 ) {
-                          _delay_us(230);
-                  } else
-                  if (RPM > 6000 ) {
-                          _delay_us(270);
-                  } else
-                          _delay_us(300);
+                        // Ignition sustaining (10° crankshaft rotation after ignition point)
+                        if (RPM > 11000 ) {
+                                _delay_us(150);
+                        } else
+                        if (RPM > 10000 ) {
+                                _delay_us(160);
+                        } else
+                        if (RPM > 9000 ) {
+                                _delay_us(180);
+                        } else
+                        if (RPM > 8600 ) {
+                                _delay_us(190);
+                        } else
+                        if (RPM > 7600 ) {
+                                _delay_us(210);
+                        } else
+                        if (RPM > 7000 ) {
+                                _delay_us(230);
+                        } else
+                        if (RPM > 6000 ) {
+                                _delay_us(270);
+                        } else
+                                _delay_us(300);
 #else // Coil-on-plug
-                  _delay_us(10);
+                        _delay_us(10);
 
             #ifdef MULTI_FIRE
-                  if (RPM < 2500) { // Extra spark on low RPM
-                    PORTB=0; // Off ignition
-                    _delay_us(MULTI_FIRE_DELAY);
-                    switch (CYLINDER) { // Set fire for required coil 1-3-4-2
-                      case 0: WASFIRE = 0;break; // SKIP fire until first CYP signal
-                      case 1: PORTB |= _BV(IGNITION1);break;
-                      case 2: PORTB |= _BV(IGNITION3);break;
-                      case 3: PORTB |= _BV(IGNITION4);break;
-                      case 4: PORTB |= _BV(IGNITION2);break;
-                    }
-                    _delay_us(20);
-                  }
+                        if (RPM < 2500) { // Extra spark on low RPM
+                                PORTB=0; // Off ignition
+                                _delay_us(MULTI_FIRE_DELAY);
+                                switch (CYLINDER) { // Set fire for required coil 1-3-4-2
+                                case 0: WASFIRE = 0; break; // SKIP fire until first CYP signal
+                                case 1: PORTB |= _BV(IGNITION1); break;
+                                case 2: PORTB |= _BV(IGNITION3); break;
+                                case 3: PORTB |= _BV(IGNITION4); break;
+                                case 4: PORTB |= _BV(IGNITION2); break;
+                                }
+                                _delay_us(20);
+                        }
             #endif // MULTI_FIRE
 
 #endif // COP or DF
 // Stop igniting
-                  PORTB=0; // Off ignition
-                  PORTA &= ~_BV(TACHO); // Off TACHO
+                        PORTB=0; // Off ignition
+                        PORTA &= ~_BV(TACHO); // Off TACHO
                 } else
                 {
                         if (WASFIRE==1) { // ready for next cylinder?
