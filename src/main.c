@@ -20,10 +20,10 @@
 #define WATCHDOG_DELAY WDTO_30MS // Set watchdog for 30 mSec
 
 #define ECU_FIRE_SUSTAIN         // Use IGN signal for fire sustaining
-//#define COP_SUSTAIN 20         // 20us COP fire trigger sustaining
+//#define COP_SUSTAIN 20         // 20µs COP fire trigger sustaining
 #define MULTI_FIRE               // Multifire - only for Coil-on-plug
-#define MULTI_FIRE_DELAY 20      // 20us for recharge coil
-#define MULTI_FIRE_SUSTAIN 10    // 10us for multifire sustaining
+#define MULTI_FIRE_DELAY 20      // 20µs for recharge coil
+#define MULTI_FIRE_SUSTAIN 10    // 10µs for multifire sustaining
 //#define DIRECT_FIRE            // Use DirectFire coils instead Coil-on-plug
 
 // OUTPUT
@@ -126,11 +126,11 @@ int main(void)
                         SPARKS++;
 #ifdef DIRECT_FIRE // DirectFire Coils
                         // Ignition sustaining
-                        int DIRECT_FIRE_DELAY=map(ROM,200,12000,300,100); // linear 200rpm->300uSec 10Krpm->100uSec
+                        int DIRECT_FIRE_DELAY=map(ROM,200,12000,300,100); // linear 200rpm->300µSec 10Krpm->100µSec
                         _delay_us(DIRECT_FIRE_DELAY);
 #else // Coil-on-plug
             #ifdef ECU_FIRE_SUSTAIN
-                       while ((PINB & (1 << 5))==1) {};  // Delay while IGN signal present
+                        while ((PINB & (1 << 5))==1) {}; // Delay while IGN signal present
             #else
                         _delay_us(COP_SUSTAIN);
             #endif
