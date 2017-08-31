@@ -19,15 +19,18 @@
 //*** CONFIG ****
 #define WATCHDOG_DELAY WDTO_30MS // Set watchdog for 30 mSec
 
-//#define DIRECT_FIRE // !!! Use DirectFire coils instead Coil-on-plug !!!
-#define MULTI_FIRE // Multifire - only for Coil-on-plug
-#define MULTI_FIRE_DELAY 20 // 20us for recharge coil
+#define ECU_FIRE_SUSTAIN         // Use IGN signal for fire sustaining
+//#define COP_SUSTAIN 20         // 20us COP fire trigger sustaining
+#define MULTI_FIRE               // Multifire - only for Coil-on-plug
+#define MULTI_FIRE_DELAY 20      // 20us for recharge coil
+#define MULTI_FIRE_SUSTAIN 10    // 10us for multifire sustaining
+//#define DIRECT_FIRE            // Use DirectFire coils instead Coil-on-plug
 
 // OUTPUT
 #define IGNITION1 PB0
 #define IGNITION2 PB1
 #define IGNITION3 PB2
-#define IGNITION4 PB3
+#define IGNITION4 PA7
 #define LED       PA3
 #define TACHO     PA1
 
@@ -48,6 +51,10 @@ uint8_t LEDSTATUS=0;
 
 #if defined(DIRECT_FIRE) && defined(MULTI_FIRE)
 #error "Multifire is NOT capable with DirectFire!"
+#endif
+
+#if defined(ECU_FIRE_SUSTAIN) && defined(COP_SUSTAIN)
+#error "No ECU and Defined sustaining in same time"
 #endif
 
 // PCINT4 - CYP PA4
@@ -93,8 +100,8 @@ uint64_t millis() {
 int main(void)
 {
 // Setup
-        DDRB = IGNITION1 + IGNITION2 + IGNITION3 + IGNITION4;
-        DDRA = TACHO + LED;
+        DDRB = IGNITION1 + IGNITION2 + IGNITION3;
+        DDRA = TACHO + LED + IGNITION4;
 
         wdt_enable (WATCHDOG_DELAY); // Enable WATCHDOG
 
@@ -113,7 +120,7 @@ int main(void)
                         case 0: WASFIRE = 0; break; // SKIP fire until first CYP signal
                         case 1: PORTB |= _BV(IGNITION1); break;
                         case 2: PORTB |= _BV(IGNITION3); break;
-                        case 3: PORTB |= _BV(IGNITION4); break;
+                        case 3: PORTA |= _BV(IGNITION4); break;
                         case 4: PORTB |= _BV(IGNITION2); break;
                         }
                         SPARKS++;
@@ -121,25 +128,31 @@ int main(void)
                         // Ignition sustaining
                         int DIRECT_FIRE_DELAY=map(ROM,200,12000,300,100); // linear 200rpm->300uSec 10Krpm->100uSec
                         _delay_us(DIRECT_FIRE_DELAY);
-            #else // Coil-on-plug
-                        _delay_us(10);
+#else // Coil-on-plug
+            #ifdef ECU_FIRE_SUSTAIN
+                       while ((PINB & (1 << 5))==1) {};  // Delay while IGN signal present
+            #else
+                        _delay_us(COP_SUSTAIN);
+            #endif
             #ifdef MULTI_FIRE
                         if (RPM < 2500) { // Extra spark on low RPM
-                                PORTB=0; // Off ignition
+                                PORTB = 0; // Off ignition
+                                PORTA &= ~_BV(IGNITION4); // Off IGNITION4
                                 _delay_us(MULTI_FIRE_DELAY);
                                 switch (CYLINDER) { // Set fire for required coil 1-3-4-2
                                 case 0: WASFIRE = 0; break; // SKIP fire until first CYP signal
                                 case 1: PORTB |= _BV(IGNITION1); break;
                                 case 2: PORTB |= _BV(IGNITION3); break;
-                                case 3: PORTB |= _BV(IGNITION4); break;
+                                case 3: PORTA |= _BV(IGNITION4); break;
                                 case 4: PORTB |= _BV(IGNITION2); break;
                                 }
-                                _delay_us(20);
+                                _delay_us(MULTI_FIRE_SUSTAIN);
                         }
             #endif // MULTI_FIRE
 #endif // COP or DF
 // Stop igniting
-                        PORTB=0; // Off ignition
+                        PORTB = 0; // Off ignition
+                        PORTA &= ~_BV(IGNITION4); // Off IGNITION4
                         PORTA &= ~_BV(TACHO); // Off TACHO
                 } else
                 {

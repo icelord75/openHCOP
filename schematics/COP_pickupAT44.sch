@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.2.2">
+<eagle version="8.3.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
+<setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
@@ -15250,15 +15251,15 @@ Source: www.kingbright.com</description>
 <part name="GND4" library="supply1" deviceset="GND" device=""/>
 <part name="P+1" library="supply1" deviceset="VCC" device=""/>
 <part name="P+3" library="supply1" deviceset="VCC" device=""/>
-<part name="RST" library="testpad" deviceset="TP" device="B2,54" value="TPB2,54"/>
-<part name="SCK" library="testpad" deviceset="TP" device="B2,54" value="TPB2,54"/>
-<part name="MISO" library="testpad" deviceset="TP" device="B2,54" value="TPB2,54"/>
-<part name="MOSI" library="testpad" deviceset="TP" device="B2,54" value="TPB2,54"/>
-<part name="GND" library="testpad" deviceset="TP" device="B2,54" value="TPB2,54"/>
+<part name="RST" library="testpad" deviceset="TP" device="TP20R" value="TPTP20R"/>
+<part name="SCK" library="testpad" deviceset="TP" device="TP20R" value="TPTP20R"/>
+<part name="MISO" library="testpad" deviceset="TP" device="TP20R" value="TPTP20R"/>
+<part name="MOSI" library="testpad" deviceset="TP" device="TP20R" value="TPTP20R"/>
+<part name="GND" library="testpad" deviceset="TP" device="TP20R" value="TPTP20R"/>
 <part name="R1" library="rcl" deviceset="R-EU_" device="R0805" value="10K"/>
 <part name="D1" library="adafruit" deviceset="DIODE" device="SOD-123" value="1N4148"/>
 <part name="Q1" library="transistor-npn" deviceset="BC849*" device="SMD" value="MMBT2222"/>
-<part name="C1" library="rcl" deviceset="CPOL-EU" device="SMCC" value="47u25v"/>
+<part name="C1" library="rcl" deviceset="CPOL-EU" device="SMCC" value="47u16v"/>
 <part name="GND12" library="supply1" deviceset="GND" device=""/>
 <part name="GND13" library="supply1" deviceset="GND" device=""/>
 <part name="GND14" library="supply1" deviceset="GND" device=""/>
@@ -15278,7 +15279,7 @@ Source: www.kingbright.com</description>
 <part name="D3" library="adafruit" deviceset="DIODE" device="SOD-123" value="1N4148"/>
 <part name="D5" library="adafruit" deviceset="DIODE" device="SOD-123" value="1N4148"/>
 <part name="D6" library="adafruit" deviceset="DIODE" device="SOD-123" value="1N4148"/>
-<part name="VCC" library="testpad" deviceset="TP" device="B2,54" value="TPB2,54"/>
+<part name="VCC" library="testpad" deviceset="TP" device="TP20R" value="TPTP20R"/>
 <part name="D8" library="adafruit" deviceset="DIODE" device="SOD-123" value="1N4148"/>
 <part name="IC2" library="linear" deviceset="78L*" device="F" technology="05"/>
 <part name="LED1" library="led" deviceset="LED" device="CHIPLED_0603"/>
@@ -15535,14 +15536,9 @@ Source: www.kingbright.com</description>
 <pinref part="D6" gate="G$1" pin="A"/>
 </segment>
 <segment>
-<label x="68.58" y="7.62" size="1.778" layer="95"/>
-<pinref part="U1" gate="A" pin="PB3"/>
-<wire x1="86.36" y1="7.62" x2="68.58" y2="7.62" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<wire x1="116.84" y1="43.18" x2="129.54" y2="43.18" width="0.1524" layer="91"/>
-<label x="119.38" y="43.18" size="1.778" layer="95"/>
-<pinref part="RST" gate="G$1" pin="TP"/>
+<pinref part="U1" gate="A" pin="PA7"/>
+<wire x1="121.92" y1="2.54" x2="132.08" y2="2.54" width="0.1524" layer="91"/>
+<label x="124.46" y="2.54" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="TACHO" class="0">
@@ -15684,6 +15680,18 @@ Source: www.kingbright.com</description>
 <pinref part="Q2" gate="G$1" pin="B"/>
 <pinref part="R6" gate="G$1" pin="1"/>
 <wire x1="43.18" y1="2.54" x2="48.26" y2="2.54" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="RST" class="0">
+<segment>
+<pinref part="U1" gate="A" pin="PB3"/>
+<wire x1="86.36" y1="7.62" x2="68.58" y2="7.62" width="0.1524" layer="91"/>
+<label x="68.58" y="7.62" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="RST" gate="G$1" pin="TP"/>
+<wire x1="129.54" y1="43.18" x2="116.84" y2="43.18" width="0.1524" layer="91"/>
+<label x="119.38" y="43.18" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
