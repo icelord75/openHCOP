@@ -20,10 +20,12 @@
 #define WATCHDOG_DELAY WDTO_30MS // Set watchdog for 30 mSec
 
 #define ECU_FIRE_SUSTAIN         // Use IGN signal for fire sustaining
-//#define COP_SUSTAIN 20         // 20µs COP fire trigger sustaining
+
+//#define COP_SUSTAIN 10         // 10µSec COP fire trigger sustaining
 #define MULTI_FIRE               // Multifire - only for Coil-on-plug
-#define MULTI_FIRE_DELAY 20      // 20µs for recharge coil
-#define MULTI_FIRE_SUSTAIN 10    // 10µs for multifire sustaining
+#define MULTI_FIRE_DELAY 200     // 200µSec for recharge coil
+#define MULTI_FIRE_SUSTAIN 1000  // 1000µSec for multifire sustaining
+
 //#define DIRECT_FIRE            // Use DirectFire coils instead Coil-on-plug
 
 // OUTPUT
@@ -57,24 +59,26 @@ uint8_t LEDSTATUS=0;
 #error "No ECU and Defined sustaining in same time"
 #endif
 
-// PCINT4 - CYP PA4
-ISR( __vectorPCINT4,  ISR_NOBLOCK) {
+#define _NOP __asm__ __volatile__ ("nop");
+
+// PCINT0 - CYP1 PA0
+ISR( __vectorPCINT0,  ISR_NOBLOCK) {
 // Check CYP
-        if ( ((PINA & (1 << 4))==0 ) && (!WASCYP)) { // CYP - LOW
+        if ( ((PINA & _BV(CYP1))==0 ) && (!WASCYP)) { // CYP - LOW
                 CYLINDER=1; WASCYP=1;
         }
-        if ( ((PINA & (1 << 4))==1 ) && (WASCYP)) { // GONE CYP
+        if ( ((PINA & _BV(CYP1))==1 ) && (WASCYP)) { // GONE CYP
                 WASCYP=0;
         }
 }
 
-// PCINT13 - IGN PB5
-ISR( __vectorPCINT13, ISR_NOBLOCK) {
+// PCINT2 - IGN PA2
+ISR( __vectorPCINT2, ISR_NOBLOCK) {
 // Check FIRE
-        if ( ((PINB & (1 << 5))==1) && (!INFIRE)) { // Start FIRE - HIGH
+        if ( ((PINA & _BV(IGN))==1) && (!INFIRE)) { // Start FIRE - HIGH
                 INFIRE=1;
         }
-        if ( ((PINB & (1 << 5))==0) && (INFIRE)) { // GONE FIRE
+        if ( ((PINA & _BV(IGN))==0) && (INFIRE)) { // GONE FIRE
                 INFIRE=0;
         }
 }
@@ -100,11 +104,12 @@ uint64_t millis() {
 int main(void)
 {
 // Setup
-        DDRB = IGNITION1 + IGNITION2 + IGNITION3;
-        DDRA = TACHO + LED + IGNITION4;
-
+        DDRB = _BV(IGNITION1) | _BV(IGNITION2) | _BV(IGNITION3);
+        DDRA = _BV(TACHO) | _BV(LED) | _BV(IGNITION4);
+        GIMSK = _BV(PCIE0);
+        MCUCR = _BV(ISC00); //ISC00 - any change
+        PCMSK0 = _BV(PCINT0) | _BV(PCINT2);
         wdt_enable (WATCHDOG_DELAY); // Enable WATCHDOG
-
         sei();
 
         PORTA |= _BV(LED); // LED ON on start
@@ -125,12 +130,16 @@ int main(void)
                         }
                         SPARKS++;
 #ifdef DIRECT_FIRE // DirectFire Coils
+            #ifdef ECU_FIRE_SUSTAIN
+                        while ((PINB & _BV(IGN))==1) { _NOP }; // Delay while IGN signal present
+            #else
                         // Ignition sustaining
-                        int DIRECT_FIRE_DELAY=map(ROM,200,12000,300,100); // linear 200rpm->300µSec 10Krpm->100µSec
+                        int DIRECT_FIRE_DELAY=map(ROM,200,10000,2000,800); // linear 200rpm->2000µSec 10Krpm->800µSec
                         _delay_us(DIRECT_FIRE_DELAY);
+            #endif
 #else // Coil-on-plug
             #ifdef ECU_FIRE_SUSTAIN
-                        while ((PINB & (1 << 5))==1) {}; // Delay while IGN signal present
+                        while ((PINB & _BV(IGN))==1) { _NOP }; // Delay while IGN signal present
             #else
                         _delay_us(COP_SUSTAIN);
             #endif
