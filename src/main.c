@@ -16,17 +16,15 @@
 #include <avr/interrupt.h>
 #include <util/delay.h>
 
-//*** CONFIG ****
-#define WATCHDOG_DELAY WDTO_30MS // Set watchdog for 30 mSec
+// CONFIG
+#define WATCHDOG_DELAY WDTO_30MS   // Set watchdog for 30 mSec
 
-#define ECU_FIRE_SUSTAIN         // Use IGN signal for fire sustaining
-
-//#define COP_SUSTAIN 10         // 10µSec COP fire trigger sustaining
-#define MULTI_FIRE               // Multifire - only for Coil-on-plug
-#define MULTI_FIRE_DELAY 200     // 200µSec for recharge coil
-#define MULTI_FIRE_SUSTAIN 1000  // 1000µSec for multifire sustaining
-
-//#define DIRECT_FIRE            // Use DirectFire coils instead Coil-on-plug
+#define ECU_FIRE_SUSTAIN           // Use IGN signal for fire sustaining
+//#define COP_SUSTAIN 10           // 10µSec COP fire trigger sustaining
+//#define MULTI_FIRE               // Multifire - only for Coil-on-plug
+//#define MULTI_FIRE_DELAY 200     // 200µSec for recharge coil
+//#define MULTI_FIRE_SUSTAIN 1000  // 1000µSec for multifire sustaining
+//#define DIRECT_FIRE              // Use DirectFire coils instead Coil-on-plug
 
 // OUTPUT
 #define IGNITION1 PB0
@@ -41,15 +39,17 @@
 #define IGN       PA2
 
 //VARS
-uint8_t CYLINDER=0;
-uint8_t WASFIRE=0;
-uint8_t INFIRE=0;
-uint8_t WASCYP=0;
-uint8_t SPARKS=0;
-uint16_t RPM=0;
-uint64_t LASTMILLIS=0;
-uint64_t _1000us=0, _millis=0;
-uint8_t LEDSTATUS=0;
+uint8_t CYLINDER    = 0;
+uint8_t WASFIRE     = 0;
+uint8_t INFIRE      = 0;
+uint8_t WASCYP      = 0;
+uint8_t SPARKS      = 0;
+uint16_t RPM        = 0;
+uint64_t LASTMILLIS = 0;
+uint64_t _1000us    = 0;
+uint64_t _millis    = 0;
+uint8_t LEDSTATUS   = 0;
+uint16_t DF_DELAY   = 0;
 
 #if defined(DIRECT_FIRE) && defined(MULTI_FIRE)
 #error "Multifire is NOT capable with DirectFire!"
@@ -67,7 +67,7 @@ ISR( __vectorPCINT0,  ISR_NOBLOCK) {
         if ( ((PINA & _BV(CYP1))==0 ) && (!WASCYP)) { // CYP - LOW
                 CYLINDER=1; WASCYP=1;
         }
-        if ( ((PINA & _BV(CYP1))==1 ) && (WASCYP)) { // GONE CYP
+        if ( ((PINA & _BV(CYP1))==1 ) && (WASCYP)) {  // GONE CYP
                 WASCYP=0;
         }
 }
@@ -78,7 +78,7 @@ ISR( __vectorPCINT2, ISR_NOBLOCK) {
         if ( ((PINA & _BV(IGN))==1) && (!INFIRE)) { // Start FIRE - HIGH
                 INFIRE=1;
         }
-        if ( ((PINA & _BV(IGN))==0) && (INFIRE)) { // GONE FIRE
+        if ( ((PINA & _BV(IGN))==0) && (INFIRE)) {  // GONE FIRE
                 INFIRE=0;
         }
 }
@@ -101,8 +101,33 @@ uint64_t millis() {
         return m;
 }
 
-int main(void)
-{
+void Ignite() {
+  switch (CYLINDER) { // Set fire for required coil 1-3-4-2
+  case 0: WASFIRE = 0; break; // SKIP fire until first CYP signal
+  case 1: PORTB |= _BV(IGNITION1); break;
+  case 2: PORTB |= _BV(IGNITION3); break;
+  case 3: PORTA |= _BV(IGNITION4); break;
+  case 4: PORTB |= _BV(IGNITION2); break;
+  }
+}
+
+void Off() {
+  PORTB = 0; // Off IGNITION1/2/3
+  PORTA &= ~_BV(IGNITION4); // Off IGNITION4
+  PORTA &= ~_BV(TACHO); // Off TACH
+}
+
+uint16_t map(uint16_t x, uint16_t in_min, uint16_t in_max, uint16_t out_min, uint16_t out_max) {
+  return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
+}
+
+void delay_us(uint16_t d) {
+    for (uint16_t i = 0; i < d; i++) {
+        _delay_us(1);
+    }
+}
+
+int main(void) {
 // Setup
         DDRB = _BV(IGNITION1) | _BV(IGNITION2) | _BV(IGNITION3);
         DDRA = _BV(TACHO) | _BV(LED) | _BV(IGNITION4);
@@ -113,78 +138,65 @@ int main(void)
         sei();
 
         PORTA |= _BV(LED); // LED ON on start
-        LASTMILLIS=millis();
+        LASTMILLIS = millis();
 
 // Main loop
-        while (1) {
+        while ( 1 ) {
                 wdt_reset (); // reset WDR
-                if (INFIRE==1) { // Fire coil?
-                        WASFIRE=1;
+                if (INFIRE == 1) { // Fire coil
+                        WASFIRE = 1;
                         PORTA |= _BV(TACHO); // TACHO output
-                        switch (CYLINDER) { // Set fire for required coil 1-3-4-2
-                        case 0: WASFIRE = 0; break; // SKIP fire until first CYP signal
-                        case 1: PORTB |= _BV(IGNITION1); break;
-                        case 2: PORTB |= _BV(IGNITION3); break;
-                        case 3: PORTA |= _BV(IGNITION4); break;
-                        case 4: PORTB |= _BV(IGNITION2); break;
-                        }
+                        Ignite();
                         SPARKS++;
 #ifdef DIRECT_FIRE // DirectFire Coils
             #ifdef ECU_FIRE_SUSTAIN
-                        while ((PINB & _BV(IGN))==1) { _NOP }; // Delay while IGN signal present
+                        while ((PINB & _BV(IGN)) == 1) { _NOP }; // Delay while IGN signal present
             #else
                         // Ignition sustaining
-                        int DIRECT_FIRE_DELAY=map(ROM,200,10000,2000,800); // linear 200rpm->2000µSec 10Krpm->800µSec
-                        _delay_us(DIRECT_FIRE_DELAY);
+                        DF_DELAY = map( RPM, 200, 10000, 2000, 800 ); // linear 200rpm->2000µSec 10Krpm->800µSec
+                        delay_us(DF_DELAY);
             #endif
 #else // Coil-on-plug
             #ifdef ECU_FIRE_SUSTAIN
-                        while ((PINB & _BV(IGN))==1) { _NOP }; // Delay while IGN signal present
+                        while ((PINB & _BV(IGN)) == 1) { _NOP }; // Delay while IGN signal present
             #else
                         _delay_us(COP_SUSTAIN);
             #endif
             #ifdef MULTI_FIRE
                         if (RPM < 2500) { // Extra spark on low RPM
-                                PORTB = 0; // Off ignition
-                                PORTA &= ~_BV(IGNITION4); // Off IGNITION4
+                                Off();
                                 _delay_us(MULTI_FIRE_DELAY);
-                                switch (CYLINDER) { // Set fire for required coil 1-3-4-2
-                                case 0: WASFIRE = 0; break; // SKIP fire until first CYP signal
-                                case 1: PORTB |= _BV(IGNITION1); break;
-                                case 2: PORTB |= _BV(IGNITION3); break;
-                                case 3: PORTA |= _BV(IGNITION4); break;
-                                case 4: PORTB |= _BV(IGNITION2); break;
-                                }
+                                Ignite();
                                 _delay_us(MULTI_FIRE_SUSTAIN);
                         }
             #endif // MULTI_FIRE
 #endif // COP or DF
 // Stop igniting
-                        PORTB = 0; // Off ignition
-                        PORTA &= ~_BV(IGNITION4); // Off IGNITION4
-                        PORTA &= ~_BV(TACHO); // Off TACHO
+                        Off();
                 } else
-                {
-                        if (WASFIRE==1) { // ready for next cylinder?
-                                PORTB=0; // disable all coils and TACHO for some reasons
-                                WASFIRE=0;
+                { // Not if fire
+                        if (WASFIRE == 1) { // ready for next cylinder?
+                                Off(); // disable all coils and TACHO for some reasons
+                                WASFIRE = 0;
                                 CYLINDER++;
-                                if (CYLINDER>4) { // only 4 cylinder model :)
-                                        CYLINDER=1;
-                                        if (LEDSTATUS==0) {// Change LED on each _FULL_ cycle
+                                if (CYLINDER > 4) { // only 4 cylinder model :)
+                                        CYLINDER = 1;
+                                        if (LEDSTATUS == 0) {// Change LED on each _FULL_ cycle
                                                 PORTA &= ~_BV(LED); // LED OFF
-                                                LEDSTATUS=1;
+                                                LEDSTATUS = 1;
                                         } else {
                                                 PORTA |= _BV(LED); // LED ON
-                                                LEDSTATUS=0;
+                                                LEDSTATUS = 0;
                                         }
                                 }
                         } // was fire
                 }
-                if (SPARKS >= 8) { // TWO CYCLES
+
+                if (SPARKS >= 8) { // TWO CYCLES for RPM Calculation
                         RPM = 30 * 1000 / (millis() - LASTMILLIS) * SPARKS;
                         LASTMILLIS = millis();
                         SPARKS = 0;
                 }
+
         } // main loop
 }
