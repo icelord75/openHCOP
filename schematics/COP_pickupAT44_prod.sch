@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.3.1">
+<eagle version="7.6.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
-<setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
@@ -15277,7 +15276,7 @@ Source: www.kingbright.com</description>
 <part name="D8" library="adafruit" deviceset="DIODE" device="SOD-123" value="1N4148"/>
 <part name="IC2" library="linear" deviceset="78L*" device="F" technology="05"/>
 <part name="LED1" library="led" deviceset="LED" device="CHIPLED_0603"/>
-<part name="R4" library="rcl" deviceset="R-EU_" device="R0805" value="100"/>
+<part name="R4" library="rcl" deviceset="R-EU_" device="R0805" value="180"/>
 <part name="GND2" library="supply1" deviceset="GND" device=""/>
 <part name="C4" library="rcl" deviceset="C-EU" device="C0805" value="100n"/>
 <part name="C5" library="rcl" deviceset="C-EU" device="C0805" value="100n"/>
