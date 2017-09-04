@@ -17,8 +17,6 @@
 #include <util/delay.h>
 
 // CONFIG
-#define WATCHDOG_DELAY WDTO_30MS   // Set watchdog for 30 mSec
-
 #define ECU_FIRE_SUSTAIN           // Use IGN signal for fire sustaining
 //#define COP_SUSTAIN 10           // 10µSec COP fire trigger sustaining
 //#define MULTI_FIRE               // Multifire - only for Coil-on-plug
@@ -27,16 +25,16 @@
 //#define DIRECT_FIRE              // Use DirectFire coils instead Coil-on-plug
 
 // OUTPUT
-#define IGNITION1 PB0
-#define IGNITION2 PB1
-#define IGNITION3 PB2
-#define IGNITION4 PA7
-#define LED       PA3
-#define TACHO     PA1
+#define IGNITION1 PINB0
+#define IGNITION2 PINB1
+#define IGNITION3 PINB2
+#define IGNITION4 PINA7
+#define LED       PINA3
+#define TACHO     PINA1
 
 // INPUT
-#define CYP1      PA0
-#define IGN       PA2
+#define CYP1      PINA0
+#define IGN       PINA2
 
 //VARS
 uint8_t CYLINDER    = 0;
@@ -51,6 +49,10 @@ uint64_t _millis    = 0;
 uint8_t LEDSTATUS   = 0;
 uint16_t DF_DELAY   = 0;
 
+#define WATCHDOG_DELAY WDTO_30MS   // Set watchdog for 30 mSec
+
+#define _NOP __asm__ __volatile__ ("nop");
+
 #if defined(DIRECT_FIRE) && defined(MULTI_FIRE)
 #error "Multifire is NOT capable with DirectFire!"
 #endif
@@ -58,8 +60,6 @@ uint16_t DF_DELAY   = 0;
 #if defined(ECU_FIRE_SUSTAIN) && defined(COP_SUSTAIN)
 #error "No ECU and Defined sustaining in same time"
 #endif
-
-#define _NOP __asm__ __volatile__ ("nop");
 
 void Led_ON(){
         PORTA |= _BV(LED); // LED ON
@@ -72,24 +72,22 @@ void Led_OFF(){
 // PCINT0
 ISR(PCINT0_vect) {
 // Check CYP
-        if ( ((PINA & _BV(CYP1))==0 ) && (!WASCYP)) { // CYP - LOW
-                CYLINDER=1; WASCYP=1; Led_OFF();
+        if ( (PINA & _BV(CYP1))==0) { // CYP - LOW
+                CYLINDER=1;
         }
-        if ( ((PINA & _BV(CYP1))==1 ) && (WASCYP)) {  // GONE CYP
-                WASCYP=0; Led_ON();
+// Check IGN
+        if ( ((PINA & _BV(IGN))!=0) && (INFIRE==0)) { // Start FIRE - HIGH
+                INFIRE=1;
         }
-
-        if ( ((PINA & _BV(IGN))==1) && (!INFIRE)) { // Start FIRE - HIGH
-                INFIRE=1; Led_OFF();
-        }
-        if ( ((PINA & _BV(IGN))==0) && (INFIRE)) {  // GONE FIRE
-                INFIRE=0; Led_ON();
+        if ( ((PINA & _BV(IGN))==0) && (INFIRE==1)) {  // GONE FIRE
+                INFIRE=0;
         }
 }
 
 // TIMER
-ISR(TIM0_OVF_vect) {
-        _1000us += 256;
+ISR(TIM1_CAPT_vect) {
+        // 1/8000000*1024
+        _1000us += 128;
         while (_1000us > 1000) {
                 _millis++;
                 _1000us -= 1000;
@@ -132,18 +130,27 @@ void delay_us(uint16_t d) {
 }
 
 int main(void) {
+        cli();
 // Setup
         DDRB = _BV(IGNITION1) | _BV(IGNITION2) | _BV(IGNITION3);
-        DDRA = _BV(TACHO) | _BV(LED) | _BV(IGNITION4) | _BV(CYP1) | _BV(IGN);
+        DDRA = _BV(TACHO) | _BV(LED) | _BV(IGNITION4);
+
         GIMSK = _BV(PCIE0);
         MCUCR = _BV(ISC00); //ISC00 - any change
         PCMSK0 = _BV(PCINT0) | _BV(PCINT2);
 
+        SREG |= (0b10000000); // enable global interrupts
+
+        TCNT1 = 0;
+        TCCR1A = 0;
+        TCCR1B = _BV(CS12) | _BV(CS10);       //start timer1 with prescaler clk/1024
+
         wdt_enable (WATCHDOG_DELAY); // Enable WATCHDOG
         sei();
 
-        PORTA |= _BV(LED); // LED ON on start
         LASTMILLIS = millis();
+
+        while ((PINA & _BV(CYP1))!=0) { _NOP }; // Delay while first CYP1
 
 // Main loop
         while ( 1 ) {
@@ -155,7 +162,7 @@ int main(void) {
                         SPARKS++;
 #ifdef DIRECT_FIRE // DirectFire Coils
             #ifdef ECU_FIRE_SUSTAIN
-                        while ((PINB & _BV(IGN)) == 1) { _NOP }; // Delay while IGN signal present
+                        while ((PINA & _BV(IGN))!=0) { _NOP }; // Delay while IGN signal present
             #else
                         // Ignition sustaining
                         DF_DELAY = map( RPM, 200, 10000, 2000, 800 ); // linear 200rpm->2000µSec 10Krpm->800µSec
@@ -163,7 +170,7 @@ int main(void) {
             #endif
 #else // Coil-on-plug
             #ifdef ECU_FIRE_SUSTAIN
-                        while ((PINB & _BV(IGN)) == 1) { _NOP }; // Delay while IGN signal present
+                        while ((PINA & _BV(IGN))!=0) { _NOP }; // Delay while IGN signal present
             #else
                         _delay_us(COP_SUSTAIN);
             #endif
@@ -184,15 +191,8 @@ int main(void) {
                                 Off(); // disable all coils and TACHO for some reasons
                                 WASFIRE = 0;
                                 CYLINDER++;
-                                if (CYLINDER > 4) { // only 4 cylinder model :)
+                                if (CYLINDER > 4) { // if we lost CYP1 signal
                                         CYLINDER = 1;
-                                        if (LEDSTATUS == 0) {// Change LED on each _FULL_ cycle
-                                                Led_OFF();
-                                                LEDSTATUS = 1;
-                                        } else {
-                                                Led_ON();
-                                                LEDSTATUS = 0;
-                                        }
                                 }
                         } // was fire
                 }
@@ -201,6 +201,13 @@ int main(void) {
                         RPM = 30 * 1000 / (millis() - LASTMILLIS) * SPARKS;
                         LASTMILLIS = millis();
                         SPARKS = 0;
+                        if (LEDSTATUS == 0) {// Change LED on each 2 FULL cycle
+                                Led_OFF();
+                                LEDSTATUS = 1;
+                        } else {
+                                Led_ON();
+                                LEDSTATUS = 0;
+                        }
                 }
 
         } // main loop
