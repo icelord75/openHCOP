@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.2.2">
+<eagle version="8.3.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
+<setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
@@ -15256,7 +15257,7 @@ Source: www.kingbright.com</description>
 <part name="MOSI" library="testpad" deviceset="TP" device="TP20R" value="TPTP20R"/>
 <part name="GND" library="testpad" deviceset="TP" device="TP20R" value="TPTP20R"/>
 <part name="R1" library="rcl" deviceset="R-EU_" device="R0805" value="10K"/>
-<part name="D1" library="adafruit" deviceset="DIODE" device="SOD-123" value="1N4148"/>
+<part name="D1" library="adafruit" deviceset="DIODE" device="SOD-123" value="1N4148W"/>
 <part name="Q1" library="transistor-npn" deviceset="BC849*" device="SMD" value="MMBT2222"/>
 <part name="C1" library="rcl" deviceset="CPOL-EU" device="SMCC" value="47µ16v"/>
 <part name="GND12" library="supply1" deviceset="GND" device=""/>
@@ -15274,12 +15275,12 @@ Source: www.kingbright.com</description>
 <part name="IGN" library="testpad" deviceset="TP" device="PAD1-13Y" value="TPPAD1-13Y"/>
 <part name="D4" library="diode" deviceset="BAS40-04" device="" value="BAS31"/>
 <part name="U1" library="atmel" deviceset="ATTINY44A-SSU" device=""/>
-<part name="D2" library="adafruit" deviceset="DIODE" device="SOD-123" value="1N4148"/>
-<part name="D3" library="adafruit" deviceset="DIODE" device="SOD-123" value="1N4148"/>
-<part name="D5" library="adafruit" deviceset="DIODE" device="SOD-123" value="1N4148"/>
-<part name="D6" library="adafruit" deviceset="DIODE" device="SOD-123" value="1N4148"/>
+<part name="D2" library="adafruit" deviceset="DIODE" device="SOD-123" value="1N4148W"/>
+<part name="D3" library="adafruit" deviceset="DIODE" device="SOD-123" value="1N4148W"/>
+<part name="D5" library="adafruit" deviceset="DIODE" device="SOD-123" value="1N4148W"/>
+<part name="D6" library="adafruit" deviceset="DIODE" device="SOD-123" value="1N4148W"/>
 <part name="VCC" library="testpad" deviceset="TP" device="TP20R" value="TPTP20R"/>
-<part name="D8" library="adafruit" deviceset="DIODE" device="SOD-123" value="1N4148"/>
+<part name="D8" library="adafruit" deviceset="DIODE" device="SOD-123" value="1N4148W"/>
 <part name="IC2" library="linear" deviceset="78L*" device="F" technology="05"/>
 <part name="LED1" library="led" deviceset="LED" device="CHIPLED_0603"/>
 <part name="R4" library="rcl" deviceset="R-EU_" device="R0805" value="180"/>
