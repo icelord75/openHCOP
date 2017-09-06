@@ -32,9 +32,6 @@
 uint8_t CYLINDER    = 0;
 uint8_t SPARKS      = 0;
 uint16_t RPM        = 0;
-uint64_t LASTMILLIS = 0;
-uint64_t _1000us    = 0;
-uint64_t _millis    = 0;
 uint8_t LEDSTATUS   = 0;
 
 #define WATCHDOG_DELAY WDTO_30MS   // Set watchdog for 30 mSec
@@ -50,21 +47,16 @@ void Led_OFF(){
 }
 
 // TIMER
-ISR(TIM0_OVF_vect) {
-        _1000us += 128;
-        while (_1000us > 1000) {
-                _millis++;
-                _1000us -= 1000;
+ISR(TIM1_COMPA_vect) {
+        if (LEDSTATUS == 0) {// Change LED on 2/10 sec
+                Led_OFF();
+                LEDSTATUS = 1;
+        } else {
+                Led_ON();
+                LEDSTATUS = 0;
         }
-}
-
-// safe access to millis counter
-uint64_t millis() {
-        uint64_t m;
-        cli();
-        m = _millis;
-        sei();
-        return m;
+        RPM=SPARKS*60*10/4;
+        SPARKS=0;
 }
 
 void Ignite_ON() {
@@ -116,22 +108,19 @@ int main(void) {
         MCUCR |= _BV(ISC00); //ISC00 - any change
         PCMSK0 = _BV(PCINT0) | _BV(PCINT2);
 
+        //Timer1 is used as 1/10 sec time base
+        //Timer Clock = 1/1024 of sys clock
+        //Mode = CTC (Clear Timer On Compare)
+        TCCR1B|=((1<<WGM12)|(1<<CS12)|(1<<CS10));
+        OCR1A=8000000/1024/10;      //Compare value
+        TIMSK1 |=(1<<OCIE1A);    //Output compare 1A interrupt enable
+
         wdt_enable (WATCHDOG_DELAY); // Enable WATCHDOG
         sei();
 
 // Main loop
         while ( 1 ) {
                 wdt_reset (); // reset WDR
-                if (SPARKS >= 8) { // TWO CYCLES
-                        SPARKS = 0;
-                        if (LEDSTATUS == 0) {// Change LED on each cycle
-                                Led_OFF();
-                                LEDSTATUS = 1;
-                        } else {
-                                Led_ON();
-                                LEDSTATUS = 0;
-                        }
-                }
                 _delay_us(1);
         } // main loop
 }
