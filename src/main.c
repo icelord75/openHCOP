@@ -5,7 +5,7 @@
    //       /      \ | \ |   /  |  /     \
    //      /   |___/___/____/ \___/_     /
    //      \___/--------TECH--------\___/
-   //       ==== ABOVE SCIENCE 1994 ====
+   //        ==== ABOVE SINCE 1994 ====
    //
    //   Ab0VE TECH - HONDA Open Coil on Plug Controller
    //             Inline4 - AT24/44mod
@@ -15,12 +15,6 @@
 #include <avr/wdt.h>
 #include <avr/interrupt.h>
 #include <util/delay.h>
-
-// CONFIG
-//#define MULTI_FIRE
-//#define MULTI_FIRE_COUNT 3
-//#define MULTI_FIRE_DELAY 100
-//#define MULTI_FIRE_SUSTAIN 50
 
 // OUTPUT
 #define IGNITION1 PINB0
@@ -36,7 +30,6 @@
 
 //VARS
 uint8_t CYLINDER    = 0;
-uint8_t INFIRE      = 0;
 uint8_t SPARKS      = 0;
 uint16_t RPM        = 0;
 uint64_t LASTMILLIS = 0;
@@ -87,51 +80,30 @@ void Ignite_ON() {
 void Ignite_Off() {
         PORTB = 0; // Off IGNITION1/2/3
         PORTA &= ~_BV(IGNITION4); // OFF IGNITION4
-        PORTA &= ~_BV(TACHO); // OFF TACH
 }
 
 // PCINT0 Vector handling PINS: PCINT0 and PCINT2
 ISR(PCINT0_vect) {
+cli();
 // Check CYP
         if ( (PINA & _BV(CYP1))==0) { // CYP - LOW
                 CYLINDER=1;
         }
 
 // Check IGN
-        if ( ((PINA & _BV(IGN))!=0) && (INFIRE==0) && (CYLINDER > 0)) { // Start FIRE - HIGH after first CYP1
-                INFIRE=1;
+        if ( ((PINA & _BV(IGN))!=0) && (CYLINDER > 0)) { // Start FIRE - HIGH after first CYP1
                 PORTA |= _BV(TACHO); // ON TACH
                 Ignite_ON();
                 SPARKS++;
-  #ifdef MULTI_FIRE
-                if (RPM < 2000) { // Extra spark on low RPM
-                        _delay_us(MULTI_FIRE_DELAY);
-                        for (int i=1; i<MULTI_FIRE_COUNT; i++)
-                        {
-                                Ignite_Off();
-                                _delay_us(MULTI_FIRE_DELAY);
-                                Ignite_Off();
-                                _delay_us(MULTI_FIRE_SUSTAIN);
-                        }
-                }
- #endif // MULTI_FIRE
-        }
-
-        if ( ((PINA & _BV(IGN))==0) && (INFIRE==1)) {  // GONE FIRE
+                  while ((PINA & _BV(IGN))!=0) ;
                 Ignite_Off();
                 PORTA &= ~_BV(TACHO); // OFF TACH
-                INFIRE=0;
                 CYLINDER++;
                 if (CYLINDER > 4) { // if we lost CYP1 signal
                         CYLINDER = 1;
                 }
         }
-}
-
-void delay_us(uint16_t d) {
-        for (uint16_t i = 0; i < d; i++) {
-                _delay_us(1);
-        }
+sei();
 }
 
 int main(void) {
@@ -140,31 +112,17 @@ int main(void) {
 // Setup
         DDRB = _BV(IGNITION1) | _BV(IGNITION2) | _BV(IGNITION3);
         DDRA = _BV(TACHO) | _BV(LED) | _BV(IGNITION4);
-
         GIMSK = _BV(PCIE0);
         MCUCR |= _BV(ISC00); //ISC00 - any change
         PCMSK0 = _BV(PCINT0) | _BV(PCINT2);
 
-        SREG |= (0b10000000); // enable global interrupts
-
-        TCNT0 = 0;
-        TCCR0A = 0;
-        TCCR0B = _BV(CS12) | _BV(CS10);       //start timer1 with prescaler clk/1024
-
         wdt_enable (WATCHDOG_DELAY); // Enable WATCHDOG
         sei();
-
-        LASTMILLIS = millis();
 
 // Main loop
         while ( 1 ) {
                 wdt_reset (); // reset WDR
-
-                delay_us(100);
-
-                if (SPARKS >= 8) { // TWO CYCLES for RPM Calculation
-                        RPM = 30 * 1000 / (millis() - LASTMILLIS) * SPARKS;
-                        LASTMILLIS = millis();
+                if (SPARKS >= 8) { // TWO CYCLES
                         SPARKS = 0;
                         if (LEDSTATUS == 0) {// Change LED on each cycle
                                 Led_OFF();
@@ -174,5 +132,6 @@ int main(void) {
                                 LEDSTATUS = 0;
                         }
                 }
+                _delay_us(1);
         } // main loop
 }

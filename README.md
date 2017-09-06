@@ -7,7 +7,7 @@ Piggyback ignition controller, for replace distributor internals: igniter unit, 
 Direct connection to CYL angle sensor - Orange and White wires (OBD1 distributers)
 Solder directly to sensor wires, do not cut and/or twist over wires!
 
-Support positive triggering 3-wire Coil-On-Plugs and multi firing.
+Support positive triggering 3-wire Coil-On-Plugs.
 
 ## License
 
