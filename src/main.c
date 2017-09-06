@@ -84,7 +84,7 @@ void Ignite_Off() {
 
 // PCINT0 Vector handling PINS: PCINT0 and PCINT2
 ISR(PCINT0_vect) {
-cli();
+        cli();
 // Check CYP
         if ( (PINA & _BV(CYP1))==0) { // CYP - LOW
                 CYLINDER=1;
@@ -95,7 +95,7 @@ cli();
                 PORTA |= _BV(TACHO); // ON TACH
                 Ignite_ON();
                 SPARKS++;
-                  while ((PINA & _BV(IGN))!=0) ;
+                while ((PINA & _BV(IGN))!=0) ;
                 Ignite_Off();
                 PORTA &= ~_BV(TACHO); // OFF TACH
                 CYLINDER++;
@@ -103,7 +103,7 @@ cli();
                         CYLINDER = 1;
                 }
         }
-sei();
+        sei();
 }
 
 int main(void) {
