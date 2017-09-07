@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.3.1">
+<eagle version="8.2.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
-<setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
@@ -15280,7 +15279,6 @@ Source: www.kingbright.com</description>
 <part name="D5" library="adafruit" deviceset="DIODE" device="SOD-123" value="1N4148W"/>
 <part name="D6" library="adafruit" deviceset="DIODE" device="SOD-123" value="1N4148W"/>
 <part name="VCC" library="testpad" deviceset="TP" device="TP20R" value="TPTP20R"/>
-<part name="D8" library="adafruit" deviceset="DIODE" device="SOD-123" value="1N4148W"/>
 <part name="IC2" library="linear" deviceset="78L*" device="F" technology="05"/>
 <part name="LED1" library="led" deviceset="LED" device="CHIPLED_0603"/>
 <part name="R4" library="rcl" deviceset="R-EU_" device="R0805" value="180"/>
@@ -15291,6 +15289,9 @@ Source: www.kingbright.com</description>
 <part name="R5" library="rcl" deviceset="R-EU_" device="R0805" value="10K"/>
 <part name="R6" library="rcl" deviceset="R-EU_" device="R0805" value="1K"/>
 <part name="GND3" library="supply1" deviceset="GND" device=""/>
+<part name="R7" library="rcl" deviceset="R-EU_" device="R0805" value="10K"/>
+<part name="GND6" library="supply1" deviceset="GND" device=""/>
+<part name="D9" library="adafruit" deviceset="DIODE" device="SOD-123" value="5.1 ZENER"/>
 </parts>
 <sheets>
 <sheet>
@@ -15356,7 +15357,6 @@ https://github.com/icelord75/openHCOP</text>
 <instance part="D5" gate="G$1" x="-2.54" y="21.59" rot="MR0"/>
 <instance part="D6" gate="G$1" x="-2.54" y="3.81" rot="MR0"/>
 <instance part="VCC" gate="G$1" x="83.82" y="25.4"/>
-<instance part="D8" gate="G$1" x="-2.54" y="-5.08"/>
 <instance part="IC2" gate="G$1" x="96.52" y="63.5"/>
 <instance part="LED1" gate="G$1" x="35.56" y="27.94" rot="R270"/>
 <instance part="R4" gate="G$1" x="22.86" y="27.94" rot="R180"/>
@@ -15370,6 +15370,9 @@ https://github.com/icelord75/openHCOP</text>
 <instance part="R5" gate="G$1" x="53.34" y="19.05" rot="R90"/>
 <instance part="R6" gate="G$1" x="41.91" y="5.08" rot="R180"/>
 <instance part="GND3" gate="1" x="53.34" y="-3.81"/>
+<instance part="R7" gate="G$1" x="0" y="-5.08" rot="R180"/>
+<instance part="GND6" gate="1" x="5.08" y="-16.51"/>
+<instance part="D9" gate="G$1" x="5.08" y="-12.7" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -15434,6 +15437,11 @@ https://github.com/icelord75/openHCOP</text>
 <pinref part="Q2" gate="G$1" pin="E"/>
 <pinref part="GND3" gate="1" pin="GND"/>
 <wire x1="53.34" y1="-1.27" x2="53.34" y2="0" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="GND6" gate="1" pin="GND"/>
+<wire x1="5.08" y1="-13.97" x2="5.08" y2="-15.24" width="0.1524" layer="91"/>
+<pinref part="D9" gate="G$1" pin="A"/>
 </segment>
 </net>
 <net name="CYP1" class="0">
@@ -15652,9 +15660,12 @@ https://github.com/icelord75/openHCOP</text>
 <pinref part="U1" gate="A" pin="PA2"/>
 </segment>
 <segment>
-<pinref part="D8" gate="G$1" pin="C"/>
-<wire x1="0" y1="-5.08" x2="8.89" y2="-5.08" width="0.1524" layer="91"/>
-<label x="68.58" y="33.02" size="1.778" layer="95" rot="R270"/>
+<pinref part="R7" gate="G$1" pin="1"/>
+<label x="10.16" y="-5.08" size="1.778" layer="95"/>
+<pinref part="D9" gate="G$1" pin="C"/>
+<wire x1="5.08" y1="-5.08" x2="12.7" y2="-5.08" width="0.1524" layer="91"/>
+<wire x1="5.08" y1="-10.16" x2="5.08" y2="-5.08" width="0.1524" layer="91"/>
+<junction x="5.08" y="-5.08"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -15667,8 +15678,8 @@ https://github.com/icelord75/openHCOP</text>
 <net name="N$3" class="0">
 <segment>
 <pinref part="IGN" gate="G$1" pin="TP"/>
-<pinref part="D8" gate="G$1" pin="A"/>
 <wire x1="-10.16" y1="-5.08" x2="-5.08" y2="-5.08" width="0.1524" layer="91"/>
+<pinref part="R7" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="N$5" class="0">

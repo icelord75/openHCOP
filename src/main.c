@@ -81,13 +81,12 @@ ISR(PCINT0_vect) {
         if ( (PINA & _BV(CYP1))==0) { // CYP - LOW
                 CYLINDER=1;
         }
-
 // Check IGN
-        if ( ((PINA & _BV(IGN))!=0) && (CYLINDER > 0)) { // Start FIRE - HIGH after first CYP1
+        if ( ((PINA & _BV(IGN))==0) && (CYLINDER > 0)) { // Start FIRE - HIGH after first CYP1
                 PORTA |= _BV(TACHO); // ON TACH
                 Ignite_ON();
                 SPARKS++;
-                while ((PINA & _BV(IGN))!=0) ;
+                while ((PINA & _BV(IGN))==0) ;
                 Ignite_Off();
                 PORTA &= ~_BV(TACHO); // OFF TACH
                 CYLINDER++;
