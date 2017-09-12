@@ -82,7 +82,7 @@ ISR(PCINT0_vect) {
                 CYLINDER=1;
         }
 // Check IGN
-        if ( ((PINA & _BV(IGN))==0) && (CYLINDER > 0)) { // Start FIRE - HIGH after first CYP1
+        if ( ((PINA & _BV(IGN))==0) && (CYLINDER > 0)) { // Start FIRE - LOW after first CYP1
                 PORTA |= _BV(TACHO); // ON TACH
                 Ignite_ON();
                 SPARKS++;
@@ -110,9 +110,9 @@ int main(void) {
         //Timer1 is used as 1/10 sec time base
         //Timer Clock = 1/1024 of sys clock
         //Mode = CTC (Clear Timer On Compare)
-        TCCR1B|=((1<<WGM12)|(1<<CS12)|(1<<CS10));
-        OCR1A=8000000/1024/10;      //Compare value
-        TIMSK1 |=(1<<OCIE1A);    //Output compare 1A interrupt enable
+        TCCR1B |= ((1<<WGM12)|(1<<CS12)|(1<<CS10));
+        OCR1A = 8000000/1024/10;  //Compare value
+        TIMSK1 |= (1<<OCIE1A);    //Output compare 1A interrupt enable
 
         wdt_enable (WATCHDOG_DELAY); // Enable WATCHDOG
         sei();
