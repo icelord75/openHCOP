@@ -7,7 +7,7 @@
 <setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -15648,7 +15648,7 @@ Created 2014-06-05, Karrer Zheng&lt;br&gt;
 <part name="D6" library="adafruit" deviceset="DIODE" device="_SOD-123FL" value="1N4148W"/>
 <part name="VCC" library="testpad" deviceset="TP" device="TP20R" value="TPTP20R"/>
 <part name="IC2" library="linear" deviceset="78L*" device="F" technology="05"/>
-<part name="LED1" library="led" deviceset="LED" device="CHIPLED_0603"/>
+<part name="LED1" library="led" deviceset="LED" device="CHIPLED_0603" value="KP-1608MGC"/>
 <part name="R4" library="rcl" deviceset="R-EU_" device="R0805" value="180"/>
 <part name="GND2" library="supply1" deviceset="GND" device=""/>
 <part name="C4" library="rcl" deviceset="C-EU" device="C0805" value="100n"/>
@@ -15660,7 +15660,7 @@ Created 2014-06-05, Karrer Zheng&lt;br&gt;
 <part name="R7" library="rcl" deviceset="R-EU_" device="R0805" value="10K"/>
 <part name="GND6" library="supply1" deviceset="GND" device=""/>
 <part name="D9" library="SparkFun-DiscreteSemi" deviceset="DIODE-ZENER" device="16V" value="5.1V"/>
-<part name="J1" library="Wurth_Elektronik_Electromechanic_Wire_to_Board_Connectors_rev17b" library_urn="urn:adsk.eagle:library:486" deviceset="645010117322" device=""/>
+<part name="J1" library="Wurth_Elektronik_Electromechanic_Wire_to_Board_Connectors_rev17b" library_urn="urn:adsk.eagle:library:486" deviceset="645010117322" device="" value="10PIN"/>
 </parts>
 <sheets>
 <sheet>

@@ -48,7 +48,7 @@ void Led_OFF(){
 
 // TIMER
 ISR(TIM1_COMPA_vect) {
-        if (LEDSTATUS == 0) {// Change LED on 2/10 sec
+        if (LEDSTATUS == 0) { // Change LED on 2/10 sec
                 Led_OFF();
                 LEDSTATUS = 1;
         } else {
@@ -121,5 +121,5 @@ int main(void) {
         while ( 1 ) {
                 wdt_reset (); // reset WDR
                 _delay_us(1);
-        } // main loop
+        } 
 }
