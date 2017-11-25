@@ -9,34 +9,34 @@
 </settings>
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
-<layer number="1" name="Top" color="4" fill="1" visible="yes" active="no"/>
-<layer number="2" name="Route2" color="1" fill="3" visible="yes" active="no"/>
-<layer number="3" name="Route3" color="4" fill="3" visible="yes" active="no"/>
-<layer number="4" name="Route4" color="1" fill="4" visible="yes" active="no"/>
-<layer number="5" name="Route5" color="4" fill="4" visible="yes" active="no"/>
-<layer number="6" name="Route6" color="1" fill="8" visible="yes" active="no"/>
-<layer number="7" name="Route7" color="4" fill="8" visible="yes" active="no"/>
-<layer number="8" name="Route8" color="1" fill="2" visible="yes" active="no"/>
-<layer number="9" name="Route9" color="4" fill="2" visible="yes" active="no"/>
-<layer number="10" name="Route10" color="1" fill="7" visible="yes" active="no"/>
-<layer number="11" name="Route11" color="4" fill="7" visible="yes" active="no"/>
-<layer number="12" name="Route12" color="1" fill="5" visible="yes" active="no"/>
-<layer number="13" name="Route13" color="4" fill="5" visible="yes" active="no"/>
-<layer number="14" name="Route14" color="1" fill="6" visible="yes" active="no"/>
-<layer number="15" name="Route15" color="4" fill="6" visible="yes" active="no"/>
-<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="no"/>
-<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="no"/>
-<layer number="18" name="Vias" color="2" fill="1" visible="yes" active="no"/>
-<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="no"/>
-<layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="no"/>
-<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="no"/>
-<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="no"/>
-<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="no"/>
-<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="no"/>
-<layer number="25" name="tNames" color="15" fill="1" visible="yes" active="no"/>
-<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="no"/>
-<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="no"/>
-<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="no"/>
+<layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
+<layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
+<layer number="3" name="Route3" color="4" fill="3" visible="no" active="no"/>
+<layer number="4" name="Route4" color="1" fill="4" visible="no" active="no"/>
+<layer number="5" name="Route5" color="4" fill="4" visible="no" active="no"/>
+<layer number="6" name="Route6" color="1" fill="8" visible="no" active="no"/>
+<layer number="7" name="Route7" color="4" fill="8" visible="no" active="no"/>
+<layer number="8" name="Route8" color="1" fill="2" visible="no" active="no"/>
+<layer number="9" name="Route9" color="4" fill="2" visible="no" active="no"/>
+<layer number="10" name="Route10" color="1" fill="7" visible="no" active="no"/>
+<layer number="11" name="Route11" color="4" fill="7" visible="no" active="no"/>
+<layer number="12" name="Route12" color="1" fill="5" visible="no" active="no"/>
+<layer number="13" name="Route13" color="4" fill="5" visible="no" active="no"/>
+<layer number="14" name="Route14" color="1" fill="6" visible="no" active="no"/>
+<layer number="15" name="Route15" color="4" fill="6" visible="no" active="no"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="no" active="no"/>
+<layer number="18" name="Vias" color="2" fill="1" visible="no" active="no"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="no"/>
+<layer number="20" name="Dimension" color="15" fill="1" visible="no" active="no"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="no" active="no"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="no" active="no"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="no"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="no"/>
+<layer number="25" name="tNames" color="15" fill="1" visible="no" active="no"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="no" active="no"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="no" active="no"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="no" active="no"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="no" active="no"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="no"/>
 <layer number="31" name="tCream" color="10" fill="1" visible="no" active="no"/>
@@ -45,8 +45,8 @@
 <layer number="34" name="bFinish" color="6" fill="6" visible="no" active="no"/>
 <layer number="35" name="tGlue" color="7" fill="4" visible="no" active="no"/>
 <layer number="36" name="bGlue" color="7" fill="5" visible="no" active="no"/>
-<layer number="37" name="tTest" color="7" fill="1" visible="yes" active="no"/>
-<layer number="38" name="bTest" color="7" fill="1" visible="yes" active="no"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="no" active="no"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="no" active="no"/>
 <layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="no"/>
 <layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="no"/>
 <layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="no"/>
@@ -54,19 +54,19 @@
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="no"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="no"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="no" active="no"/>
-<layer number="46" name="Milling" color="3" fill="1" visible="yes" active="no"/>
-<layer number="47" name="Measures" color="7" fill="1" visible="yes" active="no"/>
-<layer number="48" name="Document" color="7" fill="1" visible="yes" active="no"/>
-<layer number="49" name="Reference" color="7" fill="1" visible="yes" active="no"/>
-<layer number="50" name="dxf" color="7" fill="1" visible="yes" active="no"/>
-<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="no"/>
-<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="no"/>
-<layer number="53" name="tGND_GNDA" color="7" fill="9" visible="yes" active="no"/>
-<layer number="54" name="bGND_GNDA" color="1" fill="9" visible="yes" active="no"/>
-<layer number="56" name="wert" color="7" fill="1" visible="yes" active="no"/>
-<layer number="57" name="tCAD" color="7" fill="1" visible="yes" active="no"/>
-<layer number="59" name="tCarbon" color="7" fill="1" visible="yes" active="no"/>
-<layer number="60" name="bCarbon" color="7" fill="1" visible="yes" active="no"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="no" active="no"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="no" active="no"/>
+<layer number="48" name="Document" color="7" fill="1" visible="no" active="no"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="no" active="no"/>
+<layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="no"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="no" active="no"/>
+<layer number="53" name="tGND_GNDA" color="7" fill="9" visible="no" active="no"/>
+<layer number="54" name="bGND_GNDA" color="1" fill="9" visible="no" active="no"/>
+<layer number="56" name="wert" color="7" fill="1" visible="no" active="no"/>
+<layer number="57" name="tCAD" color="7" fill="1" visible="no" active="no"/>
+<layer number="59" name="tCarbon" color="7" fill="1" visible="no" active="no"/>
+<layer number="60" name="bCarbon" color="7" fill="1" visible="no" active="no"/>
 <layer number="90" name="Modules" color="5" fill="1" visible="yes" active="yes"/>
 <layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
@@ -15504,7 +15504,7 @@ has two diodes with a common anode. &lt;p&gt;&lt;author&gt;AAL Eindhoven MK&lt;/
 <part name="D6" library="adafruit" deviceset="DIODE" device="_SOD-123FL" value="1N4148W"/>
 <part name="VCC" library="testpad" deviceset="TP" device="TP20R" value="TPTP20R"/>
 <part name="IC2" library="linear" deviceset="78L*" device="F" technology="05"/>
-<part name="LED1" library="led" deviceset="LED" device="CHIPLED_0603" value="GR"/>
+<part name="LED1" library="led" deviceset="LED" device="CHIPLED_0603" value="KP-1608MGC"/>
 <part name="R4" library="rcl" deviceset="R-EU_" device="R0805" value="180"/>
 <part name="GND2" library="supply1" deviceset="GND" device=""/>
 <part name="C4" library="rcl" deviceset="C-EU" device="C0805" value="100n"/>
@@ -15519,14 +15519,14 @@ has two diodes with a common anode. &lt;p&gt;&lt;author&gt;AAL Eindhoven MK&lt;/
 <part name="P3" library="testpad" deviceset="TP" device="PAD1-13Y" value="TPPAD1-13Y"/>
 <part name="P4" library="testpad" deviceset="TP" device="PAD1-13Y" value="TPPAD1-13Y"/>
 <part name="IGN1" library="testpad" deviceset="TP" device="PAD1-13Y" value="TPPAD1-13Y"/>
-<part name="+1" library="testpad" deviceset="TP" device="PAD1-13Y" value="TPPAD1-13Y"/>
+<part name="+12.1" library="testpad" deviceset="TP" device="PAD1-13Y" value="TPPAD1-13Y"/>
 <part name="TACH1" library="testpad" deviceset="TP" device="PAD1-13Y" value="TPPAD1-13Y"/>
 <part name="GND_" library="testpad" deviceset="TP" device="PAD1-20Y" value="TPPAD1-20Y"/>
-<part name="GND_1" library="testpad" deviceset="TP" device="PAD1-13Y" value="TPPAD1-13Y"/>
+<part name="-GND" library="testpad" deviceset="TP" device="PAD1-13Y" value="TPPAD1-13Y"/>
 <part name="GND7" library="supply1" deviceset="GND" device=""/>
 <part name="GND_2" library="testpad" deviceset="TP" device="PAD1-13Y" value="TPPAD1-13Y"/>
-<part name="+2" library="testpad" deviceset="TP" device="PAD1-13Y" value="TPPAD1-13Y"/>
-<part name="+3" library="testpad" deviceset="TP" device="PAD1-13Y" value="TPPAD1-13Y"/>
+<part name="+12.2" library="testpad" deviceset="TP" device="PAD1-13Y" value="TPPAD1-13Y"/>
+<part name="+12V" library="testpad" deviceset="TP" device="PAD1-13Y" value="TPPAD1-13Y"/>
 </parts>
 <sheets>
 <sheet>
@@ -15537,15 +15537,15 @@ OPEN HONDA COIL ON PLUG CONTROLLER
 https://github.com/icelord75/openHCOP</text>
 </plain>
 <instances>
-<instance part="GND1" gate="1" x="43.18" y="35.56"/>
+<instance part="GND1" gate="1" x="43.18" y="38.1"/>
 <instance part="R2" gate="G$1" x="43.18" y="60.96" rot="R90"/>
-<instance part="R3" gate="G$1" x="17.78" y="43.18" rot="R90"/>
-<instance part="C3" gate="G$1" x="25.4" y="43.18"/>
-<instance part="P1" gate="G$1" x="-12.7" y="43.18" rot="R90"/>
-<instance part="P2" gate="G$1" x="-12.7" y="38.1" rot="R90"/>
+<instance part="R3" gate="G$1" x="17.78" y="45.72" rot="R90"/>
+<instance part="C3" gate="G$1" x="25.4" y="45.72"/>
+<instance part="P1" gate="G$1" x="-12.7" y="45.72" rot="R90"/>
+<instance part="P2" gate="G$1" x="-12.7" y="40.64" rot="R90"/>
 <instance part="GND4" gate="1" x="86.36" y="-1.27"/>
-<instance part="P+1" gate="VCC" x="68.58" y="20.32" smashed="yes" rot="R90">
-<attribute name="VALUE" x="76.2" y="22.86" size="1.778" layer="96" rot="R180"/>
+<instance part="P+1" gate="VCC" x="71.12" y="20.32" smashed="yes" rot="R90">
+<attribute name="VALUE" x="78.74" y="22.86" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="P+3" gate="VCC" x="43.18" y="68.58"/>
 <instance part="RST" gate="G$1" x="111.76" y="40.64" smashed="yes" rot="R270">
@@ -15565,11 +15565,11 @@ https://github.com/icelord75/openHCOP</text>
 <attribute name="TP_SIGNAL_NAME" x="110.49" y="31.75" size="1.778" layer="97" rot="R270"/>
 </instance>
 <instance part="GND" gate="G$1" x="78.74" y="2.54" rot="R90"/>
-<instance part="R1" gate="G$1" x="10.16" y="48.26" rot="R180"/>
-<instance part="D1" gate="G$1" x="33.02" y="48.26"/>
-<instance part="Q1" gate="G$1" x="40.64" y="48.26" smashed="yes">
-<attribute name="NAME" x="45.72" y="46.99" size="1.778" layer="95"/>
-<attribute name="VALUE" x="45.72" y="44.45" size="1.778" layer="96"/>
+<instance part="R1" gate="G$1" x="10.16" y="50.8" rot="R180"/>
+<instance part="D1" gate="G$1" x="33.02" y="50.8"/>
+<instance part="Q1" gate="G$1" x="40.64" y="50.8" smashed="yes">
+<attribute name="NAME" x="45.72" y="49.53" size="1.778" layer="95"/>
+<attribute name="VALUE" x="45.72" y="46.99" size="1.778" layer="96"/>
 </instance>
 <instance part="C1" gate="G$1" x="76.2" y="60.96"/>
 <instance part="GND12" gate="1" x="86.36" y="53.34"/>
@@ -15582,9 +15582,9 @@ https://github.com/icelord75/openHCOP</text>
 <instance part="I3" gate="G$1" x="-12.7" y="10.16" rot="MR270"/>
 <instance part="I4" gate="G$1" x="-12.7" y="1.27" rot="MR270"/>
 <instance part="GND5" gate="1" x="73.66" y="53.34"/>
-<instance part="TACH" gate="G$1" x="60.96" y="12.7" rot="R270"/>
-<instance part="IGN" gate="G$1" x="-12.7" y="-7.62" rot="R90"/>
-<instance part="D4" gate="G$1" x="0" y="43.18" rot="R90"/>
+<instance part="TACH" gate="G$1" x="63.5" y="17.78" rot="R270"/>
+<instance part="IGN" gate="G$1" x="20.32" y="5.08" rot="R90"/>
+<instance part="D4" gate="G$1" x="0" y="45.72" rot="R90"/>
 <instance part="U1" gate="A" x="104.14" y="15.24"/>
 <instance part="D2" gate="G$1" x="-2.54" y="27.94" rot="MR0"/>
 <instance part="D3" gate="G$1" x="-2.54" y="10.16" rot="MR0"/>
@@ -15592,32 +15592,32 @@ https://github.com/icelord75/openHCOP</text>
 <instance part="D6" gate="G$1" x="-2.54" y="1.27" rot="MR0"/>
 <instance part="VCC" gate="G$1" x="83.82" y="25.4"/>
 <instance part="IC2" gate="G$1" x="96.52" y="63.5"/>
-<instance part="LED1" gate="G$1" x="35.56" y="27.94" rot="R270"/>
-<instance part="R4" gate="G$1" x="22.86" y="27.94" rot="R180"/>
-<instance part="GND2" gate="1" x="17.78" y="21.59"/>
+<instance part="LED1" gate="G$1" x="35.56" y="30.48" rot="R270"/>
+<instance part="R4" gate="G$1" x="22.86" y="30.48" rot="R180"/>
+<instance part="GND2" gate="1" x="17.78" y="24.13"/>
 <instance part="C4" gate="G$1" x="109.22" y="60.96"/>
 <instance part="C5" gate="G$1" x="86.36" y="60.96"/>
-<instance part="Q2" gate="G$1" x="50.8" y="5.08" smashed="yes">
-<attribute name="NAME" x="55.88" y="3.81" size="1.778" layer="95"/>
-<attribute name="VALUE" x="55.88" y="1.27" size="1.778" layer="96"/>
+<instance part="Q2" gate="G$1" x="50.8" y="12.7" smashed="yes">
+<attribute name="NAME" x="55.88" y="11.43" size="1.778" layer="95"/>
+<attribute name="VALUE" x="55.88" y="8.89" size="1.778" layer="96"/>
 </instance>
-<instance part="R5" gate="G$1" x="53.34" y="19.05" rot="R90"/>
-<instance part="R6" gate="G$1" x="41.91" y="5.08" rot="R180"/>
-<instance part="GND3" gate="1" x="53.34" y="-3.81"/>
-<instance part="R7" gate="G$1" x="0" y="-7.62" rot="R180"/>
-<instance part="GND6" gate="1" x="5.08" y="-24.13"/>
-<instance part="D9" gate="G$1" x="5.08" y="-17.78" rot="R90"/>
-<instance part="P3" gate="G$1" x="-12.7" y="48.26" rot="R90"/>
-<instance part="P4" gate="G$1" x="-12.7" y="33.02" rot="R90"/>
-<instance part="IGN1" gate="G$1" x="-12.7" y="-15.24" rot="R90"/>
-<instance part="+1" gate="G$1" x="63.5" y="66.04"/>
-<instance part="TACH1" gate="G$1" x="60.96" y="22.86" rot="R270"/>
+<instance part="R5" gate="G$1" x="53.34" y="24.13" rot="R90"/>
+<instance part="R6" gate="G$1" x="41.91" y="12.7" rot="R180"/>
+<instance part="GND3" gate="1" x="53.34" y="3.81"/>
+<instance part="R7" gate="G$1" x="30.48" y="5.08" rot="R180"/>
+<instance part="GND6" gate="1" x="35.56" y="-11.43"/>
+<instance part="D9" gate="G$1" x="35.56" y="-5.08" rot="R90"/>
+<instance part="P3" gate="G$1" x="-12.7" y="50.8" rot="R90"/>
+<instance part="P4" gate="G$1" x="-12.7" y="35.56" rot="R90"/>
+<instance part="IGN1" gate="G$1" x="20.32" y="-7.62" rot="R90"/>
+<instance part="+12.1" gate="G$1" x="63.5" y="66.04"/>
+<instance part="TACH1" gate="G$1" x="63.5" y="33.02" rot="R270"/>
 <instance part="GND_" gate="G$1" x="66.04" y="55.88" rot="R90"/>
-<instance part="GND_1" gate="G$1" x="66.04" y="43.18" rot="R90"/>
+<instance part="-GND" gate="G$1" x="66.04" y="43.18" rot="R90"/>
 <instance part="GND7" gate="1" x="71.12" y="40.64"/>
 <instance part="GND_2" gate="G$1" x="76.2" y="43.18" rot="R270"/>
-<instance part="+2" gate="G$1" x="68.58" y="66.04"/>
-<instance part="+3" gate="G$1" x="73.66" y="66.04"/>
+<instance part="+12.2" gate="G$1" x="71.12" y="66.04"/>
+<instance part="+12V" gate="G$1" x="81.28" y="66.04"/>
 </instances>
 <busses>
 </busses>
@@ -15626,23 +15626,23 @@ https://github.com/icelord75/openHCOP</text>
 <segment>
 <pinref part="GND1" gate="1" pin="GND"/>
 <pinref part="C3" gate="G$1" pin="2"/>
-<wire x1="43.18" y1="38.1" x2="25.4" y2="38.1" width="0.1524" layer="91"/>
+<wire x1="43.18" y1="40.64" x2="25.4" y2="40.64" width="0.1524" layer="91"/>
 <pinref part="R3" gate="G$1" pin="1"/>
-<wire x1="25.4" y1="38.1" x2="17.78" y2="38.1" width="0.1524" layer="91"/>
-<wire x1="17.78" y1="38.1" x2="0" y2="38.1" width="0.1524" layer="91"/>
-<junction x="25.4" y="38.1"/>
-<junction x="17.78" y="38.1"/>
+<wire x1="25.4" y1="40.64" x2="17.78" y2="40.64" width="0.1524" layer="91"/>
+<wire x1="17.78" y1="40.64" x2="0" y2="40.64" width="0.1524" layer="91"/>
+<junction x="25.4" y="40.64"/>
+<junction x="17.78" y="40.64"/>
 <label x="-10.16" y="38.1" size="1.778" layer="95"/>
 <pinref part="P2" gate="G$1" pin="TP"/>
 <pinref part="Q1" gate="G$1" pin="E"/>
-<wire x1="0" y1="38.1" x2="-10.16" y2="38.1" width="0.1524" layer="91"/>
-<wire x1="43.18" y1="38.1" x2="43.18" y2="43.18" width="0.1524" layer="91"/>
-<junction x="43.18" y="38.1"/>
+<wire x1="0" y1="40.64" x2="-10.16" y2="40.64" width="0.1524" layer="91"/>
+<wire x1="43.18" y1="40.64" x2="43.18" y2="45.72" width="0.1524" layer="91"/>
+<junction x="43.18" y="40.64"/>
 <pinref part="D4" gate="G$1" pin="A1"/>
-<junction x="0" y="38.1"/>
+<junction x="0" y="40.64"/>
 <pinref part="P4" gate="G$1" pin="TP"/>
-<wire x1="-10.16" y1="33.02" x2="-10.16" y2="38.1" width="0.1524" layer="91"/>
-<junction x="-10.16" y="38.1"/>
+<wire x1="-10.16" y1="35.56" x2="-10.16" y2="40.64" width="0.1524" layer="91"/>
+<junction x="-10.16" y="40.64"/>
 </segment>
 <segment>
 <pinref part="GND4" gate="1" pin="GND"/>
@@ -15675,7 +15675,7 @@ https://github.com/icelord75/openHCOP</text>
 <segment>
 <pinref part="R4" gate="G$1" pin="2"/>
 <pinref part="GND2" gate="1" pin="GND"/>
-<wire x1="17.78" y1="24.13" x2="17.78" y2="27.94" width="0.1524" layer="91"/>
+<wire x1="17.78" y1="26.67" x2="17.78" y2="30.48" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="GND14" gate="1" pin="GND"/>
@@ -15684,15 +15684,15 @@ https://github.com/icelord75/openHCOP</text>
 <segment>
 <pinref part="Q2" gate="G$1" pin="E"/>
 <pinref part="GND3" gate="1" pin="GND"/>
-<wire x1="53.34" y1="-1.27" x2="53.34" y2="0" width="0.1524" layer="91"/>
+<wire x1="53.34" y1="6.35" x2="53.34" y2="7.62" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="GND6" gate="1" pin="GND"/>
-<wire x1="5.08" y1="-21.59" x2="5.08" y2="-20.32" width="0.1524" layer="91"/>
+<wire x1="35.56" y1="-8.89" x2="35.56" y2="-7.62" width="0.1524" layer="91"/>
 <pinref part="D9" gate="G$1" pin="A"/>
 </segment>
 <segment>
-<pinref part="GND_1" gate="G$1" pin="TP"/>
+<pinref part="-GND" gate="G$1" pin="TP"/>
 <pinref part="GND7" gate="1" pin="GND"/>
 <wire x1="68.58" y1="43.18" x2="71.12" y2="43.18" width="0.1524" layer="91"/>
 <pinref part="GND_2" gate="G$1" pin="TP"/>
@@ -15702,12 +15702,11 @@ https://github.com/icelord75/openHCOP</text>
 </net>
 <net name="CYP1" class="0">
 <segment>
-<wire x1="43.18" y1="53.34" x2="55.88" y2="53.34" width="0.1524" layer="91"/>
-<label x="50.8" y="53.34" size="1.778" layer="95"/>
+<wire x1="43.18" y1="55.88" x2="55.88" y2="55.88" width="0.1524" layer="91"/>
+<label x="50.8" y="55.88" size="1.778" layer="95"/>
 <pinref part="R2" gate="G$1" pin="1"/>
-<wire x1="43.18" y1="53.34" x2="43.18" y2="55.88" width="0.1524" layer="91"/>
 <pinref part="Q1" gate="G$1" pin="C"/>
-<junction x="43.18" y="53.34"/>
+<junction x="43.18" y="55.88"/>
 </segment>
 <segment>
 <wire x1="121.92" y1="20.32" x2="132.08" y2="20.32" width="0.1524" layer="91"/>
@@ -15717,13 +15716,13 @@ https://github.com/icelord75/openHCOP</text>
 </net>
 <net name="PICKUP" class="0">
 <segment>
-<wire x1="-10.16" y1="43.18" x2="-2.54" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="-10.16" y1="45.72" x2="-2.54" y2="45.72" width="0.1524" layer="91"/>
 <label x="-17.78" y="35.56" size="1.778" layer="95" rot="R90"/>
 <pinref part="P1" gate="G$1" pin="TP"/>
 <pinref part="D4" gate="G$1" pin="K1A2"/>
 <pinref part="P3" gate="G$1" pin="TP"/>
-<wire x1="-10.16" y1="48.26" x2="-10.16" y2="43.18" width="0.1524" layer="91"/>
-<junction x="-10.16" y="43.18"/>
+<wire x1="-10.16" y1="50.8" x2="-10.16" y2="45.72" width="0.1524" layer="91"/>
+<junction x="-10.16" y="45.72"/>
 </segment>
 </net>
 <net name="MOSI" class="0">
@@ -15756,7 +15755,7 @@ https://github.com/icelord75/openHCOP</text>
 <pinref part="P+1" gate="VCC" pin="VCC"/>
 <wire x1="86.36" y1="20.32" x2="83.82" y2="20.32" width="0.1524" layer="91"/>
 <pinref part="VCC" gate="G$1" pin="TP"/>
-<wire x1="83.82" y1="20.32" x2="71.12" y2="20.32" width="0.1524" layer="91"/>
+<wire x1="83.82" y1="20.32" x2="73.66" y2="20.32" width="0.1524" layer="91"/>
 <wire x1="83.82" y1="20.32" x2="83.82" y2="22.86" width="0.1524" layer="91"/>
 <junction x="83.82" y="20.32"/>
 </segment>
@@ -15787,8 +15786,8 @@ https://github.com/icelord75/openHCOP</text>
 </net>
 <net name="IGN1" class="0">
 <segment>
-<wire x1="86.36" y1="15.24" x2="68.58" y2="15.24" width="0.1524" layer="91"/>
-<label x="68.58" y="15.24" size="1.778" layer="95"/>
+<wire x1="86.36" y1="15.24" x2="71.12" y2="15.24" width="0.1524" layer="91"/>
+<label x="73.66" y="15.24" size="1.778" layer="95"/>
 <pinref part="U1" gate="A" pin="PB0"/>
 </segment>
 <segment>
@@ -15799,8 +15798,8 @@ https://github.com/icelord75/openHCOP</text>
 </net>
 <net name="IGN2" class="0">
 <segment>
-<wire x1="86.36" y1="12.7" x2="68.58" y2="12.7" width="0.1524" layer="91"/>
-<label x="68.58" y="12.7" size="1.778" layer="95"/>
+<wire x1="86.36" y1="12.7" x2="71.12" y2="12.7" width="0.1524" layer="91"/>
+<label x="73.66" y="12.7" size="1.778" layer="95"/>
 <pinref part="U1" gate="A" pin="PB1"/>
 </segment>
 <segment>
@@ -15816,8 +15815,8 @@ https://github.com/icelord75/openHCOP</text>
 <pinref part="D3" gate="G$1" pin="A"/>
 </segment>
 <segment>
-<label x="68.58" y="10.16" size="1.778" layer="95"/>
-<wire x1="68.58" y1="10.16" x2="86.36" y2="10.16" width="0.1524" layer="91"/>
+<label x="73.66" y="10.16" size="1.778" layer="95"/>
+<wire x1="71.12" y1="10.16" x2="86.36" y2="10.16" width="0.1524" layer="91"/>
 <pinref part="U1" gate="A" pin="PB2"/>
 </segment>
 </net>
@@ -15841,15 +15840,15 @@ https://github.com/icelord75/openHCOP</text>
 </segment>
 <segment>
 <pinref part="R6" gate="G$1" pin="2"/>
-<wire x1="36.83" y1="5.08" x2="27.94" y2="5.08" width="0.1524" layer="91"/>
-<label x="26.67" y="5.08" size="1.778" layer="95"/>
+<wire x1="36.83" y1="12.7" x2="27.94" y2="12.7" width="0.1524" layer="91"/>
+<label x="26.67" y="12.7" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$4" class="0">
 <segment>
 <pinref part="D1" gate="G$1" pin="C"/>
 <pinref part="Q1" gate="G$1" pin="B"/>
-<wire x1="35.56" y1="48.26" x2="38.1" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="35.56" y1="50.8" x2="38.1" y2="50.8" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="+12" class="0">
@@ -15858,25 +15857,25 @@ https://github.com/icelord75/openHCOP</text>
 <pinref part="+12" gate="G$1" pin="TP"/>
 <pinref part="C1" gate="G$1" pin="+"/>
 <wire x1="86.36" y1="63.5" x2="76.2" y2="63.5" width="0.1524" layer="91"/>
-<wire x1="76.2" y1="63.5" x2="73.66" y2="63.5" width="0.1524" layer="91"/>
+<wire x1="76.2" y1="63.5" x2="81.28" y2="63.5" width="0.1524" layer="91"/>
 <junction x="76.2" y="63.5"/>
 <pinref part="IC2" gate="G$1" pin="VI"/>
 <pinref part="C5" gate="G$1" pin="1"/>
 <junction x="86.36" y="63.5"/>
-<pinref part="+1" gate="G$1" pin="TP"/>
-<pinref part="+2" gate="G$1" pin="TP"/>
-<pinref part="+3" gate="G$1" pin="TP"/>
+<pinref part="+12.1" gate="G$1" pin="TP"/>
+<pinref part="+12.2" gate="G$1" pin="TP"/>
+<pinref part="+12V" gate="G$1" pin="TP"/>
 <wire x1="60.96" y1="63.5" x2="63.5" y2="63.5" width="0.1524" layer="91"/>
 <junction x="63.5" y="63.5"/>
-<wire x1="63.5" y1="63.5" x2="68.58" y2="63.5" width="0.1524" layer="91"/>
-<junction x="68.58" y="63.5"/>
-<wire x1="68.58" y1="63.5" x2="73.66" y2="63.5" width="0.1524" layer="91"/>
-<junction x="73.66" y="63.5"/>
+<wire x1="63.5" y1="63.5" x2="71.12" y2="63.5" width="0.1524" layer="91"/>
+<junction x="71.12" y="63.5"/>
+<wire x1="71.12" y1="63.5" x2="81.28" y2="63.5" width="0.1524" layer="91"/>
+<junction x="81.28" y="63.5"/>
 </segment>
 <segment>
 <pinref part="R5" gate="G$1" pin="2"/>
-<wire x1="53.34" y1="24.13" x2="53.34" y2="27.94" width="0.1524" layer="91"/>
-<label x="53.34" y="25.4" size="1.778" layer="95" rot="R90"/>
+<wire x1="53.34" y1="29.21" x2="53.34" y2="33.02" width="0.1524" layer="91"/>
+<label x="53.34" y="30.48" size="1.778" layer="95" rot="R90"/>
 </segment>
 </net>
 <net name="N$8" class="0">
@@ -15911,14 +15910,14 @@ https://github.com/icelord75/openHCOP</text>
 <segment>
 <pinref part="R3" gate="G$1" pin="2"/>
 <pinref part="R1" gate="G$1" pin="1"/>
-<wire x1="15.24" y1="48.26" x2="17.78" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="15.24" y1="50.8" x2="17.78" y2="50.8" width="0.1524" layer="91"/>
 <pinref part="D1" gate="G$1" pin="A"/>
-<wire x1="30.48" y1="48.26" x2="25.4" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="30.48" y1="50.8" x2="25.4" y2="50.8" width="0.1524" layer="91"/>
 <pinref part="C3" gate="G$1" pin="1"/>
-<wire x1="25.4" y1="48.26" x2="17.78" y2="48.26" width="0.1524" layer="91"/>
-<wire x1="25.4" y1="45.72" x2="25.4" y2="48.26" width="0.1524" layer="91"/>
-<junction x="25.4" y="48.26"/>
-<junction x="17.78" y="48.26"/>
+<wire x1="25.4" y1="50.8" x2="17.78" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="25.4" y1="48.26" x2="25.4" y2="50.8" width="0.1524" layer="91"/>
+<junction x="25.4" y="50.8"/>
+<junction x="17.78" y="50.8"/>
 </segment>
 </net>
 <net name="IGN" class="0">
@@ -15929,42 +15928,42 @@ https://github.com/icelord75/openHCOP</text>
 </segment>
 <segment>
 <pinref part="R7" gate="G$1" pin="1"/>
-<label x="10.16" y="-5.08" size="1.778" layer="95"/>
+<label x="40.64" y="5.08" size="1.778" layer="95"/>
 <pinref part="D9" gate="G$1" pin="C"/>
-<wire x1="5.08" y1="-7.62" x2="12.7" y2="-7.62" width="0.1524" layer="91"/>
-<wire x1="5.08" y1="-15.24" x2="5.08" y2="-7.62" width="0.1524" layer="91"/>
-<junction x="5.08" y="-7.62"/>
+<wire x1="35.56" y1="5.08" x2="43.18" y2="5.08" width="0.1524" layer="91"/>
+<wire x1="35.56" y1="-2.54" x2="35.56" y2="5.08" width="0.1524" layer="91"/>
+<junction x="35.56" y="5.08"/>
 </segment>
 </net>
 <net name="N$1" class="0">
 <segment>
 <pinref part="R1" gate="G$1" pin="2"/>
 <pinref part="D4" gate="G$1" pin="K2"/>
-<wire x1="5.08" y1="48.26" x2="0" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="5.08" y1="50.8" x2="0" y2="50.8" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$3" class="0">
 <segment>
 <pinref part="IGN" gate="G$1" pin="TP"/>
-<wire x1="-10.16" y1="-7.62" x2="-5.08" y2="-7.62" width="0.1524" layer="91"/>
+<wire x1="22.86" y1="5.08" x2="25.4" y2="5.08" width="0.1524" layer="91"/>
 <pinref part="R7" gate="G$1" pin="2"/>
 <pinref part="IGN1" gate="G$1" pin="TP"/>
-<wire x1="-10.16" y1="-15.24" x2="-10.16" y2="-7.62" width="0.1524" layer="91"/>
-<junction x="-10.16" y="-7.62"/>
+<wire x1="22.86" y1="-7.62" x2="22.86" y2="5.08" width="0.1524" layer="91"/>
+<junction x="22.86" y="5.08"/>
 </segment>
 </net>
 <net name="N$5" class="0">
 <segment>
 <pinref part="LED1" gate="G$1" pin="C"/>
 <pinref part="R4" gate="G$1" pin="1"/>
-<wire x1="27.94" y1="27.94" x2="30.48" y2="27.94" width="0.1524" layer="91"/>
+<wire x1="27.94" y1="30.48" x2="30.48" y2="30.48" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="LED" class="0">
 <segment>
 <pinref part="LED1" gate="G$1" pin="A"/>
-<wire x1="38.1" y1="27.94" x2="45.72" y2="27.94" width="0.1524" layer="91"/>
-<label x="43.18" y="25.4" size="1.778" layer="95"/>
+<wire x1="38.1" y1="30.48" x2="45.72" y2="30.48" width="0.1524" layer="91"/>
+<label x="43.18" y="30.48" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="U1" gate="A" pin="PA3"/>
@@ -15976,28 +15975,27 @@ https://github.com/icelord75/openHCOP</text>
 <segment>
 <pinref part="R5" gate="G$1" pin="1"/>
 <pinref part="Q2" gate="G$1" pin="C"/>
-<wire x1="53.34" y1="10.16" x2="53.34" y2="12.7" width="0.1524" layer="91"/>
 <pinref part="TACH" gate="G$1" pin="TP"/>
-<wire x1="53.34" y1="12.7" x2="53.34" y2="13.97" width="0.1524" layer="91"/>
-<wire x1="58.42" y1="12.7" x2="53.34" y2="12.7" width="0.1524" layer="91"/>
-<junction x="53.34" y="12.7"/>
+<wire x1="53.34" y1="17.78" x2="53.34" y2="19.05" width="0.1524" layer="91"/>
+<wire x1="60.96" y1="17.78" x2="53.34" y2="17.78" width="0.1524" layer="91"/>
+<junction x="53.34" y="17.78"/>
 <pinref part="TACH1" gate="G$1" pin="TP"/>
-<wire x1="58.42" y1="12.7" x2="58.42" y2="22.86" width="0.1524" layer="91"/>
-<junction x="58.42" y="12.7"/>
+<wire x1="60.96" y1="17.78" x2="60.96" y2="33.02" width="0.1524" layer="91"/>
+<junction x="60.96" y="17.78"/>
 </segment>
 </net>
 <net name="N$7" class="0">
 <segment>
 <pinref part="Q2" gate="G$1" pin="B"/>
 <pinref part="R6" gate="G$1" pin="1"/>
-<wire x1="46.99" y1="5.08" x2="48.26" y2="5.08" width="0.1524" layer="91"/>
+<wire x1="46.99" y1="12.7" x2="48.26" y2="12.7" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="RST" class="0">
 <segment>
 <pinref part="U1" gate="A" pin="PB3"/>
-<wire x1="86.36" y1="7.62" x2="68.58" y2="7.62" width="0.1524" layer="91"/>
-<label x="68.58" y="7.62" size="1.778" layer="95"/>
+<wire x1="86.36" y1="7.62" x2="71.12" y2="7.62" width="0.1524" layer="91"/>
+<label x="73.66" y="7.62" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="RST" gate="G$1" pin="TP"/>
