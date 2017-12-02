@@ -7,7 +7,7 @@
 <setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="mm" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="mm"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -15521,7 +15521,7 @@ has two diodes with a common anode. &lt;p&gt;&lt;author&gt;AAL Eindhoven MK&lt;/
 <part name="IGN1" library="testpad" deviceset="TP" device="PAD1-13Y" value="TPPAD1-13Y"/>
 <part name="+12.1" library="testpad" deviceset="TP" device="PAD1-13Y" value="TPPAD1-13Y"/>
 <part name="TACH1" library="testpad" deviceset="TP" device="PAD1-13Y" value="TPPAD1-13Y"/>
-<part name="GND_" library="testpad" deviceset="TP" device="PAD1-20Y" value="TPPAD1-20Y"/>
+<part name="GND_" library="testpad" deviceset="TP" device="PAD1-13Y" value="TPPAD1-13Y"/>
 <part name="-GND" library="testpad" deviceset="TP" device="PAD1-13Y" value="TPPAD1-13Y"/>
 <part name="GND7" library="supply1" deviceset="GND" device=""/>
 <part name="GND_2" library="testpad" deviceset="TP" device="PAD1-13Y" value="TPPAD1-13Y"/>
