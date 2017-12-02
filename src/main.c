@@ -55,7 +55,7 @@ ISR(TIM1_COMPA_vect) {
                 Led_ON();
                 LEDSTATUS = 0;
         }
-        RPM=SPARKS*60*10/4;
+        RPM=SPARKS*60*10/8;
         SPARKS=0;
 }
 
@@ -121,5 +121,5 @@ int main(void) {
         while ( 1 ) {
                 wdt_reset (); // reset WDR
                 _delay_us(1);
-        } 
+        }
 }
