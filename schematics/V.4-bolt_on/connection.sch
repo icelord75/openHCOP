@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.01" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
@@ -3349,6 +3349,8 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <text x="77.216" y="89.408" size="1.778" layer="92" rot="R270">TO DISTRIBUTOR</text>
 <text x="59.182" y="59.69" size="1.778" layer="92" rot="R270">X</text>
 <text x="62.484" y="50.292" size="1.778" layer="92">X - CUT FOR DISABLE INTERNALS</text>
+<text x="59.182" y="57.15" size="1.778" layer="92" rot="R270">X</text>
+<text x="59.182" y="72.39" size="1.778" layer="92" rot="R270">X</text>
 </plain>
 <instances>
 <instance part="J2.1" gate="G$1" x="23.876" y="56.388"/>
@@ -3383,13 +3385,16 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <segment>
 <pinref part="J2.1" gate="G$1" pin="2"/>
 <pinref part="J2.2" gate="G$1" pin="2"/>
-<wire x1="31.496" y1="58.928" x2="36.576" y2="58.928" width="0.1524" layer="91"/>
+<wire x1="31.496" y1="58.928" x2="34.036" y2="58.928" width="0.1524" layer="91"/>
 <label x="46.736" y="58.928" size="1.778" layer="95"/>
-<wire x1="36.576" y1="58.928" x2="64.516" y2="58.928" width="0.1524" layer="91"/>
+<wire x1="34.036" y1="58.928" x2="36.576" y2="58.928" width="0.1524" layer="91"/>
+<wire x1="36.576" y1="58.928" x2="61.976" y2="58.928" width="0.1524" layer="91"/>
+<wire x1="61.976" y1="58.928" x2="64.516" y2="58.928" width="0.1524" layer="91"/>
 <wire x1="36.576" y1="58.928" x2="36.576" y2="41.148" width="0.1524" layer="91"/>
 <junction x="36.576" y="58.928"/>
 <wire x1="36.576" y1="41.148" x2="23.876" y2="41.148" width="0.1524" layer="91"/>
 <pinref part="+12" gate="G$1" pin="TP"/>
+<wire x1="34.036" y1="58.928" x2="61.976" y2="58.928" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="BLU" class="0">

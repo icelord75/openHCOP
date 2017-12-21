@@ -7,7 +7,7 @@
 <setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="mm" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="mm"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -15480,7 +15480,7 @@ has two diodes with a common anode. &lt;p&gt;&lt;author&gt;AAL Eindhoven MK&lt;/
 <part name="MISO" library="testpad" deviceset="TP" device="TP20R" value="TPTP20R"/>
 <part name="MOSI" library="testpad" deviceset="TP" device="TP20R" value="TPTP20R"/>
 <part name="GND" library="testpad" deviceset="TP" device="TP20R" value="TPTP20R"/>
-<part name="R1" library="rcl" deviceset="R-EU_" device="R0805" value="10K"/>
+<part name="R1" library="rcl" deviceset="R-EU_" device="R0805" value="4.7K"/>
 <part name="D1" library="adafruit" deviceset="DIODE" device="SOD-123" value="1N4148W"/>
 <part name="Q1" library="transistor-npn" deviceset="BC849*" device="SMD" value="MMBT2222"/>
 <part name="C1" library="rcl" deviceset="CPOL-EU" device="SMCC" value="22µ16v"/>
