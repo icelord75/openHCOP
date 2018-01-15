@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.3.2">
+<eagle version="8.5.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -1566,46 +1566,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </package>
 </packages>
 </library>
-<library name="NXP_60_26022015">
-<description>&lt;H1&gt;NXP Library&lt;/H1&gt;
-&lt;author&gt;marco.kuystermans@nxp.com&lt;/author&gt;&lt;p&gt;
-
-&lt;H2&gt;Disclaimer:&lt;/H2&gt;
-&lt;ul&gt;&lt;i&gt;&lt;li&gt;The information contained in this library is made available for general information and public access only. By using our 
-library, you accept this disclaimer in full. If you disagree with any part of this disclaimer, you must not use our library.
-Use of this library is permitted on the basis that NXP will not be liable for any loss or damage including without limitation, indirect or consequential loss or 
-damage, arising out of or in connection with the use of this library.&lt;/li&gt;
-&lt;li&gt;This library may be distributed and adapted freely for any purpose, as long as NXP is credited and any new creation is licensed under the same terms.&lt;/li&gt;
-
-&lt;H2&gt;Information:&lt;/H2&gt;
-&lt;ul&gt;&lt;li&gt;Footprints are according to NXP footprint information, see &lt;a href=http://www.nxp.com&gt;NXP website&lt;/a&gt;
-&lt;li&gt;SMD Footprints in this library are for reflow soldering only.
-&lt;li&gt;&lt;b&gt;Library is generated as a courtesy: Information is NOT guaranteed, use at your own risk&lt;/b&gt;
-&lt;li&gt;NXP package numbers (SOT/SOD) numbers used
-&lt;/ul&gt;
-Please send your comments to the mail address above.</description>
-<packages>
-<package name="SOT23">
-<description>&lt;li&gt;&lt;b&gt;SOT23&lt;/b&gt;&lt;hr&gt; &lt;ul&gt;&lt;li&gt;Plastic surface-mounted package; 3 leads&lt;li&gt;&lt;u&gt;JEDEC&lt;/u&gt;: TO-236AB &lt;li&gt;&lt;u&gt;IEC&lt;/u&gt;: -- &lt;li&gt;&lt;u&gt;JEITA&lt;/u&gt;: --&lt;/ul&gt;</description>
-<wire x1="1.4224" y1="0.6604" x2="1.4224" y2="-0.6604" width="0.1524" layer="51"/>
-<wire x1="1.4224" y1="-0.6604" x2="-1.4224" y2="-0.6604" width="0.1524" layer="51"/>
-<wire x1="-1.4224" y1="-0.6604" x2="-1.4224" y2="0.6604" width="0.1524" layer="51"/>
-<wire x1="-1.4224" y1="0.6604" x2="1.4224" y2="0.6604" width="0.1524" layer="51"/>
-<wire x1="-1.4224" y1="-0.1524" x2="-1.4224" y2="0.6604" width="0.1524" layer="21"/>
-<wire x1="-1.4224" y1="0.6604" x2="-0.8636" y2="0.6604" width="0.1524" layer="21"/>
-<wire x1="1.4224" y1="0.6604" x2="1.4224" y2="-0.1524" width="0.1524" layer="21"/>
-<wire x1="0.8636" y1="0.6604" x2="1.4224" y2="0.6604" width="0.1524" layer="21"/>
-<smd name="1" x="-0.95" y="-1.1" dx="1" dy="1.4" layer="1"/>
-<smd name="2" x="0.95" y="-1.1" dx="1" dy="1.4" layer="1"/>
-<smd name="3" x="0" y="1.1" dx="1" dy="1.4" layer="1"/>
-<text x="2.5" y="0.49" size="1" layer="25" font="vector">&gt;NAME</text>
-<text x="2.5" y="-1" size="1" layer="27" font="vector">&gt;VALUE</text>
-<rectangle x1="-0.2286" y1="0.7112" x2="0.2286" y2="1.2954" layer="51"/>
-<rectangle x1="0.7112" y1="-1.2954" x2="1.1684" y2="-0.7112" layer="51"/>
-<rectangle x1="-1.1684" y1="-1.2954" x2="-0.7112" y2="-0.7112" layer="51"/>
-</package>
-</packages>
-</library>
 </libraries>
 <attributes>
 </attributes>
@@ -1691,10 +1651,11 @@ design rules under a new name.</description>
 <param name="slThermalsForVias" value="0"/>
 <param name="dpMaxLengthDifference" value="10mm"/>
 <param name="dpGapFactor" value="2.5"/>
-<param name="checkGrid" value="0"/>
 <param name="checkAngle" value="0"/>
 <param name="checkFont" value="1"/>
 <param name="checkRestrict" value="1"/>
+<param name="checkStop" value="0"/>
+<param name="checkValues" value="0"/>
 <param name="useDiameter" value="13"/>
 <param name="maxErrors" value="50"/>
 </designrules>
@@ -1801,7 +1762,7 @@ design rules under a new name.</description>
 <element name="R2" library="rcl" package="R0805" value="10K" x="33.9725" y="12.85875" smashed="yes" rot="R90">
 <attribute name="VALUE" x="36.5125" y="12.22375" size="1.27" layer="27" rot="R90"/>
 </element>
-<element name="R3" library="rcl" package="R0805" value="1K" x="30.48" y="19.84375" smashed="yes">
+<element name="R3" library="rcl" package="R0805" value="15K" x="30.48" y="19.84375" smashed="yes">
 <attribute name="VALUE" x="29.845" y="17.30375" size="1.27" layer="27"/>
 </element>
 <element name="P1" library="testpad" package="P1-13Y" value="TPPAD1-13Y" x="32.0675" y="26.9875" smashed="yes">
@@ -1839,8 +1800,8 @@ design rules under a new name.</description>
 <attribute name="TP_SIGNAL_NAME" value="" x="48.895" y="10.31875" size="1" layer="37" rot="R90"/>
 <attribute name="VALUE" x="45.72" y="11.58875" size="0.0254" layer="27" rot="R90"/>
 </element>
-<element name="R1" library="rcl" package="R0805" value="4.7K" x="33.75025" y="21.9075" smashed="yes" rot="R90">
-<attribute name="VALUE" x="36.29025" y="21.2725" size="1.27" layer="27" rot="R90"/>
+<element name="R1" library="rcl" package="R0805" value="4.7K" x="33.5915" y="22.225" smashed="yes" rot="R90">
+<attribute name="VALUE" x="36.1315" y="21.59" size="1.27" layer="27" rot="R90"/>
 </element>
 <element name="D1" library="adafruit" package="SOD-123" value="1N4148W" x="33.401" y="17.4625" smashed="yes" rot="R90">
 <attribute name="VALUE" x="34.685" y="16.3625" size="0.4064" layer="27" rot="R90"/>
@@ -1885,9 +1846,6 @@ design rules under a new name.</description>
 <attribute name="NAME" x="56.41975" y="30.4165" size="1.27" layer="25" ratio="10" rot="R180"/>
 <attribute name="TP_SIGNAL_NAME" value="" x="53.6575" y="23.01875" size="1" layer="37"/>
 <attribute name="VALUE" x="54.9275" y="26.82875" size="0.0254" layer="27"/>
-</element>
-<element name="D4" library="NXP_60_26022015" package="SOT23" value="BAS31" x="30.48" y="23.33625" smashed="yes">
-<attribute name="VALUE" x="28.575" y="20.16125" size="1.27" layer="27"/>
 </element>
 <element name="U1" library="atmel" package="SOIC127P600X175-14N" value="ATTINY44A-SSU" x="39.6875" y="12.85875" smashed="yes" rot="R270">
 <attribute name="MPN" value="ATTINY44A-SSU" x="39.6875" y="12.85875" size="1.778" layer="27" rot="R270" display="off"/>
@@ -1998,9 +1956,7 @@ design rules under a new name.</description>
 <contactref element="GND" pad="TP"/>
 <contactref element="Q1" pad="E"/>
 <contactref element="C1" pad="-"/>
-<contactref element="D4" pad="1"/>
 <contactref element="U1" pad="14"/>
-<wire x1="27.9425" y1="22.2275" x2="29.53" y2="22.23625" width="0.4064" layer="1"/>
 <wire x1="27.9425" y1="22.2275" x2="27.94" y2="27.46375" width="1.27" layer="1"/>
 <wire x1="34.6075" y1="32.86125" x2="34.6075" y2="36.195" width="1.27" layer="1"/>
 <wire x1="34.6075" y1="32.86125" x2="34.6075" y2="26.9875" width="1.27" layer="1"/>
@@ -2108,11 +2064,11 @@ design rules under a new name.</description>
 </signal>
 <signal name="PICKUP">
 <contactref element="P1" pad="TP"/>
-<contactref element="D4" pad="3"/>
-<wire x1="30.48" y1="24.43625" x2="30.44825" y2="25.654" width="0.4064" layer="1"/>
-<wire x1="32.0675" y1="26.9875" x2="30.44825" y2="25.654" width="0.4064" layer="1"/>
 <contactref element="P3" pad="TP"/>
 <wire x1="32.0675" y1="32.86125" x2="32.0675" y2="26.9875" width="1.27" layer="1"/>
+<contactref element="R1" pad="2"/>
+<wire x1="32.0675" y1="26.9875" x2="32.0675" y2="24.699" width="0.4064" layer="1"/>
+<wire x1="32.0675" y1="24.699" x2="33.5915" y2="23.175" width="0.4064" layer="1"/>
 </signal>
 <signal name="MOSI">
 <contactref element="MOSI" pad="TP"/>
@@ -2252,10 +2208,10 @@ design rules under a new name.</description>
 <contactref element="R1" pad="1"/>
 <contactref element="D1" pad="A"/>
 <contactref element="C3" pad="1"/>
-<wire x1="33.75025" y1="20.9575" x2="33.401" y2="19.3125" width="0.4064" layer="1"/>
+<wire x1="33.5915" y1="21.275" x2="33.401" y2="19.3125" width="0.4064" layer="1"/>
 <wire x1="31.43" y1="19.84375" x2="31.43" y2="17.30375" width="0.4064" layer="1"/>
 <wire x1="31.43" y1="19.84375" x2="33.462" y2="19.84375" width="0.4064" layer="1"/>
-<wire x1="33.462" y1="19.84375" x2="33.75025" y2="20.9575" width="0.4064" layer="1"/>
+<wire x1="33.462" y1="19.84375" x2="33.5915" y2="21.275" width="0.4064" layer="1"/>
 </signal>
 <signal name="IGN">
 <contactref element="U1" pad="11"/>
@@ -2265,12 +2221,6 @@ design rules under a new name.</description>
 <wire x1="40.48125" y1="5.55625" x2="40.46875" y2="5.3975" width="0.4064" layer="1"/>
 <wire x1="40.48125" y1="5.55625" x2="39.6875" y2="6.35" width="0.4064" layer="1"/>
 <wire x1="40.46875" y1="5.3975" x2="49.69125" y2="5.3975" width="0.4064" layer="1"/>
-</signal>
-<signal name="N$1">
-<contactref element="R1" pad="2"/>
-<contactref element="D4" pad="2"/>
-<wire x1="31.43" y1="22.23625" x2="32.367" y2="22.68075" width="0.4064" layer="1"/>
-<wire x1="32.367" y1="22.68075" x2="33.75025" y2="22.8575" width="0.4064" layer="1"/>
 </signal>
 <signal name="N$3">
 <contactref element="IGN" pad="TP"/>
