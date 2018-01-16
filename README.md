@@ -9,6 +9,10 @@ Solder directly to sensor wires, do not cut and/or twist over wires!
 
 Support positive triggering 3-wire Coil-On-Plugs.
 
+## Proof of work
+
+[![Proof of Work](https://img.youtube.com/vi/j7przlhhsT8/0.jpg)](https://www.youtube.com/watch?v=j7przlhhsT8)
+
 ## License
 
 **openHCOP** is available under GPL License.
