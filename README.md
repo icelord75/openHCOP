@@ -15,7 +15,7 @@ Support positive triggering 3-wire Coil-On-Plugs.
 
 ## Order board
 
-Order from [OSHPark](https://oshpark.com/shared_projects/zJNEvHbp)
+Order from [OSHPark](https://oshpark.com/shared_projects/Hhu0kevI)
 
 ## License
 
