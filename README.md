@@ -13,6 +13,10 @@ Support positive triggering 3-wire Coil-On-Plugs.
 
 [![Proof of Work](https://img.youtube.com/vi/j7przlhhsT8/0.jpg)](https://www.youtube.com/watch?v=j7przlhhsT8)
 
+## Order board
+
+Order from [OSHPark](https://oshpark.com/shared_projects/GoBCXrNp)
+
 ## License
 
 **openHCOP** is available under GPL License.
