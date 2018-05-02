@@ -36,8 +36,6 @@ uint8_t LEDSTATUS   = 0;
 
 #define WATCHDOG_DELAY WDTO_30MS   // Set watchdog for 30 mSec
 
-#define _NOP __asm__ __volatile__ ("nop");
-
 void Led_ON(){
         PORTA |= _BV(LED); // LED ON
 }
@@ -107,9 +105,9 @@ int main(void) {
         MCUCR |= _BV(ISC00); //ISC00 - any change
         PCMSK0 = _BV(PCINT0) | _BV(PCINT2);
 
-        //Timer1 is used as 1/10 sec time base
-        //Timer Clock = 1/1024 of sys clock
-        //Mode = CTC (Clear Timer On Compare)
+//Timer1 is used as 1/10 sec time base
+//Timer Clock = 1/1024 of sys clock
+//Mode = CTC (Clear Timer On Compare)
         TCCR1B |= ((1<<WGM12)|(1<<CS12)|(1<<CS10));
         OCR1A = 8000000/1024/10;  //Compare value
         TIMSK1 |= (1<<OCIE1A);    //Output compare 1A interrupt enable

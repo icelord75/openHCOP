@@ -2,7 +2,8 @@
 .piolibdeps
 .clang_complete
 .gcc-flags.json
+*.pro
+*.job
 *.?#?
-old/
-*.pptx
 *.xlsx
+*.pptx
