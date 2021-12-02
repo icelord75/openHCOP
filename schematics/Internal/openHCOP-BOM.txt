@@ -1,0 +1,26 @@
+Partlist
+
+Part  Value               Device              Package             Description
+C1    22µ16v              CPOL-EUSMCC         SMC_C               POLARIZED CAPACITOR, European symbol
+C3    10n                 C-EUC0805           C0805               CAPACITOR, European symbol
+C4    100n                C-EUC0805           C0805               CAPACITOR, European symbol
+C5    100n                C-EUC0805           C0805               CAPACITOR, European symbol
+D1    1N4148W             DIODE_SOD-123FL     SOD-123FL           Diode
+D2    1N4148W             DIODE_SOD-123FL     SOD-123FL           Diode
+D3    1N4148W             DIODE_SOD-123FL     SOD-123FL           Diode
+D5    1N4148W             DIODE_SOD-123FL     SOD-123FL           Diode
+D6    1N4148W             DIODE_SOD-123FL     SOD-123FL           Diode
+D9    4.7V                DIODE-ZENER16V      SOD-123             Zener Diode
+IC2   78L05F              78L05F              SOT89               POSITIVE-VOLTAGE REGULATORS
+J1    AVR_SPI_PROG_3X2PTH AVR_SPI_PROG_3X2PTH 2X3                 AVR ISP 6 Pin                                           
+LED1  KP-1608MGC          LEDCHIPLED_0603     CHIPLED_0603        LED
+Q1    MMBT2222            BC849SMD            SOT23-BEC           NPN Transistor
+Q2    MMBT2222            BC849SMD            SOT23-BEC           NPN Transistor
+R1    4.7K                R-EU_R0805          R0805               RESISTOR, European symbol
+R2    10K                 R-EU_R0805          R0805               RESISTOR, European symbol
+R3    15K                 R-EU_R0805          R0805               RESISTOR, European symbol
+R4    180                 R-EU_R0805          R0805               RESISTOR, European symbol
+R5    10K                 R-EU_R0805          R0805               RESISTOR, European symbol
+R6    1K                  R-EU_R0805          R0805               RESISTOR, European symbol
+R7    10K                 R-EU_R0805          R0805               RESISTOR, European symbol
+U1    ATTINY44A-SSU       ATTINY44A-SSU       SOIC127P600X175-14N 8-bit Microcontroller with In-System Programmable Flash
