@@ -1,26 +1,43 @@
-Partlist
+Partlist exported from C:/Users/ice/ownCloud/Development/openHCOP/schematics/Internal/openHCOP-internal.sch at 02.12.2021 23:29
 
-Part  Value               Device              Package             Description
-C1    22µ16v              CPOL-EUSMCC         SMC_C               POLARIZED CAPACITOR, European symbol
-C3    10n                 C-EUC0805           C0805               CAPACITOR, European symbol
-C4    100n                C-EUC0805           C0805               CAPACITOR, European symbol
-C5    100n                C-EUC0805           C0805               CAPACITOR, European symbol
-D1    1N4148W             DIODE_SOD-123FL     SOD-123FL           Diode
-D2    1N4148W             DIODE_SOD-123FL     SOD-123FL           Diode
-D3    1N4148W             DIODE_SOD-123FL     SOD-123FL           Diode
-D5    1N4148W             DIODE_SOD-123FL     SOD-123FL           Diode
-D6    1N4148W             DIODE_SOD-123FL     SOD-123FL           Diode
-D9    4.7V                DIODE-ZENER16V      SOD-123             Zener Diode
-IC2   78L05F              78L05F              SOT89               POSITIVE-VOLTAGE REGULATORS
-J1    AVR_SPI_PROG_3X2PTH AVR_SPI_PROG_3X2PTH 2X3                 AVR ISP 6 Pin                                           
-LED1  KP-1608MGC          LEDCHIPLED_0603     CHIPLED_0603        LED
-Q1    MMBT2222            BC849SMD            SOT23-BEC           NPN Transistor
-Q2    MMBT2222            BC849SMD            SOT23-BEC           NPN Transistor
-R1    4.7K                R-EU_R0805          R0805               RESISTOR, European symbol
-R2    10K                 R-EU_R0805          R0805               RESISTOR, European symbol
-R3    15K                 R-EU_R0805          R0805               RESISTOR, European symbol
-R4    180                 R-EU_R0805          R0805               RESISTOR, European symbol
-R5    10K                 R-EU_R0805          R0805               RESISTOR, European symbol
-R6    1K                  R-EU_R0805          R0805               RESISTOR, European symbol
-R7    10K                 R-EU_R0805          R0805               RESISTOR, European symbol
-U1    ATTINY44A-SSU       ATTINY44A-SSU       SOIC127P600X175-14N 8-bit Microcontroller with In-System Programmable Flash
+Part    Value               Device              Package             Description                                             MPN           OC_FARNELL OC_NEWARK PACKAGE POPULARITY PROD_ID   SPICEPREFIX SUPPLIER VALUE
++12     LSP13               LSP13               LSP13               SOLDER PAD drill 1.3 mm, distributor Buerklin, 12H562                                              5                                              
++COILS  LSP13               LSP13               LSP13               SOLDER PAD drill 1.3 mm, distributor Buerklin, 12H562                                              5                                              
+-COILS  LSP13               LSP13               LSP13               SOLDER PAD drill 1.3 mm, distributor Buerklin, 12H562                                              5                                              
+1       LSP13               LSP13               LSP13               SOLDER PAD drill 1.3 mm, distributor Buerklin, 12H562                                              5                                              
+2       LSP13               LSP13               LSP13               SOLDER PAD drill 1.3 mm, distributor Buerklin, 12H562                                              5                                              
+3       LSP13               LSP13               LSP13               SOLDER PAD drill 1.3 mm, distributor Buerklin, 12H562                                              5                                              
+4       LSP13               LSP13               LSP13               SOLDER PAD drill 1.3 mm, distributor Buerklin, 12H562                                              5                                              
+C1      22µ25v              CPOL-EUSMCC         SMC_C               POLARIZED CAPACITOR, European symbol                                                                                                              
+C1<     LSP11               LSP11               LSP11               SOLDER PAD                                                                                         5                                              
+C1>     LSP11               LSP11               LSP11               SOLDER PAD                                                                                         5                                              
+C1_GND  LSP11               LSP11               LSP11               SOLDER PAD                                                                                         5                                              
+C1_GND2 LSP11               LSP11               LSP11               SOLDER PAD                                                                                         5                                              
+C2      22µ25v              CPOL-EUSMCE         SMC_E               POLARIZED CAPACITOR, European symbol                                                                                                              
+C3      10n                 C-EUC0805           C0805               CAPACITOR, European symbol                                                                                                                        
+C4      100n                C-EUC0805           C0805               CAPACITOR, European symbol                                                                                                                        
+C5      100n                C-EUC0805           C0805               CAPACITOR, European symbol                                                                                                                        
+D1      1N4148W             DIODE_SOD-123FL     SOD-123FL           Diode                                                                                                                                             
+D2      1N4148W             DIODE_SOD-123FL     SOD-123FL           Diode                                                                                                                                             
+D3      1N4148W             DIODE_SOD-123FL     SOD-123FL           Diode                                                                                                                                             
+D5      1N4148W             DIODE_SOD-123FL     SOD-123FL           Diode                                                                                                                                             
+D6      1N4148W             DIODE_SOD-123FL     SOD-123FL           Diode                                                                                                                                             
+D9      4.7V                DIODE-ZENER16V      SOD-123             Zener Diode                                                                                                   DIO-12440                      16V  
+H1                          MOUNT-PAD-ROUND5.0  5,0-PAD             MOUNTING PAD, round                                                                                0                                              
+H2                          MOUNT-PAD-ROUND5.0  5,0-PAD             MOUNTING PAD, round                                                                                0                                              
+IC2     78L05F              78L05F              SOT89               POSITOIV-VOLTAGE REGULATORS                                                                                                                       
+IGN<    LSP13               LSP13               LSP13               SOLDER PAD drill 1.3 mm, distributor Buerklin, 12H562                                              5                                              
+J1      AVR_SPI_PROG_3X2PTH AVR_SPI_PROG_3X2PTH 2X3                 AVR ISP 6 Pin                                                                                                                                     
+L1      100uH               L-USPIS2816         PIS2816             INDUCTOR, American symbol                                                                                               L                         
+LED1    KP-1608MGC          LEDCHIPLED_0603     CHIPLED_0603        LED                                                                                                                                               
+Q1      MMBT2222            BC849SMD            SOT23-BEC           NPN Transistor                                                                                                                                    
+Q2      MMBT2222            BC849SMD            SOT23-BEC           NPN Transistor                                                                                                                                    
+R1      4.7K                R-EU_R0805          R0805               RESISTOR, European symbol                                                                                                                         
+R2      10K                 R-EU_R0805          R0805               RESISTOR, European symbol                                                                                                                         
+R3      15K                 R-EU_R0805          R0805               RESISTOR, European symbol                                                                                                                         
+R4      180                 R-EU_R0805          R0805               RESISTOR, European symbol                                                                                                                         
+R5      10K                 R-EU_R0805          R0805               RESISTOR, European symbol                                                                                                                         
+R6      1K                  R-EU_R0805          R0805               RESISTOR, European symbol                                                                                                                         
+R7      30K                 R-EU_R0805          R0805               RESISTOR, European symbol                                                                                                                         
+TACH>   LSP13               LSP13               LSP13               SOLDER PAD drill 1.3 mm, distributor Buerklin, 12H562                                              5                                              
+U1      ATTINY44A-SSU       ATTINY44A-SSU       SOIC127P600X175-14N 8-bit Microcontroller with In-System Programmable Flash ATTINY44A-SSU 1699397    68T3711   SOIC-14                                  Atmel         
