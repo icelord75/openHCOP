@@ -1,4 +1,4 @@
-# Name: Makefile
+ma# Name: Makefile
 # Author: icelord
 # Copyright: 2018
 # License: GNU Public license V3
@@ -10,7 +10,6 @@ OBJECTS    = main.o
 FUSES      = -U lfuse:w:0x52:m -U hfuse:w:0xdf:m
 CFLAGS     = -std=gnu11 -fno-fat-lto-objects -g -Os -Wall -ffunction-sections -fdata-sections -flto -Wno-comment -DARDUINO_AVR_ATTINYX4
 AVRPATH    = 
-
 
 ######################################################################
 ######################################################################
