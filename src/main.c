@@ -50,7 +50,7 @@ void Led_OFF()
 ISR(TIM1_COMPA_vect)
 {
         if (CYLINDER < 1)
-        {       // BLINK SLOW Before start engine.
+        { // BLINK SLOW Before start engine.
                 // Blink on timer
                 if (LEDSTATUS == 0)
                 { // Change LED on 2/10 sec
@@ -116,11 +116,12 @@ ISR(PCINT0_vect)
                 /***/
         }
 
+        PORTA |= _BV(TACHO); // ON TACH in any cases
+
         // Check IGN only after CYP1 triggered
         if (((PINA & _BV(IGN)) == 0) && (CYLINDER != 0))
         {
                 // Start FIRE - LOW after first CYP1
-                PORTA |= _BV(TACHO); // ON TACH
                 Ignite_ON();
                 SPARKS++; // counter for RPM calc
                 while ((PINA & _BV(IGN)) == 0)
@@ -128,7 +129,6 @@ ISR(PCINT0_vect)
                         // Wait end of IGN signal
                 }
                 Ignite_Off();
-                PORTA &= ~_BV(TACHO); // OFF TACH
                 CYLINDER++;
                 if (CYLINDER > 4)
                 {
@@ -136,6 +136,8 @@ ISR(PCINT0_vect)
                         CYLINDER = 1;
                 }
         }
+        
+        PORTA &= ~_BV(TACHO); // OFF TACH in any cases
         sei();
 }
 
