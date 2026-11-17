@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.4.2">
+<eagle version="9.6.2">
 <drawing>
 <settings>
-<setting alwaysvectorfont="yes"/>
+<setting alwaysvectorfont="no"/>
 <setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
@@ -19259,6 +19259,7 @@ drill 1.1 mm</description>
 <part name="+COILS" library="solpad" library_urn="urn:adsk.eagle:library:364" deviceset="SE14" device="" package3d_urn="urn:adsk.eagle:package:26504/1"/>
 <part name="H1" library="holes" library_urn="urn:adsk.eagle:library:237" deviceset="MOUNT-PAD-ROUND" device="5.0" package3d_urn="urn:adsk.eagle:package:14288/1" value=""/>
 <part name="H2" library="holes" library_urn="urn:adsk.eagle:library:237" deviceset="MOUNT-PAD-ROUND" device="5.0" package3d_urn="urn:adsk.eagle:package:14288/1" value=""/>
+<part name="R8" library="rcl" deviceset="R-EU_" device="R0805" value="30K"/>
 </parts>
 <sheets>
 <sheet>
@@ -19454,6 +19455,10 @@ https://github.com/icelord75/openHCOP</text>
 <instance part="H2" gate="G$1" x="78.74" y="78.74" smashed="yes">
 <attribute name="NAME" x="81.534" y="79.3242" size="1.778" layer="95"/>
 <attribute name="VALUE" x="81.534" y="76.2762" size="1.778" layer="96"/>
+</instance>
+<instance part="R8" gate="G$1" x="25.4" y="0" smashed="yes" rot="R270">
+<attribute name="NAME" x="26.8986" y="3.81" size="1.778" layer="95" rot="R270"/>
+<attribute name="VALUE" x="22.098" y="3.81" size="1.778" layer="96" rot="R270"/>
 </instance>
 </instances>
 <busses>
@@ -19701,6 +19706,11 @@ https://github.com/icelord75/openHCOP</text>
 <junction x="54.61" y="63.5"/>
 <wire x1="54.61" y1="63.5" x2="58.42" y2="63.5" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="R8" gate="G$1" pin="2"/>
+<wire x1="25.4" y1="-5.08" x2="25.4" y2="-10.16" width="0.1524" layer="91"/>
+<label x="20.32" y="-10.16" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="COIL1" class="0">
 <segment>
@@ -19764,6 +19774,8 @@ https://github.com/icelord75/openHCOP</text>
 <wire x1="22.86" y1="5.08" x2="25.4" y2="5.08" width="0.1524" layer="91"/>
 <pinref part="R7" gate="G$1" pin="2"/>
 <pinref part="IGN&lt;" gate="1" pin="MP"/>
+<pinref part="R8" gate="G$1" pin="1"/>
+<junction x="25.4" y="5.08"/>
 </segment>
 </net>
 <net name="N$5" class="0">
@@ -19836,6 +19848,9 @@ https://github.com/icelord75/openHCOP</text>
 </nets>
 </sheet>
 </sheets>
+<errors>
+<approved hash="115,1,51.435,63.5,+12,,,,,"/>
+</errors>
 </schematic>
 </drawing>
 <compatibility>
