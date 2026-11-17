@@ -1,4 +1,4 @@
-ma# Name: Makefile
+# Name: Makefile
 # Author: icelord
 # Copyright: 2018
 # License: GNU Public license V3
@@ -7,8 +7,8 @@ DEVICE     = attiny44
 CLOCK      = 8000000L
 PROGRAMMER = -Pusb
 OBJECTS    = main.o
-FUSES      = -U lfuse:w:0x52:m -U hfuse:w:0xdf:m
-CFLAGS     = -std=gnu11 -fno-fat-lto-objects -g -Os -Wall -ffunction-sections -fdata-sections -flto -Wno-comment -DARDUINO_AVR_ATTINYX4
+FUSES      = -U lfuse:w:0x52:m -U hfuse:w:0xdd:m -U efuse:w:0xff:m
+CFLAGS     = -std=gnu11 -fno-fat-lto-objects -g -Os -Wall -ffunction-sections -fdata-sections -flto -Wno-comment
 AVRPATH    = 
 
 ######################################################################
