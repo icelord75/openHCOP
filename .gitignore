@@ -18,10 +18,10 @@ src/*.hex
 *.?#?
 *.job
 
-# KiCad import (work in progress, not published)
-*.kicad_*
-*.pretty/
-*-backups/
+# KiCad: local view state, caches, backups, lock files
+*.kicad_prl
 fp-info-cache
-fp-lib-table
-sym-lib-table
+*-backups/
+*.lck
+_autosave-*
+\#auto_saved_files\#

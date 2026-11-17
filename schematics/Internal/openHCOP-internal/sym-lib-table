@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 0)
+  (lib (name "openHCOP-internal-eagle-import")(type "KiCad")(uri "${KIPRJMOD}/openHCOP-internal-eagle-import.kicad_sym")(options "")(descr ""))
+)

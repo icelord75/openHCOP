@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "openHCOP-bolt-on")(type "KiCad")(uri "$(KIPRJMOD)/openHCOP-bolt-on.pretty")(options "")(descr ""))
+)

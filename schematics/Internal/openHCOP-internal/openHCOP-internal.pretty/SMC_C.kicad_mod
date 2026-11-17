@@ -1,0 +1,152 @@
+(footprint "SMC_C"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "Chip Capacitor  Polar tantalum capacitors with solid electrolyte\n\nSiemens Matsushita Components B 45 194, B 45 197, B 45 198\nSource: www.farnell.com/datasheets/247.pdf")
+	(property "Reference" "REF**"
+		(at -1.905 -1.905 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "375206d6-eb81-4d9a-9d70-a1f28e51186e")
+		(effects
+			(font
+				(size 0.93472 0.93472)
+				(thickness 0.08128)
+			)
+			(justify left bottom)
+		)
+	)
+	(property "Value" "SMC_C"
+		(at -1.905 2.54 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "48bacdfb-9f6b-464f-92db-ff113fd64678")
+		(effects
+			(font
+				(size 0.93472 0.93472)
+				(thickness 0.08128)
+			)
+			(justify left bottom)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "9e40d014-a50e-4780-a020-8875cfe82daa")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "e32e5efd-fa97-4c65-810b-cdbb1951e2b1")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_line
+		(start -2.85 -1.55)
+		(end 2.85 -1.55)
+		(stroke
+			(width 0.1016)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "18cd14d7-0221-4211-ab3b-0b844e512954")
+	)
+	(fp_line
+		(start -2.85 1.55)
+		(end -2.85 -1.55)
+		(stroke
+			(width 0.1016)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "71a44f56-9646-49c3-9d26-a5e9e0c68f68")
+	)
+	(fp_line
+		(start 2.85 -1.55)
+		(end 2.85 1.55)
+		(stroke
+			(width 0.1016)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "7c6e5851-83fc-432c-8dbf-5a2025be5ea1")
+	)
+	(fp_line
+		(start 2.85 1.55)
+		(end -2.85 1.55)
+		(stroke
+			(width 0.1016)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "3c6db596-8d0e-4ea3-b279-9da491dcfbab")
+	)
+	(fp_poly
+		(pts
+			(xy -3 1.1) (xy -2.8 1.1) (xy -2.8 -1.1) (xy -3 -1.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill yes)
+		(layer "F.Fab")
+		(uuid "c5b3f79c-953b-40a0-8b4b-d8dfc1e473ad")
+	)
+	(fp_poly
+		(pts
+			(xy -2.85 1.55) (xy -1.9 1.55) (xy -1.9 -1.55) (xy -2.85 -1.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill yes)
+		(layer "F.Fab")
+		(uuid "63fcbf3c-b8dc-4d26-8abb-1e080591edf7")
+	)
+	(fp_poly
+		(pts
+			(xy 3 -1.1) (xy 2.8 -1.1) (xy 2.8 1.1) (xy 3 1.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill yes)
+		(layer "F.Fab")
+		(uuid "de6fce06-94f1-41ac-89ea-2daf300cfaa5")
+	)
+	(pad "+" smd rect
+		(at -2.5 0)
+		(size 2.4 2.4)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.1)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 0)
+		(uuid "b3be2aba-8755-4f8d-87d0-e4f45921066f")
+	)
+	(pad "-" smd rect
+		(at 2.5 0 180)
+		(size 2.4 2.4)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(solder_mask_margin 0.1)
+		(solder_paste_margin 0)
+		(thermal_bridge_angle 0)
+		(uuid "77ef289e-ebd9-4bb2-9edc-a6417ee795a8")
+	)
+	(embedded_fonts no)
+)

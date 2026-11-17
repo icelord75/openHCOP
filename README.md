@@ -23,6 +23,12 @@ Firmware is for ATtiny44 (internal 8 MHz RC oscillator), built with [PlatformIO]
 
 Without PlatformIO: `cd src && make && make install` (needs avr-gcc and avrdude).
 
+## Schematics and boards
+
+Two board versions: `schematics/Internal` and `schematics/Bolt-On`.
+Each has the original Eagle files (`.sch`, `.brd`) and a KiCad 9 project converted from them
+(`openHCOP-internal/`, `openHCOP-bolt-on/`).
+
 ## Tests
 
 Simulation tests of the firmware (simavr) are in [sim/](sim/README.md): `cd sim && make`.
