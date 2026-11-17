@@ -13,6 +13,20 @@ Support positive triggering 3-wire Coil-On-Plugs.
 
 [![Proof of Work](https://img.youtube.com/vi/j7przlhhsT8/0.jpg)](https://www.youtube.com/watch?v=j7przlhhsT8)
 
+## Build and flash
+
+Firmware is for ATtiny44 (internal 8 MHz RC oscillator), built with [PlatformIO](https://platformio.org/):
+
+    pio run                 # build
+    pio run -t fuses        # write fuses (lfuse 0x52, hfuse 0xDD, efuse 0xFF), once
+    pio run -t upload       # flash (USBtiny programmer by default, see platformio.ini)
+
+Without PlatformIO: `cd src && make && make install` (needs avr-gcc and avrdude).
+
+## Tests
+
+Simulation tests of the firmware (simavr) are in [sim/](sim/README.md): `cd sim && make`.
+
 ## Order board
 
 Order from [OSHPark](https://oshpark.com/shared_projects/Hhu0kevI)
