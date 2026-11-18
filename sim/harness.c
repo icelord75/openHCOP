@@ -17,7 +17,7 @@
 
 #define F_SIM 8000000.0
 #define MAX_DWELL_MS 20.0   /* must match MAX_DWELL_US in src/main.c */
-#define MAX_LATENCY_US 15.0 /* IGN rising edge -> coil OFF */
+#define MAX_LATENCY_US 4.0 /* IGN rising edge -> coil OFF (asm stub gives ~2.6 us) */
 
 enum { CH_CYL1 = 1, CH_CYL2, CH_CYL3, CH_CYL4, CH_TACH, CH_LED };
 static const char *names[] = {"?", "cyl1(PB0)", "cyl2(PB1)", "cyl3(PB2)", "cyl4(PA7)", "TACH(PA1)", "LED(PA3)"};

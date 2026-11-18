@@ -154,14 +154,89 @@ ISR(TIM1_OVF_vect)
         CYP_TIMER_VALID = 0;
 }
 
-// PCINT0: CYP1 (PA0) and IGN (PA2), both edges
-ISR(PCINT0_vect)
-{
-        uint8_t pins = PINA;
-        uint8_t changed = pins ^ PREV_PINA;
-        PREV_PINA = pins;
+// PCINT0: CYP1 (PA0) and IGN (PA2), both edges.
+//
+// The entry is hand written in assembler: a C ISR saves every register its
+// body uses (11 of them) before it even reads PINA, which delays the spark by
+// ~6 us. The stub saves only r24/r25, reads PINA at once and on the IGN rising
+// edge switches the coils off using only instructions that do not touch SREG
+// (lds/sbrs/sbrc/cbi), so SREG is saved after the spark. Then it saves the
+// call-clobbered registers and calls Pcint0_Tail() for the rest in C.
+// Switching the coils off unconditionally is the same as Fire()'s coil part:
+// outside of a dwell they are off anyway.
+static void Pcint0_Tail(uint8_t pins, uint8_t changed) __attribute__((used));
 
-        // IGN rising edge = spark. Handled first for minimal latency.
+ISR(PCINT0_vect, ISR_NAKED)
+{
+        __asm__ volatile(
+            "push r24\n"
+            "in r24, %[pina]\n" // pins
+            "push r25\n"
+            "lds r25, %[prev]\n" // previous pins
+            // IGN rising edge = spark: high now, low before
+            "sbrs r24, %[ign]\n"
+            "rjmp 1f\n"
+            "sbrc r25, %[ign]\n"
+            "rjmp 1f\n"
+            "cbi %[portb], %[ign1]\n"
+            "cbi %[portb], %[ign2]\n"
+            "cbi %[portb], %[ign3]\n"
+            "cbi %[porta], %[ign4]\n"
+            "1:\n"
+            "sts %[prev], r24\n"
+            "push r0\n"
+            "in r0, __SREG__\n"
+            "push r0\n"
+            "push r1\n"
+            "clr r1\n"
+            "eor r25, r24\n" // changed
+            // Rest of the handler in C (normal call, so save what it may clobber)
+            "push r18\n"
+            "push r19\n"
+            "push r20\n"
+            "push r21\n"
+            "push r22\n"
+            "push r23\n"
+            "push r26\n"
+            "push r27\n"
+            "push r30\n"
+            "push r31\n"
+            "mov r22, r25\n" // Pcint0_Tail(pins = r24, changed = r22)
+            "rcall %x[tail]\n"
+            "pop r31\n"
+            "pop r30\n"
+            "pop r27\n"
+            "pop r26\n"
+            "pop r23\n"
+            "pop r22\n"
+            "pop r21\n"
+            "pop r20\n"
+            "pop r19\n"
+            "pop r18\n"
+            "pop r1\n"
+            "pop r0\n"
+            "out __SREG__, r0\n"
+            "pop r0\n"
+            "pop r25\n"
+            "pop r24\n"
+            "reti"
+            :
+            : [pina] "I"(_SFR_IO_ADDR(PINA)),
+              [porta] "I"(_SFR_IO_ADDR(PORTA)),
+              [portb] "I"(_SFR_IO_ADDR(PORTB)),
+              [ign] "I"(IGN),
+              [ign1] "I"(IGNITION1),
+              [ign2] "I"(IGNITION2),
+              [ign3] "I"(IGNITION3),
+              [ign4] "I"(IGNITION4),
+              [prev] "i"(&PREV_PINA),
+              [tail] "i"(Pcint0_Tail));
+}
+
+// PCINT0 handler body after the spark (called from the stub above)
+static void Pcint0_Tail(uint8_t pins, uint8_t changed)
+{
+        // IGN rising edge: coils are already off, finish the spark
         if ((changed & _BV(IGN)) && (pins & _BV(IGN)))
         {
                 if (DWELL_ACTIVE)
@@ -177,7 +252,11 @@ ISR(PCINT0_vect)
                 uint8_t next = NEXT_CYL;
                 uint8_t valid = CYP_TIMER_VALID;
                 uint16_t period = CYP_PERIOD;
-                if (next == 0 || !valid || elapsed >= period / 8 * 3)
+                // period / 8 * 3 without multiplication: a __mulhi3 call here
+                // would make the ISR save every call-clobbered register
+                uint16_t eighth = period >> 3;
+                uint16_t min_period = eighth + (eighth << 1);
+                if (next == 0 || !valid || elapsed >= min_period)
                 {
                         // Trust the measured period only if the counter agreed
                         // and the pulse is not suspiciously late
