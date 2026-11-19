@@ -3163,6 +3163,306 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Device:D_Schottky"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "D_Schottky"
+				(at 0 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Schottky diode"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "diode Schottky"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "TO-???* *_Diode_* *SingleDiode* D_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "D_Schottky_0_1"
+				(polyline
+					(pts
+						(xy -1.905 0.635) (xy -1.905 1.27) (xy -1.27 1.27) (xy -1.27 -1.27) (xy -0.635 -1.27) (xy -0.635 -0.635)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 0) (xy -1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "D_Schottky_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Device:D_Zener"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "D_Zener"
+				(at 0 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Zener diode"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "diode"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "TO-???* *_Diode_* *SingleDiode* D_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "D_Zener_0_1"
+				(polyline
+					(pts
+						(xy -1.27 -1.27) (xy -1.27 1.27) (xy -0.762 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 0) (xy -1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -1.27) (xy 1.27 1.27) (xy -1.27 0) (xy 1.27 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "D_Zener_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 	)
 	(text "Ab0VE-TECH\nOPEN HONDA COIL ON PLUG CONTROLLER\nhttps://github.com/icelord75/openHCOP"
 		(exclude_from_sim no)
@@ -3182,7 +3482,7 @@
 		(uuid "16f68eab-2be7-4786-b4dd-feaaee8e60e8")
 	)
 	(junction
-		(at 193.04 81.28)
+		(at 218.44 81.28)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "2c816c39-6f2c-4add-9bd7-3ef0720a892a")
@@ -3218,7 +3518,7 @@
 		(uuid "756447d5-3765-4148-8915-c0a8da44f602")
 	)
 	(junction
-		(at 180.34 81.28)
+		(at 205.74 81.28)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "7cbd44cb-0bca-43da-9774-55aad3adc0ae")
@@ -3236,7 +3536,7 @@
 		(uuid "a54ceaa9-58b4-46df-b266-d95565a572be")
 	)
 	(junction
-		(at 180.34 73.66)
+		(at 205.74 73.66)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "a77b17d1-6bb8-4d29-9e69-f2ec22d8ae10")
@@ -3248,13 +3548,13 @@
 		(uuid "bc24ec18-d0da-487b-88fa-38d7f6594295")
 	)
 	(junction
-		(at 203.2 73.66)
+		(at 228.6 73.66)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c0aab537-3d56-4121-a901-794140d053e9")
 	)
 	(junction
-		(at 152.4 73.66)
+		(at 177.8 73.66)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "cf423531-1816-4cb5-8fd0-eef795c3a857")
@@ -3290,7 +3590,7 @@
 		(uuid "f18167bf-59bf-48bd-a359-2f10455ab5ca")
 	)
 	(junction
-		(at 170.18 73.66)
+		(at 195.58 73.66)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "fc7fa777-49f9-4282-ba05-ab2042eb6234")
@@ -3304,16 +3604,6 @@
 			(type solid)
 		)
 		(uuid "0105f7bc-c672-4d6f-b68a-a782ac2933f7")
-	)
-	(wire
-		(pts
-			(xy 93.98 127) (xy 102.87 127)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "01dbcf57-b228-4510-b74b-061f7ec45853")
 	)
 	(wire
 		(pts
@@ -3387,7 +3677,7 @@
 	)
 	(wire
 		(pts
-			(xy 200.66 73.66) (xy 203.2 73.66)
+			(xy 226.06 73.66) (xy 228.6 73.66)
 		)
 		(stroke
 			(width 0.1524)
@@ -3397,7 +3687,7 @@
 	)
 	(wire
 		(pts
-			(xy 190.5 81.28) (xy 193.04 81.28)
+			(xy 215.9 81.28) (xy 218.44 81.28)
 		)
 		(stroke
 			(width 0.1524)
@@ -3417,7 +3707,7 @@
 	)
 	(wire
 		(pts
-			(xy 182.88 73.66) (xy 180.34 73.66)
+			(xy 208.28 73.66) (xy 205.74 73.66)
 		)
 		(stroke
 			(width 0.1524)
@@ -3437,7 +3727,7 @@
 	)
 	(wire
 		(pts
-			(xy 170.18 81.28) (xy 180.34 81.28)
+			(xy 195.58 81.28) (xy 205.74 81.28)
 		)
 		(stroke
 			(width 0.1524)
@@ -3517,23 +3807,13 @@
 	)
 	(wire
 		(pts
-			(xy 203.2 73.66) (xy 210.82 73.66)
+			(xy 228.6 73.66) (xy 236.22 73.66)
 		)
 		(stroke
 			(width 0.1524)
 			(type solid)
 		)
 		(uuid "428355ec-0c3c-48da-87e5-28738e0d2b47")
-	)
-	(wire
-		(pts
-			(xy 83.82 118.11) (xy 88.9 118.11)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "43798114-fad9-4826-9444-4ce260180d30")
 	)
 	(wire
 		(pts
@@ -3544,16 +3824,6 @@
 			(type solid)
 		)
 		(uuid "454c57fa-997d-4696-8458-22fab528edfc")
-	)
-	(wire
-		(pts
-			(xy 83.82 109.22) (xy 88.9 109.22)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "473c599e-2e02-4a15-ba7a-c824b3408487")
 	)
 	(wire
 		(pts
@@ -3594,16 +3864,6 @@
 			(type solid)
 		)
 		(uuid "5260204c-07cd-4e92-87f8-c7319abac5a3")
-	)
-	(wire
-		(pts
-			(xy 93.98 135.89) (xy 102.87 135.89)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "54518510-9d19-4590-97d0-a826426e6500")
 	)
 	(wire
 		(pts
@@ -3657,7 +3917,7 @@
 	)
 	(wire
 		(pts
-			(xy 167.64 73.66) (xy 170.18 73.66)
+			(xy 193.04 73.66) (xy 195.58 73.66)
 		)
 		(stroke
 			(width 0.1524)
@@ -3684,16 +3944,6 @@
 			(type solid)
 		)
 		(uuid "67790e7b-67f8-4a6c-b025-8d4eb36cb6bc")
-	)
-	(wire
-		(pts
-			(xy 93.98 118.11) (xy 102.87 118.11)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "68a0a99e-4216-49b5-bdaf-a6f45e130717")
 	)
 	(wire
 		(pts
@@ -3734,16 +3984,6 @@
 			(type solid)
 		)
 		(uuid "73384327-f3be-4c26-a1fb-153e5afaad83")
-	)
-	(wire
-		(pts
-			(xy 83.82 127) (xy 88.9 127)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "785dd784-951a-4d12-b963-116c401920ff")
 	)
 	(wire
 		(pts
@@ -3817,7 +4057,7 @@
 	)
 	(wire
 		(pts
-			(xy 180.34 73.66) (xy 170.18 73.66)
+			(xy 205.74 73.66) (xy 195.58 73.66)
 		)
 		(stroke
 			(width 0.1524)
@@ -3937,16 +4177,6 @@
 	)
 	(wire
 		(pts
-			(xy 83.82 135.89) (xy 88.9 135.89)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "d3424e63-82db-43eb-b07e-e36aef1632b1")
-	)
-	(wire
-		(pts
 			(xy 210.82 93.98) (xy 218.44 93.98)
 		)
 		(stroke
@@ -3964,16 +4194,6 @@
 			(type solid)
 		)
 		(uuid "ee0bcb76-8638-48e1-921f-22c144c61b0a")
-	)
-	(wire
-		(pts
-			(xy 93.98 109.22) (xy 102.87 109.22)
-		)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(uuid "f601fc22-0a1b-409b-b143-bb2c301836ed")
 	)
 	(label "MISO"
 		(at 218.44 129.54 0)
@@ -4004,16 +4224,6 @@
 			(justify left bottom)
 		)
 		(uuid "2ade7b6d-124c-4655-ad19-aaa7ed0f309d")
-	)
-	(label "IGN4"
-		(at 101.6 135.89 0)
-		(effects
-			(font
-				(size 1.2446 1.2446)
-			)
-			(justify left bottom)
-		)
-		(uuid "30767722-22d3-479c-806b-dd220f08bae2")
 	)
 	(label "IGN3"
 		(at 167.64 127 0)
@@ -4125,16 +4335,6 @@
 		)
 		(uuid "a1b86b47-be76-4fcb-a54f-484ca0df2f0b")
 	)
-	(label "IGN1"
-		(at 101.6 109.22 0)
-		(effects
-			(font
-				(size 1.2446 1.2446)
-			)
-			(justify left bottom)
-		)
-		(uuid "a80129e1-29fa-4fcf-8eec-5c8417b58137")
-	)
 	(label "+12"
 		(at 119.38 147.32 0)
 		(effects
@@ -4154,16 +4354,6 @@
 			(justify left bottom)
 		)
 		(uuid "afc4f3a6-46b4-49f9-85f7-3f92648b3d46")
-	)
-	(label "IGN2"
-		(at 101.6 118.11 0)
-		(effects
-			(font
-				(size 1.2446 1.2446)
-			)
-			(justify left bottom)
-		)
-		(uuid "bccb29dd-38b2-4aae-8ad6-31c4540e8a1e")
 	)
 	(label "GND"
 		(at 213.36 99.06 0)
@@ -4205,16 +4395,6 @@
 		)
 		(uuid "d16c8f66-0ba4-43d2-a492-01c4724da1b7")
 	)
-	(label "IGN3"
-		(at 101.6 127 0)
-		(effects
-			(font
-				(size 1.2446 1.2446)
-			)
-			(justify left bottom)
-		)
-		(uuid "d3c232af-b0a2-4171-a777-ed04074dd94f")
-	)
 	(label "SCK"
 		(at 218.44 127 0)
 		(effects
@@ -4246,7 +4426,7 @@
 		(uuid "e8230db7-401a-4879-b106-54a1fb98dfca")
 	)
 	(label "+12F"
-		(at 172.72 73.66 0)
+		(at 198.12 73.66 0)
 		(effects
 			(font
 				(size 1.2446 1.2446)
@@ -4422,7 +4602,7 @@
 	)
 	(symbol
 		(lib_id "openHCOP-internal-eagle-import:C-EUC0805")
-		(at 203.2 76.2 0)
+		(at 228.6 76.2 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4430,7 +4610,7 @@
 		(dnp no)
 		(uuid "0d9c0a0e-254d-42a0-95f3-1d8b5bafe348")
 		(property "Reference" "C4"
-			(at 204.724 75.819 0)
+			(at 230.124 75.819 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -4439,7 +4619,7 @@
 			)
 		)
 		(property "Value" "100n"
-			(at 204.724 80.899 0)
+			(at 230.124 80.899 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -4448,7 +4628,7 @@
 			)
 		)
 		(property "Footprint" "openHCOP-internal:C0805"
-			(at 203.2 76.2 0)
+			(at 228.6 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4457,7 +4637,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 203.2 76.2 0)
+			(at 228.6 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4466,7 +4646,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 203.2 76.2 0)
+			(at 228.6 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4755,7 +4935,7 @@
 	)
 	(symbol
 		(lib_id "openHCOP-internal-eagle-import:VCC")
-		(at 213.36 73.66 270)
+		(at 238.76 73.66 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4763,7 +4943,7 @@
 		(dnp no)
 		(uuid "290c2cf3-5d00-4bf3-9f91-8b845b1a8491")
 		(property "Reference" "#P+7"
-			(at 213.36 73.66 0)
+			(at 238.76 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4772,7 +4952,7 @@
 			)
 		)
 		(property "Value" "VCC"
-			(at 210.82 71.12 90)
+			(at 236.22 71.12 90)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -4781,7 +4961,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 213.36 73.66 0)
+			(at 238.76 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4790,7 +4970,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 213.36 73.66 0)
+			(at 238.76 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4799,7 +4979,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 213.36 73.66 0)
+			(at 238.76 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4821,7 +5001,7 @@
 	)
 	(symbol
 		(lib_id "openHCOP-internal-eagle-import:LSP13")
-		(at 81.28 118.11 90)
+		(at 81.28 127 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4829,7 +5009,7 @@
 		(dnp no)
 		(uuid "2c2a3108-8488-4caf-b1d7-ae2e31884b8b")
 		(property "Reference" "UNK2"
-			(at 78.359 119.38 0)
+			(at 78.359 128.27 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -4838,7 +5018,7 @@
 			)
 		)
 		(property "Value" "LSP13"
-			(at 81.28 118.11 0)
+			(at 81.28 127 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4847,7 +5027,7 @@
 			)
 		)
 		(property "Footprint" "openHCOP-internal:LSP13_364"
-			(at 81.28 118.11 0)
+			(at 81.28 127 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4856,7 +5036,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 81.28 118.11 0)
+			(at 81.28 127 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4865,7 +5045,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 81.28 118.11 0)
+			(at 81.28 127 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4887,7 +5067,7 @@
 	)
 	(symbol
 		(lib_id "openHCOP-internal-eagle-import:CPOL-EUSMCC")
-		(at 170.18 76.2 0)
+		(at 195.58 76.2 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4895,7 +5075,7 @@
 		(dnp no)
 		(uuid "2e1bbbd7-1481-4d01-9de1-98eaa652399a")
 		(property "Reference" "C1"
-			(at 171.323 75.7174 0)
+			(at 196.723 75.7174 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -4903,8 +5083,8 @@
 				(justify left bottom)
 			)
 		)
-		(property "Value" "22µ25v"
-			(at 166.323 83.2974 0)
+		(property "Value" "22µ35v"
+			(at 191.723 83.2974 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -4912,8 +5092,8 @@
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "openHCOP-internal:SMC_C"
-			(at 170.18 76.2 0)
+		(property "Footprint" "openHCOP-internal:SMC_E"
+			(at 195.58 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4922,7 +5102,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 170.18 76.2 0)
+			(at 195.58 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4931,7 +5111,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 170.18 76.2 0)
+			(at 195.58 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5028,7 +5208,7 @@
 	)
 	(symbol
 		(lib_id "openHCOP-internal-eagle-import:GND")
-		(at 193.04 83.82 0)
+		(at 218.44 83.82 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5036,7 +5216,7 @@
 		(dnp no)
 		(uuid "34c3241d-a5b4-44b8-afd5-8128cd5cd77d")
 		(property "Reference" "#GND13"
-			(at 193.04 83.82 0)
+			(at 218.44 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5045,7 +5225,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 190.5 86.36 0)
+			(at 215.9 86.36 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -5054,7 +5234,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 193.04 83.82 0)
+			(at 218.44 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5063,7 +5243,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 193.04 83.82 0)
+			(at 218.44 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5072,7 +5252,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 193.04 83.82 0)
+			(at 218.44 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5087,76 +5267,6 @@
 			(project "openHCOP-internal"
 				(path "/f4af27fb-7f3b-4e93-a3c3-658e12a0ff9b"
 					(reference "#GND13")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "openHCOP-internal-eagle-import:DIODE_SOD-123FL")
-		(at 91.44 127 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "362269ec-3a69-445b-9bf6-b568b52b2502")
-		(property "Reference" "D3"
-			(at 93.98 124.46 0)
-			(effects
-				(font
-					(size 1.27 1.0795)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Value" "1N4148W"
-			(at 93.98 130.81 0)
-			(effects
-				(font
-					(size 1.27 1.0795)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Footprint" "openHCOP-internal:SOD-123FL"
-			(at 91.44 127 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 91.44 127 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 91.44 127 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "A"
-			(uuid "a9da0941-c4d4-49e8-937e-d2ee94b03c31")
-		)
-		(pin "C"
-			(uuid "0c013cab-8c80-420d-b7de-bbf9945fe487")
-		)
-		(instances
-			(project "openHCOP-internal"
-				(path "/f4af27fb-7f3b-4e93-a3c3-658e12a0ff9b"
-					(reference "D3")
 					(unit 1)
 				)
 			)
@@ -5236,7 +5346,7 @@
 	)
 	(symbol
 		(lib_id "openHCOP-internal-eagle-import:GND")
-		(at 152.4 83.82 0)
+		(at 177.8 83.82 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5244,7 +5354,7 @@
 		(dnp no)
 		(uuid "413048e8-f17a-444a-8b9c-bc2efa7b2050")
 		(property "Reference" "#GND7"
-			(at 152.4 83.82 0)
+			(at 177.8 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5253,7 +5363,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 149.86 86.36 0)
+			(at 175.26 86.36 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -5262,7 +5372,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 152.4 83.82 0)
+			(at 177.8 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5271,7 +5381,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 152.4 83.82 0)
+			(at 177.8 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5280,7 +5390,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 152.4 83.82 0)
+			(at 177.8 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5364,76 +5474,6 @@
 			(project "openHCOP-internal"
 				(path "/f4af27fb-7f3b-4e93-a3c3-658e12a0ff9b"
 					(reference "LED1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "openHCOP-internal-eagle-import:DIODE_SOD-123FL")
-		(at 91.44 135.89 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "5029e2ef-1936-4994-8a23-2c6f489193a8")
-		(property "Reference" "D6"
-			(at 93.98 133.35 0)
-			(effects
-				(font
-					(size 1.27 1.0795)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Value" "1N4148W"
-			(at 93.98 139.7 0)
-			(effects
-				(font
-					(size 1.27 1.0795)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Footprint" "openHCOP-internal:SOD-123FL"
-			(at 91.44 135.89 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 91.44 135.89 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 91.44 135.89 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "A"
-			(uuid "fa0e462f-292d-48e6-91a5-ab39ec8e07b5")
-		)
-		(pin "C"
-			(uuid "63d1c333-d9c5-4a0d-8d59-4b067c907f10")
-		)
-		(instances
-			(project "openHCOP-internal"
-				(path "/f4af27fb-7f3b-4e93-a3c3-658e12a0ff9b"
-					(reference "D6")
 					(unit 1)
 				)
 			)
@@ -5924,7 +5964,7 @@
 	)
 	(symbol
 		(lib_id "openHCOP-internal-eagle-import:LSP13")
-		(at 81.28 127 90)
+		(at 81.28 144.78 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5932,7 +5972,7 @@
 		(dnp no)
 		(uuid "72aabfeb-d4e8-43ee-a4cb-404caca35158")
 		(property "Reference" "UNK3"
-			(at 78.359 128.27 0)
+			(at 78.359 146.05 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -5941,7 +5981,7 @@
 			)
 		)
 		(property "Value" "LSP13"
-			(at 81.28 127 0)
+			(at 81.28 144.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5950,7 +5990,7 @@
 			)
 		)
 		(property "Footprint" "openHCOP-internal:LSP13_364"
-			(at 81.28 127 0)
+			(at 81.28 144.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5959,7 +5999,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 81.28 127 0)
+			(at 81.28 144.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5968,7 +6008,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 81.28 127 0)
+			(at 81.28 144.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6797,7 +6837,7 @@
 	)
 	(symbol
 		(lib_id "openHCOP-internal-eagle-import:GND")
-		(at 180.34 83.82 0)
+		(at 205.74 83.82 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6805,7 +6845,7 @@
 		(dnp no)
 		(uuid "b87278e7-dc1d-4885-8e3a-f9513dd82d00")
 		(property "Reference" "#GND12"
-			(at 180.34 83.82 0)
+			(at 205.74 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6814,7 +6854,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 177.8 86.36 0)
+			(at 203.2 86.36 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -6823,7 +6863,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 180.34 83.82 0)
+			(at 205.74 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6832,7 +6872,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 180.34 83.82 0)
+			(at 205.74 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6841,7 +6881,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 180.34 83.82 0)
+			(at 205.74 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6998,7 +7038,7 @@
 	)
 	(symbol
 		(lib_id "openHCOP-internal-eagle-import:C-EUC0805")
-		(at 180.34 76.2 0)
+		(at 205.74 76.2 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7006,7 +7046,7 @@
 		(dnp no)
 		(uuid "d0f032e9-9526-4c61-822f-d642a015f6fb")
 		(property "Reference" "C5"
-			(at 181.864 75.819 0)
+			(at 207.264 75.819 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -7015,7 +7055,7 @@
 			)
 		)
 		(property "Value" "100n"
-			(at 180.864 81.399 0)
+			(at 206.264 81.399 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -7024,7 +7064,7 @@
 			)
 		)
 		(property "Footprint" "openHCOP-internal:C0805"
-			(at 180.34 76.2 0)
+			(at 205.74 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7033,7 +7073,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 180.34 76.2 0)
+			(at 205.74 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7042,7 +7082,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 180.34 76.2 0)
+			(at 205.74 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7238,7 +7278,7 @@
 	)
 	(symbol
 		(lib_id "openHCOP-internal-eagle-import:78LF")
-		(at 190.5 73.66 0)
+		(at 215.9 73.66 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7246,7 +7286,7 @@
 		(dnp no)
 		(uuid "da77b30c-97fb-45cf-8e48-3a05951328ac")
 		(property "Reference" "IC2"
-			(at 185.42 67.945 0)
+			(at 210.82 67.945 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -7255,7 +7295,7 @@
 			)
 		)
 		(property "Value" "78L05F"
-			(at 185.42 70.485 0)
+			(at 210.82 70.485 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -7264,7 +7304,7 @@
 			)
 		)
 		(property "Footprint" "openHCOP-internal:SOT89"
-			(at 190.5 73.66 0)
+			(at 215.9 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7273,7 +7313,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 190.5 73.66 0)
+			(at 215.9 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7282,7 +7322,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 190.5 73.66 0)
+			(at 215.9 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7313,7 +7353,7 @@
 	)
 	(symbol
 		(lib_id "openHCOP-internal-eagle-import:GND")
-		(at 203.2 83.82 0)
+		(at 228.6 83.82 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7321,7 +7361,7 @@
 		(dnp no)
 		(uuid "ddeb50ed-9924-4aef-9094-9d49eb34c7f0")
 		(property "Reference" "#GND14"
-			(at 203.2 83.82 0)
+			(at 228.6 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7330,7 +7370,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 200.66 86.36 0)
+			(at 226.06 86.36 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -7339,7 +7379,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 203.2 83.82 0)
+			(at 228.6 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7348,7 +7388,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 203.2 83.82 0)
+			(at 228.6 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7357,7 +7397,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 203.2 83.82 0)
+			(at 228.6 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7583,7 +7623,7 @@
 	)
 	(symbol
 		(lib_id "openHCOP-internal-eagle-import:LSP13")
-		(at 81.28 135.89 90)
+		(at 81.28 162.56 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7591,7 +7631,7 @@
 		(dnp no)
 		(uuid "e872c023-cb53-4c4e-8898-6a45a26e9191")
 		(property "Reference" "UNK4"
-			(at 78.359 137.16 0)
+			(at 78.359 163.83 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -7600,7 +7640,7 @@
 			)
 		)
 		(property "Value" "LSP13"
-			(at 81.28 135.89 0)
+			(at 81.28 162.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7609,7 +7649,7 @@
 			)
 		)
 		(property "Footprint" "openHCOP-internal:LSP13_364"
-			(at 81.28 135.89 0)
+			(at 81.28 162.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7618,7 +7658,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 81.28 135.89 0)
+			(at 81.28 162.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7627,7 +7667,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 81.28 135.89 0)
+			(at 81.28 162.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7649,7 +7689,7 @@
 	)
 	(symbol
 		(lib_id "openHCOP-internal-eagle-import:L-USPIS2816")
-		(at 160.02 73.66 90)
+		(at 185.42 73.66 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7657,7 +7697,7 @@
 		(dnp no)
 		(uuid "ee297771-3d18-4bf9-bbca-cf8ed67ae535")
 		(property "Reference" "L1"
-			(at 165.1 74.93 90)
+			(at 190.5 74.93 90)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -7666,7 +7706,7 @@
 			)
 		)
 		(property "Value" "100uH"
-			(at 165.1 69.85 90)
+			(at 190.5 69.85 90)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -7675,7 +7715,7 @@
 			)
 		)
 		(property "Footprint" "openHCOP-internal:PIS2816_334"
-			(at 160.02 73.66 0)
+			(at 185.42 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7684,7 +7724,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 160.02 73.66 0)
+			(at 185.42 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7693,7 +7733,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 160.02 73.66 0)
+			(at 185.42 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7718,7 +7758,7 @@
 	)
 	(symbol
 		(lib_id "openHCOP-internal-eagle-import:CPOL-EUSMCE")
-		(at 152.4 76.2 0)
+		(at 177.8 76.2 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7726,7 +7766,7 @@
 		(dnp no)
 		(uuid "f3815e3a-7364-42cc-ab92-d2d9f6c3e7cb")
 		(property "Reference" "C2"
-			(at 153.543 75.7174 0)
+			(at 178.943 75.7174 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -7734,8 +7774,8 @@
 				(justify left bottom)
 			)
 		)
-		(property "Value" "22µ25v"
-			(at 153.543 80.7974 0)
+		(property "Value" "22µ35v"
+			(at 178.943 80.7974 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -7744,7 +7784,7 @@
 			)
 		)
 		(property "Footprint" "openHCOP-internal:SMC_E"
-			(at 152.4 76.2 0)
+			(at 177.8 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7753,7 +7793,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 152.4 76.2 0)
+			(at 177.8 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7762,7 +7802,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 152.4 76.2 0)
+			(at 177.8 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7780,76 +7820,6 @@
 			(project "openHCOP-internal"
 				(path "/f4af27fb-7f3b-4e93-a3c3-658e12a0ff9b"
 					(reference "C2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "openHCOP-internal-eagle-import:DIODE_SOD-123FL")
-		(at 91.44 109.22 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "f93fbec9-11c1-48a9-b193-9999d979c8d9")
-		(property "Reference" "D2"
-			(at 93.98 106.68 0)
-			(effects
-				(font
-					(size 1.27 1.0795)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Value" "1N4148W"
-			(at 93.98 113.03 0)
-			(effects
-				(font
-					(size 1.27 1.0795)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Footprint" "openHCOP-internal:SOD-123FL"
-			(at 91.44 109.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 91.44 109.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 91.44 109.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "A"
-			(uuid "1e5f069e-b2cc-4cf5-97ca-08cbc3b6b4f5")
-		)
-		(pin "C"
-			(uuid "58e17726-4ece-4d82-92a5-30ea7db8ded7")
-		)
-		(instances
-			(project "openHCOP-internal"
-				(path "/f4af27fb-7f3b-4e93-a3c3-658e12a0ff9b"
-					(reference "D2")
 					(unit 1)
 				)
 			)
@@ -7921,36 +7891,97 @@
 			)
 		)
 	)
+	(wire
+		(pts
+			(xy 83.82 109.22) (xy 86.36 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fb4517b0-4b5c-4132-9727-93221d7f9f46")
+	)
+	(wire
+		(pts
+			(xy 86.36 109.22) (xy 93.98 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8e935132-c1bf-4c25-814d-6dd1bf996b6f")
+	)
+	(wire
+		(pts
+			(xy 93.98 109.22) (xy 96.52 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b9eb6da3-42cd-4916-a501-43917af08903")
+	)
+	(wire
+		(pts
+			(xy 106.68 109.22) (xy 110.49 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "86cc8190-e6e7-4c80-b391-72c82733e607")
+	)
+	(junction
+		(at 86.36 109.22)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3b4ad8ee-8f72-45d4-a8a9-7c56144ebdd2")
+	)
+	(junction
+		(at 93.98 109.22)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6f78b128-8ec6-4377-b416-cbde7c38df4e")
+	)
+	(label "IGN1"
+		(at 107.95 109.22 0)
+		(effects
+			(font
+				(size 1.2446 1.2446)
+			)
+			(justify left bottom)
+		)
+		(uuid "8cdbb563-0e86-42aa-b361-d2ef61087b1b")
+	)
 	(symbol
-		(lib_id "openHCOP-internal-eagle-import:DIODE_SOD-123FL")
-		(at 91.44 118.11 0)
-		(mirror y)
+		(lib_id "openHCOP-internal-eagle-import:R-EU_R0805")
+		(at 101.6 109.22 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "fed76f62-d320-491b-9228-b5b09437e807")
-		(property "Reference" "D5"
-			(at 93.98 115.57 0)
+		(uuid "e8144384-65fb-45de-829c-e9a76157bbcc")
+		(property "Reference" "R9"
+			(at 105.41 110.7186 0)
 			(effects
 				(font
-					(size 1.27 1.0795)
+					(size 1.778 1.5113)
 				)
 				(justify left bottom)
 			)
 		)
-		(property "Value" "1N4148W"
-			(at 93.98 121.92 0)
+		(property "Value" "100"
+			(at 105.41 105.918 0)
 			(effects
 				(font
-					(size 1.27 1.0795)
+					(size 1.778 1.5113)
 				)
 				(justify left bottom)
 			)
 		)
-		(property "Footprint" "openHCOP-internal:SOD-123FL"
-			(at 91.44 118.11 0)
+		(property "Footprint" "openHCOP-internal:R0805"
+			(at 101.6 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7959,7 +7990,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 91.44 118.11 0)
+			(at 101.6 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7968,7 +7999,211 @@
 			)
 		)
 		(property "Description" ""
-			(at 91.44 118.11 0)
+			(at 101.6 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ae00af0b-a5bd-4259-b81a-ddcdecb3db20")
+		)
+		(pin "2"
+			(uuid "0b7a2be0-19a9-45ee-aaf8-b4e9e34a91f3")
+		)
+		(instances
+			(project "openHCOP-internal"
+				(path "/f4af27fb-7f3b-4e93-a3c3-658e12a0ff9b"
+					(reference "R9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "openHCOP-internal-eagle-import:R-EU_R0805")
+		(at 93.98 114.3 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ab4217c8-135b-4e1d-8c13-5d95afd7b512")
+		(property "Reference" "R13"
+			(at 95.25 112.52 90)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify right bottom)
+			)
+		)
+		(property "Value" "10K"
+			(at 95.25 115.32 90)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify right bottom)
+			)
+		)
+		(property "Footprint" "openHCOP-internal:R0805"
+			(at 93.98 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 93.98 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 93.98 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "02f69b19-1544-4b63-a81b-a261e63b201a")
+		)
+		(pin "2"
+			(uuid "5ad781f3-2c85-4c99-91cb-460f14111fac")
+		)
+		(instances
+			(project "openHCOP-internal"
+				(path "/f4af27fb-7f3b-4e93-a3c3-658e12a0ff9b"
+					(reference "R13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "openHCOP-internal-eagle-import:GND")
+		(at 93.98 121.92 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "74794d78-dbd6-42fb-ac2d-f4b4a8706755")
+		(property "Reference" "#GND101"
+			(at 93.98 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 91.44 124.46 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" ""
+			(at 93.98 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 93.98 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 93.98 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6329af5c-0f24-4e82-92eb-065d62f094d7")
+		)
+		(instances
+			(project "openHCOP-internal"
+				(path "/f4af27fb-7f3b-4e93-a3c3-658e12a0ff9b"
+					(reference "#GND101")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "openHCOP-internal-eagle-import:DIODE-ZENER16V")
+		(at 86.36 111.76 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "5cfcab23-4b78-4c62-ace0-65379efb0a2d")
+		(property "Reference" "D10"
+			(at 87.63 110.12 90)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify right bottom)
+			)
+		)
+		(property "Value" "6.2V"
+			(at 87.63 112.72 90)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify right bottom)
+			)
+		)
+		(property "Footprint" "openHCOP-internal:SOD-123"
+			(at 86.36 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 86.36 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 86.36 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7977,15 +8212,1524 @@
 			)
 		)
 		(pin "A"
-			(uuid "5f65a1d3-411a-43f6-8b66-4d963f51d997")
+			(uuid "07ebfd41-f162-4a34-81d3-09a28b41c8df")
 		)
 		(pin "C"
-			(uuid "d83443f0-d598-4cdf-863c-b9d42eca155a")
+			(uuid "e8accdf5-b502-424e-b8ed-3d600a72d039")
 		)
 		(instances
 			(project "openHCOP-internal"
 				(path "/f4af27fb-7f3b-4e93-a3c3-658e12a0ff9b"
-					(reference "D5")
+					(reference "D10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "openHCOP-internal-eagle-import:GND")
+		(at 86.36 116.84 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c9d5578d-86ad-4c6a-b649-662a2ab5a18b")
+		(property "Reference" "#GND102"
+			(at 86.36 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 83.82 119.38 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" ""
+			(at 86.36 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 86.36 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 86.36 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4e0fde24-dddc-41ea-8f67-1a4a786b67dc")
+		)
+		(instances
+			(project "openHCOP-internal"
+				(path "/f4af27fb-7f3b-4e93-a3c3-658e12a0ff9b"
+					(reference "#GND102")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 83.82 127) (xy 86.36 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e99b0340-58a3-466d-a6ec-ef4c226a6367")
+	)
+	(wire
+		(pts
+			(xy 86.36 127) (xy 93.98 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f0487f5b-089d-42a0-b679-efef5a866d98")
+	)
+	(wire
+		(pts
+			(xy 93.98 127) (xy 96.52 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8f3cba07-d573-4afc-96f9-71af4d3ac921")
+	)
+	(wire
+		(pts
+			(xy 106.68 127) (xy 110.49 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e964a07e-c669-4164-ab58-601aedb4897e")
+	)
+	(junction
+		(at 86.36 127)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "749f681b-98b7-42a6-b128-fb113c8d9335")
+	)
+	(junction
+		(at 93.98 127)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f5f25a79-623c-419d-aa96-5c4165fb213d")
+	)
+	(label "IGN2"
+		(at 107.95 127 0)
+		(effects
+			(font
+				(size 1.2446 1.2446)
+			)
+			(justify left bottom)
+		)
+		(uuid "9007abb1-2fb9-41e5-84a8-dfa5d126e00a")
+	)
+	(symbol
+		(lib_id "openHCOP-internal-eagle-import:R-EU_R0805")
+		(at 101.6 127 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "68addc00-902e-4529-9663-0d514d294c41")
+		(property "Reference" "R10"
+			(at 105.41 128.4986 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Value" "100"
+			(at 105.41 123.698 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" "openHCOP-internal:R0805"
+			(at 101.6 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 101.6 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 101.6 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2e4c944b-340c-4de6-b448-9ff81648ae25")
+		)
+		(pin "2"
+			(uuid "252a3e0d-b8d1-4ab6-a04a-f5418e21d5e3")
+		)
+		(instances
+			(project "openHCOP-internal"
+				(path "/f4af27fb-7f3b-4e93-a3c3-658e12a0ff9b"
+					(reference "R10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "openHCOP-internal-eagle-import:R-EU_R0805")
+		(at 93.98 132.08 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "0503e036-9f6e-4fa6-affd-e07745ef7ae2")
+		(property "Reference" "R14"
+			(at 95.25 130.3 90)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify right bottom)
+			)
+		)
+		(property "Value" "10K"
+			(at 95.25 133.1 90)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify right bottom)
+			)
+		)
+		(property "Footprint" "openHCOP-internal:R0805"
+			(at 93.98 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 93.98 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 93.98 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f8dc547a-0b07-4d32-b418-cfc1c4326af8")
+		)
+		(pin "2"
+			(uuid "0ad5f861-af4a-4ec2-8c94-00d51983da2e")
+		)
+		(instances
+			(project "openHCOP-internal"
+				(path "/f4af27fb-7f3b-4e93-a3c3-658e12a0ff9b"
+					(reference "R14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "openHCOP-internal-eagle-import:GND")
+		(at 93.98 139.7 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f9240925-ba68-4546-a3ec-9bf4406063f1")
+		(property "Reference" "#GND103"
+			(at 93.98 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 91.44 142.24 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" ""
+			(at 93.98 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 93.98 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 93.98 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "fdbab17f-13e8-4e60-925b-7f29ca521fff")
+		)
+		(instances
+			(project "openHCOP-internal"
+				(path "/f4af27fb-7f3b-4e93-a3c3-658e12a0ff9b"
+					(reference "#GND103")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "openHCOP-internal-eagle-import:DIODE-ZENER16V")
+		(at 86.36 129.54 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "3e8dfbe9-491d-422e-87d9-8b84afe7c146")
+		(property "Reference" "D11"
+			(at 87.63 127.9 90)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify right bottom)
+			)
+		)
+		(property "Value" "6.2V"
+			(at 87.63 130.5 90)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify right bottom)
+			)
+		)
+		(property "Footprint" "openHCOP-internal:SOD-123"
+			(at 86.36 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 86.36 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 86.36 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "A"
+			(uuid "4022bcd6-a883-439d-bcaf-4d2e9cbf4fc9")
+		)
+		(pin "C"
+			(uuid "061b9219-dc1c-45d2-b8ff-a9379d5b112d")
+		)
+		(instances
+			(project "openHCOP-internal"
+				(path "/f4af27fb-7f3b-4e93-a3c3-658e12a0ff9b"
+					(reference "D11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "openHCOP-internal-eagle-import:GND")
+		(at 86.36 134.62 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b72dd370-7ad9-4a48-bc7d-2665f3b1a5ad")
+		(property "Reference" "#GND104"
+			(at 86.36 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 83.82 137.16 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" ""
+			(at 86.36 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 86.36 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 86.36 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "af51b301-cc78-40bd-8f93-3f7f5b29b991")
+		)
+		(instances
+			(project "openHCOP-internal"
+				(path "/f4af27fb-7f3b-4e93-a3c3-658e12a0ff9b"
+					(reference "#GND104")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 83.82 144.78) (xy 86.36 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c439b0e0-4d26-4ed9-821f-7eaae41de279")
+	)
+	(wire
+		(pts
+			(xy 86.36 144.78) (xy 93.98 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "99ed5c58-8263-43dc-9386-2be1c0fbd950")
+	)
+	(wire
+		(pts
+			(xy 93.98 144.78) (xy 96.52 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "de009253-baad-4b63-a12c-cdfefd5bc271")
+	)
+	(wire
+		(pts
+			(xy 106.68 144.78) (xy 110.49 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "94330067-1aa1-4ef0-bd39-f17f9236432a")
+	)
+	(junction
+		(at 86.36 144.78)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "59b9e901-fe0a-4f61-8add-b5844f848661")
+	)
+	(junction
+		(at 93.98 144.78)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b954441b-7d80-484e-8f5e-3ba67f6e4d07")
+	)
+	(label "IGN3"
+		(at 107.95 144.78 0)
+		(effects
+			(font
+				(size 1.2446 1.2446)
+			)
+			(justify left bottom)
+		)
+		(uuid "006e372a-f23f-4d7d-a3d2-5088e9225bad")
+	)
+	(symbol
+		(lib_id "openHCOP-internal-eagle-import:R-EU_R0805")
+		(at 101.6 144.78 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "cd1231ba-c92d-4345-a061-1851fecccedb")
+		(property "Reference" "R11"
+			(at 105.41 146.2786 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Value" "100"
+			(at 105.41 141.478 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" "openHCOP-internal:R0805"
+			(at 101.6 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 101.6 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 101.6 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8bc443c7-c42c-4c5d-bda6-cf9db2742462")
+		)
+		(pin "2"
+			(uuid "0c23f88a-72e5-44f6-a09e-40f452782eec")
+		)
+		(instances
+			(project "openHCOP-internal"
+				(path "/f4af27fb-7f3b-4e93-a3c3-658e12a0ff9b"
+					(reference "R11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "openHCOP-internal-eagle-import:R-EU_R0805")
+		(at 93.98 149.86 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "5de8e626-8d31-427b-893c-82a28b8a8ae7")
+		(property "Reference" "R15"
+			(at 95.25 148.08 90)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify right bottom)
+			)
+		)
+		(property "Value" "10K"
+			(at 95.25 150.88 90)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify right bottom)
+			)
+		)
+		(property "Footprint" "openHCOP-internal:R0805"
+			(at 93.98 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 93.98 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 93.98 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "affa1a7e-5690-4e0d-bbdd-035cf30a1ead")
+		)
+		(pin "2"
+			(uuid "19de2553-2979-414c-95b4-fa55512ec4a7")
+		)
+		(instances
+			(project "openHCOP-internal"
+				(path "/f4af27fb-7f3b-4e93-a3c3-658e12a0ff9b"
+					(reference "R15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "openHCOP-internal-eagle-import:GND")
+		(at 93.98 157.48 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "62747b1c-1329-41ba-bebb-e27fc6634bac")
+		(property "Reference" "#GND105"
+			(at 93.98 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 91.44 160.02 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" ""
+			(at 93.98 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 93.98 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 93.98 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d5b9885a-abaa-45db-ba65-b7ca5769fa31")
+		)
+		(instances
+			(project "openHCOP-internal"
+				(path "/f4af27fb-7f3b-4e93-a3c3-658e12a0ff9b"
+					(reference "#GND105")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "openHCOP-internal-eagle-import:DIODE-ZENER16V")
+		(at 86.36 147.32 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "3ef06bd8-44ef-4540-abd2-364bc7997f57")
+		(property "Reference" "D12"
+			(at 87.63 145.68 90)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify right bottom)
+			)
+		)
+		(property "Value" "6.2V"
+			(at 87.63 148.28 90)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify right bottom)
+			)
+		)
+		(property "Footprint" "openHCOP-internal:SOD-123"
+			(at 86.36 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 86.36 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 86.36 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "A"
+			(uuid "25ba54d6-4ffe-4246-bdda-5ad985f157e3")
+		)
+		(pin "C"
+			(uuid "75e7a0b3-7fa3-4722-99c1-d3f19f04f8a8")
+		)
+		(instances
+			(project "openHCOP-internal"
+				(path "/f4af27fb-7f3b-4e93-a3c3-658e12a0ff9b"
+					(reference "D12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "openHCOP-internal-eagle-import:GND")
+		(at 86.36 152.4 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c15b6765-0e4a-4083-9406-51af846eafd2")
+		(property "Reference" "#GND106"
+			(at 86.36 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 83.82 154.94 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" ""
+			(at 86.36 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 86.36 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 86.36 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3fa3c21e-e865-4a00-89e3-83edf756957c")
+		)
+		(instances
+			(project "openHCOP-internal"
+				(path "/f4af27fb-7f3b-4e93-a3c3-658e12a0ff9b"
+					(reference "#GND106")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 83.82 162.56) (xy 86.36 162.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "23654e3a-1a5f-4600-aeb1-cfbef963c233")
+	)
+	(wire
+		(pts
+			(xy 86.36 162.56) (xy 93.98 162.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eeb5a9bb-2980-4a08-84fc-cc35abccce9c")
+	)
+	(wire
+		(pts
+			(xy 93.98 162.56) (xy 96.52 162.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "42bca267-0e5a-4b27-a566-57d7db2e4ce7")
+	)
+	(wire
+		(pts
+			(xy 106.68 162.56) (xy 110.49 162.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2b2be848-716c-4b24-a7d7-7875a2688aa6")
+	)
+	(junction
+		(at 86.36 162.56)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "492c1355-1fa0-4694-8e58-c0d29781c9bb")
+	)
+	(junction
+		(at 93.98 162.56)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6656e125-b7c8-4458-98d9-28a65c6608b7")
+	)
+	(label "IGN4"
+		(at 107.95 162.56 0)
+		(effects
+			(font
+				(size 1.2446 1.2446)
+			)
+			(justify left bottom)
+		)
+		(uuid "43396a4b-1ec3-4191-9c86-cb95d09699eb")
+	)
+	(symbol
+		(lib_id "openHCOP-internal-eagle-import:R-EU_R0805")
+		(at 101.6 162.56 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "dba29006-4f89-4400-a033-8d0c7f988b3f")
+		(property "Reference" "R12"
+			(at 105.41 164.0586 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Value" "100"
+			(at 105.41 159.258 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" "openHCOP-internal:R0805"
+			(at 101.6 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 101.6 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 101.6 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "22d6f01c-c16f-4fa5-94db-5d2880b86dd8")
+		)
+		(pin "2"
+			(uuid "f1e39913-4a6a-4a0b-a622-db51349701d8")
+		)
+		(instances
+			(project "openHCOP-internal"
+				(path "/f4af27fb-7f3b-4e93-a3c3-658e12a0ff9b"
+					(reference "R12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "openHCOP-internal-eagle-import:R-EU_R0805")
+		(at 93.98 167.64 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "fa148288-7ccb-4028-8db6-de8ec0b5f888")
+		(property "Reference" "R16"
+			(at 95.25 165.86 90)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify right bottom)
+			)
+		)
+		(property "Value" "10K"
+			(at 95.25 168.66 90)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify right bottom)
+			)
+		)
+		(property "Footprint" "openHCOP-internal:R0805"
+			(at 93.98 167.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 93.98 167.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 93.98 167.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ce940c32-1c34-4edc-be31-24cd271ddb6a")
+		)
+		(pin "2"
+			(uuid "d36a3cf6-d204-490d-ae36-a014cd8f35cc")
+		)
+		(instances
+			(project "openHCOP-internal"
+				(path "/f4af27fb-7f3b-4e93-a3c3-658e12a0ff9b"
+					(reference "R16")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "openHCOP-internal-eagle-import:GND")
+		(at 93.98 175.26 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e38509c3-be92-475f-85e9-8f79e15c1cdb")
+		(property "Reference" "#GND107"
+			(at 93.98 175.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 91.44 177.8 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" ""
+			(at 93.98 175.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 93.98 175.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 93.98 175.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ede3ae9f-16f2-4c42-95ed-005cee96763d")
+		)
+		(instances
+			(project "openHCOP-internal"
+				(path "/f4af27fb-7f3b-4e93-a3c3-658e12a0ff9b"
+					(reference "#GND107")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "openHCOP-internal-eagle-import:DIODE-ZENER16V")
+		(at 86.36 165.1 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d5f6975c-e1ac-4412-aeeb-e9a8d6e3b93c")
+		(property "Reference" "D13"
+			(at 87.63 163.46 90)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify right bottom)
+			)
+		)
+		(property "Value" "6.2V"
+			(at 87.63 166.06 90)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify right bottom)
+			)
+		)
+		(property "Footprint" "openHCOP-internal:SOD-123"
+			(at 86.36 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 86.36 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 86.36 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "A"
+			(uuid "d434ed5a-6928-40bf-b955-7ecbd46b58c2")
+		)
+		(pin "C"
+			(uuid "9273f8ab-d243-4d24-a4f4-c9b43d289b7c")
+		)
+		(instances
+			(project "openHCOP-internal"
+				(path "/f4af27fb-7f3b-4e93-a3c3-658e12a0ff9b"
+					(reference "D13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "openHCOP-internal-eagle-import:GND")
+		(at 86.36 170.18 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d6857127-fd10-4d36-8043-ca5c60528a00")
+		(property "Reference" "#GND108"
+			(at 86.36 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 83.82 172.72 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" ""
+			(at 86.36 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 86.36 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 86.36 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "656673bd-01dc-4166-bf14-b2eea99a83c7")
+		)
+		(instances
+			(project "openHCOP-internal"
+				(path "/f4af27fb-7f3b-4e93-a3c3-658e12a0ff9b"
+					(reference "#GND108")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D_Schottky")
+		(at 156.21 73.66 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f8f75a63-1af0-4c5d-be41-02aecbff2381")
+		(property "Reference" "D14"
+			(at 153.67 70.06 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify right bottom)
+			)
+		)
+		(property "Value" "SS14"
+			(at 153.67 76.66 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify right bottom)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SMA"
+			(at 156.21 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 156.21 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Reverse polarity protection, Schottky 40 V 1 A"
+			(at 156.21 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "415050f0-71c8-439d-8d80-d6cf5fe3ed79")
+		)
+		(pin "1"
+			(uuid "7b2f5afb-9ee5-4b46-914a-8aeff6b6fb65")
+		)
+		(instances
+			(project "openHCOP-internal"
+				(path "/f4af27fb-7f3b-4e93-a3c3-658e12a0ff9b"
+					(reference "D14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 160.02 73.66) (xy 162.56 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "130ad872-efb9-4045-b0bc-6e07b6ae09d2")
+	)
+	(wire
+		(pts
+			(xy 162.56 73.66) (xy 177.8 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f3fe2624-4da7-4c57-9d35-71f4d55c6e41")
+	)
+	(junction
+		(at 162.56 73.66)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7f656122-9cbf-4e48-938a-c6f87091ba22")
+	)
+	(label "+12P"
+		(at 165.1 73.66 0)
+		(effects
+			(font
+				(size 1.2446 1.2446)
+			)
+			(justify left bottom)
+		)
+		(uuid "72c0cd42-62a1-424c-9648-c9a3b8f4a342")
+	)
+	(symbol
+		(lib_id "Device:D_Zener")
+		(at 162.56 77.47 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "13fb27f9-e4ec-449c-aa8b-e7fef73a87a6")
+		(property "Reference" "D15"
+			(at 163.83 77.06 90)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Value" "SMBJ18A"
+			(at 163.83 79.86 90)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SMB"
+			(at 162.56 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 162.56 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "TVS 600 W, 18 V stand-off"
+			(at 162.56 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "61905d6f-f98d-43d3-bf9c-37cf3abb6490")
+		)
+		(pin "1"
+			(uuid "e6cbe4bd-427f-4962-bf7c-303eeaea90ea")
+		)
+		(instances
+			(project "openHCOP-internal"
+				(path "/f4af27fb-7f3b-4e93-a3c3-658e12a0ff9b"
+					(reference "D15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "openHCOP-internal-eagle-import:GND")
+		(at 162.56 83.82 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c6d8d6d3-c5c2-4a8f-93dd-d340774826ea")
+		(property "Reference" "#GND109"
+			(at 162.56 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 160.02 86.36 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" ""
+			(at 162.56 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 162.56 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 162.56 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5ed9ebd1-0a4b-4d57-957a-a797a773e8d8")
+		)
+		(instances
+			(project "openHCOP-internal"
+				(path "/f4af27fb-7f3b-4e93-a3c3-658e12a0ff9b"
+					(reference "#GND109")
 					(unit 1)
 				)
 			)
