@@ -248,6 +248,14 @@ static void Pcint0_Tail(uint8_t pins, uint8_t changed)
         // CYP1 falling edge = cylinder 1 is next (unless filtered out as noise)
         if ((changed & _BV(CYP1)) && !(pins & _BV(CYP1)))
         {
+                // If the overflow flag is already pending, the elapsed counter
+                // cannot be trusted even if the timer overflow ISR has not run
+                // and cleared CYP_TIMER_VALID yet.
+                if (TIFR1 & _BV(TOV1))
+                {
+                        TIFR1 = _BV(TOV1);
+                        CYP_TIMER_VALID = 0;
+                }
                 uint16_t elapsed = TCNT1;
                 uint8_t next = NEXT_CYL;
                 uint8_t valid = CYP_TIMER_VALID;
